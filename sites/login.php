@@ -1,5 +1,11 @@
-<!DOCTYPE html>
+<?php
+session_start();
 
+session_destroy();
+$_SESSION = array();
+?>
+
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -10,7 +16,8 @@
 	</head>
 	<body>
 		<div class="container">
-			<form action="mainpage.php" >	
+		
+			<form action="../business-logic/mLogin.php" method="post">		
                 <div id="form-input-user">
 					<img title="Benutzernamen eingeben" class="login-icon" src="../image/icon-benutzername.png">
 					<input type="text" name="username" placeholder="Benutzername">
@@ -22,12 +29,11 @@
 				<div class="button">
                     <button id="btnSubmit" type="submit" name="submit" value="Einloggen">Einloggen</button>
 				</div>
-                    <a href="forget-password.php"> Passwort vergessen? </a>
-                    <a href="contact.php"> Kontaktieren </a>
-                <div id="logo">
-                        <img class="logo-logo" src="../image/verpacking-logo.png">
-                </div>
-                    
+				<a href="forget-password.php"> Passwort vergessen </a>
+				<a href="contact.php"> Kontaktieren </a>
+				<div id="logo">
+					<img class="logo-logo" src="../image/verpacking-logo.png">
+				</div>	
 			</form>
 		</div>
 	

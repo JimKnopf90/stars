@@ -24,9 +24,8 @@ input{
 #btnSubmit{
     width: 300px;
     height: 40px;
-    font-size: 17px;
-    margin-left: 30px;
-    margin-bottom: 20px;
+    font-size: 17px;    
+    margin-left: 30px;   
 }
 
 .login-icon{

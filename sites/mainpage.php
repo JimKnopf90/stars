@@ -1,13 +1,17 @@
-<html>
+<?php
+session_start();
+if(isset($_SESSION["username"])) {     
+    ?>
+    <html>
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
-		<link rel="icon" href="../image/icon.jpg">
+		<link rel="icon" href="../Programm/pictures/icon.jpg">
 		<script type="text/javascript">
 		
 		</script>
-		<title>Login bereich</title>
+		<title>Startseite</title>
 	</head>
 	<body>
 	<div id="header-bg">
@@ -26,7 +30,7 @@
 			</div>
 		</div>
          <div class="content-bg">         
-				    <strong class="ueberschrift" >Willkommen, <!-- Name vom eingeloggten --></strong>
+				    <strong class="ueberschrift" >Willkommen, <?php echo $_SESSION["username"]; ?></strong>
                     <br />
                     <article id="newsfeed"> 
                         Neuigkeiten: Du kannst nun unter dem Menüpunkt <b><a href="products.php">"Produkte"</a></b> alle Artikeldaten einsehen und ggf. ändern.
@@ -44,3 +48,8 @@
                 </div>
 	</body>
 </html>
+<?php
+} else {
+    echo "erst ein loggen Bro";
+}
+?>
