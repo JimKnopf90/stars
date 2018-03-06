@@ -2,16 +2,16 @@
 session_start();
 if(isset($_SESSION["username"])) {     
     ?>
-    <html>
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
-		<link rel="icon" href="../Programm/pictures/icon.jpg">
+		<link rel="icon" href="../image/icon.jpg">
 		<script type="text/javascript">
 		
 		</script>
-		<title>Startseite</title>
+		<title>Login bereich</title>
 	</head>
 	<body>
 	<div id="header-bg">
