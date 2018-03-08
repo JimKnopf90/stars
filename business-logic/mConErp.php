@@ -3,5 +3,4 @@
     $dbname = "eazybusiness";
     $dbusername = "sa";
     $pw = "abc:0102";
-
 ?>
