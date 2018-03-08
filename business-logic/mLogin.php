@@ -35,7 +35,7 @@ try {
          header("Location: ../sites/mainpage.php"); 
         
     } else {
-        header("Location: ../sites/mainpage.php"); //echo 'Du kommst hier nicht rein!';
+        echo 'Du kommst hier nicht rein!';
     }
     
   } catch (PDOException $e) {
