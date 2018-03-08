@@ -9,44 +9,32 @@ if(isset($_SESSION["username"])) {
 		<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
 		<link rel="icon" href="../image/icon.jpg">
 		<script type="text/javascript">
-		
 		</script>
-		<title>Login bereich</title>
+		<title>StaRs | Startseite</title>
 	</head>
 	<body>
-	<div id="header-bg">
-			<a href="mainpage.php"><img id="header-logo" src="../image/verpacking-logo.png" /></a>
-				<div id="menu">
-					<ul>
-						<li><a href="mainpage.php">Startseite</a></li>
-						<li><a href="products.php">Produkte</a></li>
-						<li><a href="statistik.php">Statistik</a></li>
-					</ul>
-				</div>
-            <div id="buttons">
-                <a href="login.php"><img title="Ausloggen" class="mini-button" name="Logout" alt="logout" src="../image/logoutbutton.png" /></a>
-                <a href="help.php"><img title="Hilfe" class="mini-button" name="settings" alt="settings" src="../image/hilfebutton.png" /></a>
-                <a href="settings.php"><img title="Einstellungen" class="mini-button" name="settings" alt="settings" src="../image/einstellungsbutton.png" /></a>
-			</div>
-		</div>
-         <div class="content-bg">         
-				    <strong class="ueberschrift" >Willkommen, <?php echo $_SESSION["username"]; ?></strong>
-                    <br />
-                    <article id="newsfeed"> 
-                        Neuigkeiten: Du kannst nun unter dem Menüpunkt <b><a href="products.php">"Produkte"</a></b> alle Artikeldaten einsehen und ggf. ändern.
-                    </article>
-                    <div id="attentions">
-                        <strong class="attention">Hinweis!</strong>
-                        <article> 
-                            Wir haben <strong class="attention" > 123 </strong> neue Artikel
-                        </article> 
-                        <article> 
-                            <strong class="attention" > 123 </strong> Artikel sind Fehlerhaft!
-                        </article>
-                    </div>
-                    <br />
-                </div>
-	</body>
+        <header>
+            <nav>
+                <a href="mainpage.php"><img id="header-logo" src="../image/verpacking-logo.png" /></a>
+                <ul id="nav">
+                    <li><a class="active" href="mainpage.php">Startseite</a></li>
+                    <li><a class="inactive" href="products.php">Produkte</a></li>
+                    <li><a class="inactive" href="mainpage.php">Stammartikel</a></li>
+                    <li><a class="inactive" href="mainpage.php">Fehlermeldungen</a></li>
+                    <li><a class="inactive" id="rechts" href="mainpage.php">Statistiken</a></li>
+                    <a href="login.php"><img class="icons"src="../image/icon-information.png" /></a>
+                    <a href="login.php"><img class="icons" src="../image/icon-help.png" /></a>
+                    <a href="login.php"><img class="icons" src="../image/icon-settings.png" /></a>
+                    <a href="login.php"><img class="icons" src="../image/icon-logout.png" /></a>
+                </ul>
+            </nav>
+        </header>
+        <div class="divider"></div>
+            <div id="content-mainpage">
+                <h1>Wilkommen, <?php echo $_SESSION["username"]; ?></h1>
+                <h3>Es wurden <span class="attention">14</span> fehlerhafte Dateien gefunden!</h3>
+        </div>
+    </body>
 </html>
 <?php
 } else {
