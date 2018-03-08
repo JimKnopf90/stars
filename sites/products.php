@@ -614,7 +614,9 @@
 </html>
 
 
-
+<?php
+include("../business-logic/mProducts.php");
+?>
 
 
 
