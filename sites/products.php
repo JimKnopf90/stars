@@ -50,7 +50,7 @@
             <!-- Hier die Filterfunktion -->
             <tr id="table-filter">
                 <th ><a href="#"><img class="icon-setting" src="../image/icon-settings.png" /></a></th>
-                <td>
+                <th>
                     <select class="dropdown">
                         <option>---</option>
                         <option>eBay Verpacking_com</option>
@@ -60,17 +60,17 @@
                         <option>Rakuten</option>
                         <option>Webshop Verpacking</option>
                     </select>
-                </td>
+                </th>
                 
-                <td>
+                <th>
                     <input type="text" name="artikelnummer" placeholder="Artikelnummer">
-                </td>
+                </th>
                 
-                <td>
+                <th>
                     <input type="text" name="artikelname" placeholder="Artikelname">
-                </td>
+                </th>
                
-                <td>
+                <th>
                     <select class="dropdown">
                         <option>---</option>
                         <option>Verpacking</option>
@@ -80,28 +80,28 @@
                         <option>Brennenstuhl</option>
                         <option>Staedtler</option>
                     </select>
-                </td>
+                </th>
                 
-                <td>
+                <th>
                     <input type="text" name="Plattform-ID" placeholder="Artikelname">
-                </td>
+                </th>
                 
-                <td>
+                <th>
                     <select class="dropdown">
                         <option>---</option>
                         <option>aufsteigend</option>
                         <option>absteigend</option>
                     </select>
-                </td>
+                </th>
                 
-                <td>
+                <th>
                     <select class="dropdown">
                         <option>---</option>
                         <option>19 %</option>
                     </select>
-                </td> 
+                </th> 
                 
-                <td>
+                <th>
                     <select class="dropdown">
                         <option>---</option>
                         <option>GB | 1,20€</option>
@@ -113,57 +113,57 @@
                         <option>GLS | 14,39€</option>
                         <option>NB Rolle | 2,50€</option>
                     </select>
-                </td> 
+                </th> 
                 
-                <td>
+                <th>
                     <select class="dropdown">
                         <option>---</option>
                         <option>aufsteigend</option>
                         <option>absteigend</option>
                     </select>
-                </td>
+                </th>
                 
-                <td>
+                <th>
                     <select class="dropdown">
                         <option>---</option>
                         <option>aufsteigend</option>
                         <option>absteigend</option>
                     </select>
-                </td>
+                </th>
                 
-                <td>
+                <th>
                     <select class="dropdown">
                         <option>---</option>
                         <option>aufsteigend</option>
                         <option>absteigend</option>
                     </select>
-                </td> 
+                </th> 
                 
-                <td>
+                <th>
                     <select class="dropdown">
                         <option>---</option>
                         <option>aufsteigend</option>
                         <option>absteigend</option>
                     </select>
-                </td>
+                </th>
                 
-                <td>
+                <th>
                     <select class="dropdown">
                         <option>---</option>
                         <option>aufsteigend</option>
                         <option>absteigend</option>
                     </select>
-                </td> 
+                </th> 
                 
-                <td>
+                <th>
                     <select class="dropdown">
                         <option>---</option>
                         <option>aufsteigend</option>
                         <option>absteigend</option>
                     </select>
-                </td>
+                </th>
                 
-                <td>
+                <th>
                     <select class="dropdown">
                         <option>---</option>
                         <option>Faltkartons</option>
@@ -171,7 +171,7 @@
                         <option>Klebeband</option>
                         <option>Hinzufügen + </option>
                     </select>
-                </td>
+                </th>
             </tr>
             <!-- Hier kommt die eigentliche Tabelle -->
             <tr class="hover">
@@ -250,6 +250,7 @@
                 <td> eBay Artikel</td>   
             </tr>
         </table>
+        <div class="divider-end"></div>
 	</body>
 </html>
 
