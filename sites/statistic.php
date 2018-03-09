@@ -1,7 +1,3 @@
-<?php
-session_start();
-if(isset($_SESSION["username"])) {     
-    ?>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -17,11 +13,11 @@ if(isset($_SESSION["username"])) {
             <nav>
                 <a href="mainpage.php"><img id="header-logo" src="../image/verpacking-logo.png" /></a>
                 <ul id="nav">
-                    <li><a class="active" href="mainpage.php">Startseite</a></li>
+                    <li><a class="inactive" href="mainpage.php">Startseite</a></li>
                     <li><a class="inactive" href="products.php">Produkte</a></li>
                     <li><a class="inactive" href="mainpage.php">Stammartikel</a></li>
                     <li><a class="inactive" href="mainpage.php">Fehlermeldungen</a></li>
-                    <li><a class="inactive" id="rechts" href="statistic.php">Statistiken</a></li>
+                    <li><a class="active" id="rechts" href="mainpage.php">Statistiken</a></li>
                     <a href="login.php"><img class="icons"src="../image/icon-information.png" /></a>
                     <a href="login.php"><img class="icons" src="../image/icon-help.png" /></a>
                     <a href="login.php"><img class="icons" src="../image/icon-settings.png" /></a>
@@ -31,13 +27,16 @@ if(isset($_SESSION["username"])) {
         </header>
         <div class="divider"></div>
             <div id="content-mainpage">
-                <h1>Wilkommen, <?php echo $_SESSION["username"]; ?></h1>
-                <h3>Es wurden <span class="attention">14</span> fehlerhafte Dateien gefunden!</h3>
+                <h1>Statistiken</h1>
+                <h3>Bestseller - plattform unterscheiden</h3>
+                <h3>und auch nicht unterscheiden - alle zusammen</h3>
+                <h3>tägliche auswertung - balkendiagramm oder tabelle</h3>
+                <h3>bestandverlauf </h3>
+                <h3>einzelne Statistiken größer machen </h3>
+                <h3>monate miteinander vergleichen</h3>
+                <h3>zeitraum wählen</h3>
+                <h3>jeder einzelne artikel soll ne statistik haben</h3>
+                <h3>verkaufte stückzahl pro tag von asin oder ebay oder real oder rakuten oder shop </h3>
         </div>
     </body>
 </html>
-<?php
-} else {
-    echo "erst ein loggen Bro";
-}
-?>
