@@ -22,7 +22,7 @@ header{
     width: 56.63px;
     height: 47.75px;
     float:left;
-    margin-left: 20px;
+    margin-right: 0;
 }
 
 nav ul{
@@ -64,10 +64,14 @@ nav ul li a{
 .divider{
     background-color: orange;
     height: 8px;
+    wdith: 100%;
 }
 
 .background{
-    background-color: lightgray;
+    /* background-image: url("../image/background-bubbles.png"); */
+    background-color: linear-gradient(to bottom, #fffff, #e8e8e8,);
+    width: 100%;
+    height: 100%
 }
 
 /* <<<<<<<<< BIS HIER HIN FÜR JEDE HOMEPAGE */
@@ -93,5 +97,11 @@ nav ul li a{
 .info{
     color: forestgreen;
 }
+
+
+/* >>>>>> TABELLENLAYOUT <<<<<<<< */
+
+
+
 
 

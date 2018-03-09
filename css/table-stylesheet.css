@@ -1,143 +1,30 @@
-/* <<<<<<<<<<<<<<< Header >>>>>>>>>>>>>> */
-
-#header-bg{
-	margin: 0 auto;
-	background-image: linear-gradient(45deg, #feb416 40%, #ff9206 60%);
-	background-size: 100% 200px;
-	display: flex;
-	box-shadow: 0px 5px 20px black;
+table{
+    width: 100%;
+    height: auto;
 }
 
-#header-logo{
-	width: 100%x;
-	height: 73px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	margin-left:20px;
-	margin-right: 60px;
+table tr{
+    border-bottom: solid 1px black;
 }
 
-a:hover{
-	text-shadow: 0px 0px 20px white;
-}
-
-#buttons{
-    margin-left: 500px;
-}
-
-.mini-button{
-	width: 30px;
-	height: 30px;
-	float: right;
-	margin-top: 50px;
-}
-
-a{
-	text-decoration: none;
-	color: black;
-	list-style: none; 
-}
-
-#menu li{
-	display: inline-block;
-	font-size: 32px;
-	margin-top: 10%;
-	font-family: 'Acme', sans-serif;
-	
-}
-
-/* <<<<<<<<<< Content >>>>>>>>>> */
-
-#mainpage-content{
-    margin-top:50px;
-    margin-left: 20px;
-    font-family: 'Crete Round', serif;
-    
-}
-
-#content-bg{
-	background-color: #f2f2f2;
-	width:100%;
-	height: 100%;
-	box-shadow: 0px 5px 10px grey;
-	margin-top: 8px;
-}
-
-.content-bg{
-    margin-top: 8px;
-	background-color: #f2f2f2;
-	background-size: 100% 500px;
-	box-shadow: 0px 5px 20px grey;
-}
-
-.content-bg li{
-	display: inline-block;
-	font-size: 1.2em;
-    margin-right: 40px;
-}
-
-.ueberschrift{
-    font-style: bold;
-    font-size: 1.2em;
-}
-
-
-/* <<<<<<<<<< Tabelle >>>>>>>>>> */
-
-.artikel-setting-button{
-    width: 20px;
-    height: 20px;
-}
-
-.hover-content:hover{
-    background-color: #ffd1a0;
-}
-
-.hover-content td{
-    border-bottom: 1px solid #1e1d1c;
-    cursor: pointer;
-}
-
-#verschieben{
-    margin-top: 500px;
-}
-
-#table-header th{
-    color: #1e1d1c;
+table tr th{
     text-align: left;
     font-size: 18px;
 }
 
-#table-filter th{
-    text-align: left;
+table tr td{
+    width: 200px;
+    height: 30px;
 }
 
+.hover:hover{
+    background-color: lightcoral;
+    cursor: pointer;
+    color: darkred;
+}
 
-
-/* Suche und Filter */
-
-#pic-lupe{
+.icon-setting{
     width: 20px;
     height: 20px;
-    margin-top: 5px;
+    margin-right: auto;
 }
-
-table{
-    width: 100%;
-    font-size: 15px;
-}
-
-select{
-    font-size: 12px;
-    width: 100%;
-    height: 20px;
-    margin-bottom: 10px;
-}
-
-input{
-    width: 100%;
-    height: 20px;
-    margin-bottom:10px
-}
-
-

@@ -32,8 +32,8 @@ if(isset($_SESSION["username"])) {
         </header>
         <div class="background">
         <div class="divider"></div>
-        <!-- <div id="banner"><img src="../image/banner-1.png"/></div> -->
-        <div class="divider"></div>
+        <!-- <div id="banner"><img src="../image/banner-1.png"/></div> 
+        <div class="divider"></div>-->
             <div id="content-mainpage">
                 <h1>Wilkommen, <?php echo $_SESSION["username"]; ?></h1>
             <div id="news">
