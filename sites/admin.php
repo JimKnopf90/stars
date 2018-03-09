@@ -6,7 +6,7 @@
 		<link rel="icon" href="../image/icon.jpg">
 		<script type="text/javascript">
 		</script>
-		<title>StaRs | Statistiken</title>
+		<title>StaRs | Admin</title>
 	</head>
 	<body>
         <header>
@@ -17,7 +17,7 @@
                     <li><a class="inactive" href="products.php">Produkte</a></li>
                     <li><a class="inactive" href="mainpage.php">Stammartikel</a></li>
                     <li><a class="inactive" href="mainpage.php">Fehlermeldungen</a></li>
-                    <li><a class="active" id="rechts" href="mainpage.php">Statistiken</a></li>
+                    <li><a class="inactive" id="rechts" href="mainpage.php">Statistiken</a></li>
                     <a href="login.php"><img class="icons"src="../image/icon-information.png" /></a>
                     <a href="login.php"><img class="icons" src="../image/icon-help.png" /></a>
                     <a href="login.php"><img class="icons" src="../image/icon-settings.png" /></a>
@@ -26,17 +26,9 @@
             </nav>
         </header>
         <div class="divider"></div>
-            <div id="content-mainpage">
-                <h1>Statistiken</h1>
-                <h3>Bestseller - plattform unterscheiden</h3>
-                <h3>und auch nicht unterscheiden - alle zusammen</h3>
-                <h3>tägliche auswertung - balkendiagramm oder tabelle</h3>
-                <h3>bestandverlauf </h3>
-                <h3>einzelne Statistiken größer machen </h3>
-                <h3>monate miteinander vergleichen</h3>
-                <h3>zeitraum wählen</h3>
-                <h3>jeder einzelne artikel soll ne statistik haben</h3>
-                <h3>verkaufte stückzahl pro tag von asin oder ebay oder real oder rakuten oder shop </h3>
+        <div id="content-admin">
+            <h1>Willkommen im Adminbereich, CapslockJesus</h1>
+            <h3>Hier kannst du einiges einstellen.</h3>
         </div>
     </body>
 </html>

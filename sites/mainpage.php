@@ -13,6 +13,7 @@ if(isset($_SESSION["username"])) {
 		<title>StaRs | Startseite</title>
 	</head>
 	<body>
+    
         <header>
             <nav>
                 <a href="mainpage.php"><img id="header-logo" src="../image/verpacking-logo.png" /></a>
@@ -29,11 +30,31 @@ if(isset($_SESSION["username"])) {
                 </ul>
             </nav>
         </header>
+        <div class="background">
+        <div class="divider"></div>
+        <!-- <div id="banner"><img src="../image/banner-1.png"/></div> -->
         <div class="divider"></div>
             <div id="content-mainpage">
                 <h1>Wilkommen, <?php echo $_SESSION["username"]; ?></h1>
-                <h3>Es wurden <span class="attention">14</span> fehlerhafte Dateien gefunden!</h3>
+            <div id="news">
+                <h2>Neuigkeiten!</h2>
+                <ul><h3>Es wurden <span class="attention">14</span> fehlerhafte Artikel gefunden.</h3>
+                <h3>Es wurden <span class="info">7</span> neue Artikel gefunden.</h3>
+                <h3>Bitte überprüfe umgehend die fehlerhaften Artikel! Diese findest du <a href="attentions.php">Hier</a></h3>
+                <h3>Sollte es Probleme geben, wende dich bitte an die zuständige Person.</h3>
+                <h3>Neue <span class="info">Statistiken</span> sind verfügbar!</h3>
+                <h3>Der <span class="info">Repricer</span> ist jetzt auch am Start!</h3>
+                <h3><span class="info">Timm</span> nascht gern Kot.</h3>
+                <h3>Es wurden <span class="info">7</span> neue Artikel gefunden.</h3>
+                <h3>Bitte überprüfe umgehend die fehlerhaften Artikel! Diese findest du <a href="attentions.php">Hier</a></h3>
+                <h3>Sollte es Probleme geben, wende dich bitte an die zuständige Person.</h3>
+                <h3>Neue <span class="info">Statistiken</span> sind verfügbar!</h3>
+                <h3>Der <span class="info">Repricer</span> ist jetzt auch am Start!</h3>
+                <h3><span class="info">Timm</span> nascht gern Kot.</h3>
+                </ul>
+            </div>
         </div>
+    </div>
     </body>
 </html>
 <?php

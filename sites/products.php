@@ -2,31 +2,31 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<link rel="stylesheet" type="text/css" href="../css/table-stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
 		<link rel="icon" href="../image/icon.jpg">
 		<script type="text/javascript">
-        
-        </script>
-		<title>Produkte vergewaltigen</title>
+		</script>
+		<title>StaRs | Produkte</title>
 	</head>
 	<body>
-		<div id="header-bg">
-			<a href="mainpage.php"><img id="header-logo" src="../image/verpacking-logo.png" /></a>
-				<div id="menu">
-					<ul>
-						<li><a href="mainpage.php">Startseite</a></li>
-						<li><a href="products.php">Produkte</a></li>
-						<li><a href="statistik.php">Statistik</a></li>
-					</ul>
-				</div>
-            <div id="buttons">
-               <a href="login.php"><img title="Ausloggen" class="mini-button" name="Logout" alt="logout" src="../image/logoutbutton.png" /></a>
-                <a href="help.php"><img title="Hilfe" class="mini-button" name="settings" alt="settings" src="../image/hilfebutton.png" /></a>
-                <a href="settings.php"><img title="Einstellungen" class="mini-button" name="settings" alt="settings" src="../image/einstellungsbutton.png" /></a>
-             
-			</div>
-		</div>
-        <!-- JAVASCRIPT -->
+        <header>
+            <nav>
+                <a href="mainpage.php"><img id="header-logo" src="../image/verpacking-logo.png" /></a>
+                <ul id="nav">
+                    <li><a class="inactive" href="mainpage.php">Startseite</a></li>
+                    <li><a class="active" href="products.php">Produkte</a></li>
+                    <li><a class="inactive" href="mainpage.php">Stammartikel</a></li>
+                    <li><a class="inactive" href="mainpage.php">Fehlermeldungen</a></li>
+                    <li><a class="inactive" id="rechts" href="statistic.php">Statistiken</a></li>
+                    <a href="login.php"><img class="icons"src="../image/icon-information.png" /></a>
+                    <a href="login.php"><img class="icons" src="../image/icon-help.png" /></a>
+                    <a href="login.php"><img class="icons" src="../image/icon-settings.png" /></a>
+                    <a href="login.php"><img class="icons" src="../image/icon-logout.png" /></a>
+                </ul>
+            </nav>
+        </header>
+        <div class="divider"></div>
+        <!--
         <div class="content-bg">   
             <div id="headline">
                 <table>
@@ -49,9 +49,7 @@
                         <th>Produktgruppe</th>
                         <th><img id="pic-lupe" src="../image/icon-lupe.png"></th>
                     </tr>
-                    <!-- bis hier die überschriften von der Tabelle -->
-                    <!-- ab hier die Filter funktion und soll ausgeblendet werden! -->
-                    <!-- ***************** FILTER **************  -->
+                    
                     <tr id="table-filter">
                         <th>
                         
@@ -209,7 +207,7 @@
                             </div>
                         </th>
                     </tr>
-                    <!-- bis hier die Filter funktion und soll ausgeblendet werden! --> 
+            
                     <tr class="hover-content">
                         <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>        
                         <td>Amazon</td>        
@@ -228,395 +226,19 @@
                         <td> -10 Stk.</td>        
                         <td> Mustergruppe</td>        
                     </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>eBay</td>        
-                        <td>ARTNRVONEB</td>        
-                        <td>1 Gelisteter Artikel von eBay</td>        
-                        <td>Musterhersteller</td>        
-                        <td>ebay PF ID</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>Amazon</td>        
-                        <td>SKU-VON-AMZN</td>        
-                        <td>hier ein test mit viel zu vielen zeichen !!!hier ein test mit viel zu vielen zeichen !!!hier ein test mit viel zu vielen zeichen !!!</td>        
-                        <td>Musterhersteller</td>        
-                        <td> H13RD13A5IN</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>eBay</td>        
-                        <td>ARTNRVONEB</td>        
-                        <td>1 Gelisteter Artikel von eBay</td>        
-                        <td>Musterhersteller</td>        
-                        <td>ebay PF ID</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>Amazon</td>        
-                        <td>SKU-VON-AMZN</td>        
-                        <td>1 Gelisteter Artikel von Amazon</td>        
-                        <td>Musterhersteller</td>        
-                        <td> H13RD13A5IN</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>eBay</td>        
-                        <td>ARTNRVONEB</td>        
-                        <td>1 Gelisteter Artikel von eBay</td>        
-                        <td>Musterhersteller</td>        
-                        <td>ebay PF ID</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>Amazon</td>        
-                        <td>SKU-VON-AMZN</td>        
-                        <td>1 Gelisteter Artikel von Amazon</td>        
-                        <td>Musterhersteller</td>        
-                        <td> H13RD13A5IN</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>eBay</td>        
-                        <td>ARTNRVONEB</td>        
-                        <td>1 Gelisteter Artikel von eBay</td>        
-                        <td>Musterhersteller</td>        
-                        <td>ebay PF ID</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>Amazon</td>        
-                        <td>SKU-VON-AMZN</td>        
-                        <td>1 Gelisteter Artikel von Amazon</td>        
-                        <td>Musterhersteller</td>        
-                        <td> H13RD13A5IN</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>eBay</td>        
-                        <td>ARTNRVONEB</td>        
-                        <td>1 Gelisteter Artikel von eBay</td>        
-                        <td>Musterhersteller</td>        
-                        <td>ebay PF ID</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>Amazon</td>        
-                        <td>SKU-VON-AMZN</td>        
-                        <td>hier ein test mit viel zu vielen zeichen !!!hier ein test mit viel zu vielen zeichen !!!hier ein test mit viel zu vielen zeichen !!!</td>        
-                        <td>Musterhersteller</td>        
-                        <td> H13RD13A5IN</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>eBay</td>        
-                        <td>ARTNRVONEB</td>        
-                        <td>1 Gelisteter Artikel von eBay</td>        
-                        <td>Musterhersteller</td>        
-                        <td>ebay PF ID</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>Amazon</td>        
-                        <td>SKU-VON-AMZN</td>        
-                        <td>1 Gelisteter Artikel von Amazon</td>        
-                        <td>Musterhersteller</td>        
-                        <td> H13RD13A5IN</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>eBay</td>        
-                        <td>ARTNRVONEB</td>        
-                        <td>1 Gelisteter Artikel von eBay</td>        
-                        <td>Musterhersteller</td>        
-                        <td>ebay PF ID</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>Amazon</td>        
-                        <td>SKU-VON-AMZN</td>        
-                        <td>1 Gelisteter Artikel von Amazon</td>        
-                        <td>Musterhersteller</td>        
-                        <td> H13RD13A5IN</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>eBay</td>        
-                        <td>ARTNRVONEB</td>        
-                        <td>1 Gelisteter Artikel von eBay</td>        
-                        <td>Musterhersteller</td>        
-                        <td>ebay PF ID</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>Amazon</td>        
-                        <td>SKU-VON-AMZN</td>        
-                        <td>1 Gelisteter Artikel von Amazon</td>        
-                        <td>Musterhersteller</td>        
-                        <td> H13RD13A5IN</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>eBay</td>        
-                        <td>ARTNRVONEB</td>        
-                        <td>1 Gelisteter Artikel von eBay</td>        
-                        <td>Musterhersteller</td>        
-                        <td>ebay PF ID</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>Amazon</td>        
-                        <td>SKU-VON-AMZN</td>        
-                        <td>hier ein test mit viel zu vielen zeichen !!!hier ein test mit viel zu vielen zeichen !!!hier ein test mit viel zu vielen zeichen !!!</td>        
-                        <td>Musterhersteller</td>        
-                        <td> H13RD13A5IN</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>eBay</td>        
-                        <td>ARTNRVONEB</td>        
-                        <td>1 Gelisteter Artikel von eBay</td>        
-                        <td>Musterhersteller</td>        
-                        <td>ebay PF ID</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>Amazon</td>        
-                        <td>SKU-VON-AMZN</td>        
-                        <td>1 Gelisteter Artikel von Amazon</td>        
-                        <td>Musterhersteller</td>        
-                        <td> H13RD13A5IN</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
-                    <tr class="hover-content">
-                        <td><a href="settings.php" target="_blank"><img class="artikel-setting-button" name="artikel-setting" alt="artikel-setting" title="Artikel bearbeiten" src="../image/einstellungsbutton.png" /></a></td>  
-                        <td>eBay</td>        
-                        <td>ARTNRVONEB</td>        
-                        <td>1 Gelisteter Artikel von eBay</td>        
-                        <td>Musterhersteller</td>        
-                        <td>ebay PF ID</td>        
-                        <td> 10,99 €</td>        
-                        <td> 19 %</td>        
-                        <td> GLS | 3,26</td>        
-                        <td> 3,5 kg</td>        
-                        <td> 19,77 €</td>        
-                        <td> 20,55 €</td>        
-                        <td> - 0,78 €</td>        
-                        <td> - 23 %</td>        
-                        <td> -10 Stk.</td>        
-                        <td> Mustergruppe</td>        
-                    </tr>
                 </table>
             </div>
         </div>
-		
+		-->
 	</body>
 </html>
 
 
+
 <?php
-include("../business-logic/mProducts.php");
+// include("../business-logic/mProducts.php");
 ?>
+
 
 
 

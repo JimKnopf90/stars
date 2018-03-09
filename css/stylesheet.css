@@ -19,8 +19,8 @@ header{
 }
 
 .icons{
-    width: 40px;
-    height: 40px;
+    width: 56.63px;
+    height: 47.75px;
     float:left;
     margin-left: 20px;
 }
@@ -57,12 +57,17 @@ nav ul li a{
     color: white;
 }
 
-.inactive:hover{  
+.inactive:hover{
+    color: crimson;
 }
 
 .divider{
     background-color: orange;
     height: 8px;
+}
+
+.background{
+    background-color: lightgray;
 }
 
 /* <<<<<<<<< BIS HIER HIN FÜR JEDE HOMEPAGE */
@@ -73,6 +78,20 @@ nav ul li a{
     padding: 8px 0px 6px 40px;
 }
 
+#content-admin{
+    padding: 8px 0px 6px 40px;
+}
+
+#news{
+    padding: 8px 0px 6px 40px;
+}
+
 .attention{
     color: red;
 }
+
+.info{
+    color: forestgreen;
+}
+
+
