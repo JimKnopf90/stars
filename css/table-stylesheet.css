@@ -1,7 +1,8 @@
 table{
     height: auto;
     border-spacing: 0px;
-    margin-top: 3px;
+    margin-top: 5px;
+    table-layout: fixed;
 }
 
 table tr{
@@ -31,53 +32,213 @@ tr td{
 }
 
 tbody tr:nth-child(even) { 
-  background-color: #ebebeb; 
+  background-color: #efefef;
   color: #000; 
+}
+
+.icon-art-setting{
+    width: 18.75px;
+    height: 23.5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.icon-art-settings{
+    width: 18.75px;
+    height: 23.5px;
+    opacity: 0;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* TH Breite */
 
 #th-plattform{
-    width: 80px;
-    padding-right: 20px;
+    width: 6%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #td-plattform{
-    width: 80px;
-    padding-right: 20px;
+    width: 6%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #th-artikelnummer{
-    width: 100px;
-    padding-right: 20px;
+    width: 6%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #td-artikelnummer{
-    width: 100px;
-    padding-right: 20px;
+    width: 6%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #th-artikelname{
-    width: 350px;
-    padding-right: 20px;
+    width: 20%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #td-artikelname{
-    width: 350px;
-    padding-right: 20px;
+    width: 20%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #th-hersteller{
-    width: 80px;
-    padding-right: 20px;
+    width: 8%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-td-hersteller{
-    width: 80px;
-    padding-right: 20px;
+#td-hersteller{
+    width: 8%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#th-plattform-id{
+    width: 8%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#th-plattform-id{
+    width: 3%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#td-plattform-id{
+    width: 3%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#th-ek-netto{
+    width: 3%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 
+#td-ek-netto{
+    width: 3%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#th-mehrwertsteuer{
+    width: 3%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#td-mehrwertsteuer{
+    width: 3%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#th-versandklasse{
+    width: 5%;
+    padding-left: 10px;
+    padding-right: 10px;    
+}
+
+#td-versandklasse{
+    width: 5%;
+    padding-left: 10px;
+    padding-right: 10px;    
+}
+
+#th-gewicht{
+    width: 3%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#td-gewicht{
+    width: 3%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#th-nullpreis{
+    width: 3%;
+    padding-left: 10px;
+    padding-right: 10px;   
+}
+
+#td-nullpreis{
+    width: 3%;
+    padding-left: 10px;
+    padding-right: 10px;   
+}
+
+#th-vk-preis{
+    width: 5%;
+    padding-left: 10px;
+    padding-right: 10px;    
+}
+
+#td-vk-preis{
+    width: 5%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#th-marge-euro{
+    width: 5%;
+    padding-left: 10px;
+    padding-right: 10px; 
+}
+
+#td-marge-euro{
+    width: 5%;
+    padding-left: 10px;
+    padding-right: 10px; 
+}
+
+#th-marge-prozent{
+    width: 5%;
+    padding-left: 10px;
+    padding-right: 10px;  
+}
+
+#td-marge-prozent{
+    width: 5%;
+    padding-left: 10px;
+    padding-right: 10px;  
+}
+
+#th-bestand{
+    width: 5%;
+    padding-left: 10px;
+    padding-right: 10px;    
+}
+
+#td-bestand{
+    width: 5%;
+    padding-left: 10px;
+    padding-right: 10px;    
+}
+
+#th-ordner{
+    width: 5%;
+    padding-left: 10px;
+    padding-right: 10px; 
+}
+
+#td-ordner{
+    width: 5%;
+    padding-left: 10px;
+    padding-right: 10px; 
+}
 
 
 
