@@ -5,11 +5,14 @@
 		<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
 		<link rel="stylesheet" type="text/css" href="../css/table-stylesheet.css">
 		<link rel="icon" href="../image/icon.jpg">
-        <script type="text/javascript"> 
-		</script>
+        <script src="../js/products.js" type="text/javascript"></script>
+        <script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        
+		
 		<title>StaRs | Produkte</title>
 	</head>
 	<body>
+	<label id="myLabel"></label>
         <header>
             <nav>
                 <a href="mainpage.php"><img id="header-logo" src="../image/verpacking-logo.png" /></a>
@@ -30,7 +33,7 @@
         <table>
             <tr id="table-header">
                 <th ><a href="login.php"><img class="icon-setting" src="../image/icon-settings.png" /></a></th>
-                <th >Plattform</th>
+                <th>Plattform</th>
                 <th>Artikelnummer</th>
                 <th>Artikelname</th>
                 <th>Hersteller</th>
@@ -256,7 +259,7 @@
 
 
 <?php
-// include("../business-logic/mProducts.php");
+ include("../business-logic/mProducts.php");
 ?>
 
 
