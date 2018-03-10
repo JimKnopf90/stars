@@ -30,7 +30,7 @@
             </nav>
         </header>
         <div class="divider"></div>
-        <table>
+       <!-- <table>
             <tr id="table-header">
                 <th ><a href="login.php"><img class="icon-setting" src="../image/icon-settings.png" /></a></th>
                 <th>Plattform</th>
@@ -50,7 +50,7 @@
                 <th>Produktgruppe</th>
             </tr>
             
-            <!-- Hier die Filterfunktion -->
+            <!-- Hier die Filterfunktion
             <tr id="table-filter">
                 <th ><a href="#"><img class="icon-setting" src="../image/icon-settings.png" /></a></th>
                 <th>
@@ -176,84 +176,9 @@
                     </select>
                 </th>
             </tr>
-            <!-- Hier kommt die eigentliche Tabelle -->
-            <tr class="hover">
-                <td ><a href="#"><img class="icon-setting" src="../image/icon-settings.png" /></a></td>
-                <td>Amazon</td>    
-                <td>SKU-VON-AMZN</td>    
-                <td>1 Gelisteter Artikel von Amazon</td>        
-                <td>Musterhersteller</td>        
-                <td> H13RD13A5IN</td>        
-                <td> 10,99 €</td>        
-                <td> 19 %</td>        
-                <td> GLS | 3,26</td>        
-                <td> 3,5 kg</td>        
-                <td> 19,77 €</td>        
-                <td> 20,55 €</td>        
-                <td> - 0,78 €</td>        
-                <td> - 23 %</td>        
-                <td> -10 Stk.</td>        
-                <td> Mustergruppe</td>   
-            </tr> 
-            
-            <tr class="hover">
-                <td ><a href="#"><img class="icon-setting" src="../image/icon-settings.png" /></a></td>
-                <td>Amazon</td>    
-                <td>SKU-VON-AMZN</td>    
-                <td>1 Gelisteter Artikel von Amazon</td>        
-                <td>Musterhersteller</td>        
-                <td> H13RD13A5IN</td>        
-                <td> 10,99 €</td>        
-                <td> 19 %</td>        
-                <td> GLS | 3,26</td>        
-                <td> 3,5 kg</td>        
-                <td> 19,77 €</td>        
-                <td> 20,55 €</td>        
-                <td> - 0,78 €</td>        
-                <td> - 23 %</td>        
-                <td> -10 Stk.</td>        
-                <td> Mustergruppe</td>   
-            </tr>
-            
-            <tr class="hover">
-                <td ><a href="#"><img class="icon-setting" src="../image/icon-settings.png" /></a></td>
-                <td>eBay Verpacking_com</td>    
-                <td>900001-001</td>    
-                <td>1 Gelisteter Artikel von eBay</td>        
-                <td>Hersteller Muster</td>        
-                <td> 546546546546</td>        
-                <td> 14,99 €</td>        
-                <td> 7 %</td>        
-                <td> GLS | 6,08</td>        
-                <td> 14,7 kg</td>        
-                <td> 39,97 €</td>        
-                <td> 34,64</td>        
-                <td> 4,70 €</td>        
-                <td> 6 %</td>        
-                <td> 40 Stk.</td>        
-                <td> eBay Artikel</td>   
-            </tr>
-            
-            <tr class="hover">
-                <td ><a href="#"><img class="icon-setting" src="../image/icon-settings.png" /></a></td>
-                <td>eBay Verpackung-berlin</td>    
-                <td>900001-001</td>    
-                <td>1 Gelisteter Artikel von eBay</td>        
-                <td>Hersteller Muster</td>        
-                <td> 546546546546</td>        
-                <td> 14,99 €</td>        
-                <td> 7 %</td>        
-                <td> GLS | 6,08</td>        
-                <td> 14,7 kg</td>        
-                <td> 39,97 €</td>        
-                <td> 34,64</td>        
-                <td> 4,70 €</td>        
-                <td> 6 %</td>        
-                <td> 40 Stk.</td>        
-                <td> eBay Artikel</td>   
-            </tr>
+            <!-- Hier kommt die eigentliche Tabelle
         </table>
-        <div class="divider-end"></div>
+        <div class="divider-end"></div> -->
 	</body>
 </html>
 

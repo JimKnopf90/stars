@@ -1,8 +1,11 @@
 table{
-    width: 100%;
     height: auto;
     border-spacing: 0px;
     margin-top: 3px;
+}
+
+table tr{
+    height: 10px;
 }
 
 tr th{
@@ -11,15 +14,14 @@ tr th{
 }
 
 tr td{
-    width: 200px;
     height: 50px;
     border-bottom: solid 1px grey;
 }
 
 .hover:hover{
-    background-color: lightcoral;
+    background-color: #ffc354;
     cursor: pointer;
-    color: darkred;
+    color: white;
 }
 
 .icon-setting{
@@ -29,6 +31,70 @@ tr td{
 }
 
 tbody tr:nth-child(even) { 
-  background-color: #F2F2F2; 
+  background-color: #ebebeb; 
   color: #000; 
 }
+
+/* TH Breite */
+
+#th-plattform{
+    width: 80px;
+    padding-right: 20px;
+}
+
+#td-plattform{
+    width: 80px;
+    padding-right: 20px;
+}
+
+#th-artikelnummer{
+    width: 100px;
+    padding-right: 20px;
+}
+
+#td-artikelnummer{
+    width: 100px;
+    padding-right: 20px;
+}
+
+#th-artikelname{
+    width: 350px;
+    padding-right: 20px;
+}
+
+#td-artikelname{
+    width: 350px;
+    padding-right: 20px;
+}
+
+#th-hersteller{
+    width: 80px;
+    padding-right: 20px;
+}
+
+td-hersteller{
+    width: 80px;
+    padding-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
