@@ -20,19 +20,19 @@
     
    
         //Table beginn
-        echo "<table border='1'";
+        echo "<table>";
         
         // Headline
-        echo "<tr><td>Plattform</td>";
-        echo "<td>Artikelnummer</td>";
-        echo "<td>Artikelname</td>";
-        echo "<td>Hersteller</td>";
-        echo "<td>ASIN</td>";
-        echo "<td>GesamtEK-Netto</td></tr>";
+        echo "<tr><th>Plattform</th>";
+        echo "<th>Artikelnummer</th>";
+        echo "<th>Artikelname</th>";
+        echo "<th>Hersteller</th>";
+        echo "<th>ASIN</th>";
+        echo "<th>GesamtEK-Netto</th></tr>";
         
         foreach ($dbh->query($sql) as $row) {
             
-            echo "<tr>";
+            echo "<tr class='hover' >";
             echo "<td>" .$row["Plattform"] . "</td>";
             echo "<td>" .$row["Artikelnummer"] . "</td>";
             echo "<td>" .$row["Bezeichnung"] . "</td>";

@@ -5,12 +5,12 @@ table{
     margin-top: 3px;
 }
 
-table tr th{
+tr th{
     text-align: left;
     font-size: 18px;
 }
 
-table tr td{
+tr td{
     width: 200px;
     height: 50px;
     border-bottom: solid 1px grey;
@@ -28,4 +28,7 @@ table tr td{
     margin-right: auto;
 }
 
-.
+tbody tr:nth-child(even) { 
+  background-color: #F2F2F2; 
+  color: #000; 
+}
