@@ -7,6 +7,8 @@
 		<link rel="icon" href="../image/icon.jpg">
         <script src="../js/products.js" type="text/javascript"></script>
         <script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script>
+         <script src="../js/bootstrap.js" type="text/javascript"></script>
+        
         
 		
 		<title>StaRs | Produkte</title>

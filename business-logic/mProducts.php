@@ -5,7 +5,20 @@
     
     $dbh = new PDO ("sqlsrv:Server=$hostname;Database=$dbname","$dbusername","$pw");
     
-    $sql = "SELECT DISTINCT TOP (15)'Amazon' As Plattform, AVAL.kArtikel, AVAL.kStueckliste, AVAL.Artikelnummer, AVAL.Bezeichnung, AVAL.EAN, AVAL.ASIN, AVAL.PreisAmazon, AVAL.Hersteller, 
+    //Paging
+    $limit = 20;
+    
+    
+    if (isset($_GET["page"])) { 
+        $page  = $_GET["page"];       
+    } else { 
+        $page=1;        
+    };    
+    
+     $start_from = ($page-1) * $limit;   
+     
+    
+    $sql = "SELECT DISTINCT 'Amazon' As Plattform, AVAL.kArtikel, AVAL.kStueckliste, AVAL.Artikelnummer, AVAL.Bezeichnung, AVAL.EAN, AVAL.ASIN, AVAL.PreisAmazon, AVAL.Hersteller, 
 				AVAL.IstStuecklistenkomponente, AVAL.VerkaufspreisBrutto, EK.GesamtEkNetto
             FROM            ArtikelVerwaltung.vArtikelliste AS AVAL INNER JOIN
                 dbo.tkategorieartikel AS KA ON AVAL.kArtikelForKategorieArtikel = KA.kArtikel LEFT OUTER JOIN
@@ -15,9 +28,9 @@
             WHERE			(KA.kKategorie IN (SELECT        kKategorie
 								   FROM          dbo.tkategorie
                                    WHERE        (kOberKategorie = 41))) AND (1 = AVAL.Zustand)
-            ORDER BY AVAL.Bezeichnung, AVAL.kArtikel";
+            ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $limit ROWS ONLY";
 
-    
+  
    
         //Table beginn
         echo "<table>";
@@ -66,6 +79,24 @@
         
         //Table conclusion
         echo "</table>";
+        
+        $sql = "SELECT DISTINCT COUNT(Artikelnummer)
+                FROM ArtikelVerwaltung.vArtikelliste AS AVAL INNER JOIN
+                dbo.tkategorieartikel AS KA ON AVAL.kArtikelForKategorieArtikel = KA.kArtikel
+                WHERE (KA.kKategorie IN (SELECT kKategorie FROM dbo.tkategorie
+                WHERE (kOberKategorie = 41))) AND (1 = AVAL.Zustand)";
+
+        $count = $dbh->query($sql);
+        
+        $total_records = $count->fetchColumn();
+        $total_pages = ceil($total_records / $limit);  
+        
+        $pagLink = "<div class='pagination'>";
+        
+        for ($i=1; $i<=$total_pages; $i++) {
+            $pagLink .= "<a href='products.php?page=".$i."'>".$i."</a>";
+        };
+        echo $pagLink . "</div>";  
 
 
 
