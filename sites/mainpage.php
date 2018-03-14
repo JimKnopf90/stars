@@ -2,6 +2,8 @@
 session_start();
 if(isset($_SESSION["username"])) {     
     ?>
+
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">

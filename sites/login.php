@@ -20,11 +20,11 @@ $_SESSION = array();
             
             <form action="../business-logic/mLogin.php" method="post">
                 <div id="form-input-user">
-                    <input type="text" name="username" placeholder="Benutzername">
+                    <input type="text" name="username" placeholder="Benutzername" required="required">
                 </div>
                 
                 <div class="form-input">
-                    <input type="password" name="password" placeholder="Passwort">
+                    <input type="password" name="password" placeholder="Passwort" required="required">
                 </div>
     
                 <input type="submit" value="Einloggen" class="btn btn-primary btn-lg outline">

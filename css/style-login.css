@@ -4,8 +4,11 @@
     text-align: center;
     background-color: rgba(254, 180, 22, 1);
     border-radius: 20px;
-    margin: 0 auto;
-    margin-top: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
 .container img{
@@ -126,7 +129,8 @@ input{
 
 /* <<<<<<<<<< Login fehlgeschlagen >>>>>>>>>> */
 
+
 span{
-    margin-bottom: 5px;
-    color: red;
+    font-size: 20px;
+    font-weight: bolder;
 }

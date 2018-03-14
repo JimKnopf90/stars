@@ -1,36 +1,19 @@
-<?php
-session_start();
-
-session_destroy();
-$_SESSION = array();
-?>
-
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
+        <meta http-equiv="refresh" content="5; URL=login.php">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="../css/style-login.css">
 		<link rel="icon" href="../image/icon.jpg">
-		<title>StaRs | Login</title>
+		<title>StaRs | Login fehlgeschlagen</title>
 	</head>
 	<body>
         <div class="container">
-            <img src="../image/icon-big-user.png">
-            
-            <form action="../business-logic/mLogin.php" method="post">
-                <div id="form-input-user">
-                    <span> Login fehlgeschlagen. Bitte die Daten korrekt eingeben.</span>
-                    <input type="text" name="username" placeholder="Benutzernamen">
-                </div>
-                
-                <div class="form-input">
-                    <input type="password" name="password" placeholder="Passwort">
-                </div>
-                
-                <input type="submit" name="submit" value="Einloggen">
-                
-            </form>
+            <div id="failed-login">
+                   <p><span>Sie sind für diesen Bereich nicht autorisiert.</span></p>   
+                   <p><span>Sie werden automatisch weitergeleitet...</span></p>
+            </div>
         </div>    
     </body>
 </html>
