@@ -18,17 +18,22 @@
      $start_from = ($page-1) * $limit;   
      
     
-    $sql = "SELECT DISTINCT 'Amazon' As Plattform, AVAL.kArtikel, AVAL.kStueckliste, AVAL.Artikelnummer, AVAL.Bezeichnung, AVAL.EAN, AVAL.ASIN, AVAL.PreisAmazon, AVAL.Hersteller, 
-				AVAL.IstStuecklistenkomponente, AVAL.VerkaufspreisBrutto, EK.GesamtEkNetto
-            FROM            ArtikelVerwaltung.vArtikelliste AS AVAL INNER JOIN
-                dbo.tkategorieartikel AS KA ON AVAL.kArtikelForKategorieArtikel = KA.kArtikel LEFT OUTER JOIN
+    $sql = "SELECT DISTINCT 'Amazon' AS Plattform, AVAL.kArtikel, AVAL.kStueckliste, AVAL.Artikelnummer, AVAL.Bezeichnung, AVAL.EAN, AVAL.ASIN, AVAL.PreisAmazon, AVAL.Hersteller, AVAL.IstStuecklistenkomponente, 
+                         AVAL.VerkaufspreisBrutto, EK.GesamtEkNetto, Steuer.fSteuersatz, dbo.tVersandklasse.cName, AVAL.BestandGesamt, AVAL.Versandgewicht
+FROM            ArtikelVerwaltung.vArtikelliste AS AVAL INNER JOIN
+                         dbo.tkategorieartikel AS KA ON AVAL.kArtikelForKategorieArtikel = KA.kArtikel INNER JOIN
+                         dbo.tArtikel AS Art ON Art.kArtikel = AVAL.kArtikel INNER JOIN
+                         dbo.tSteuersatz AS Steuer ON Art.kSteuerklasse = Steuer.kSteuersatz INNER JOIN
+                         dbo.tVersandklasse ON Art.kVersandklasse = dbo.tVersandklasse.kVersandklasse LEFT OUTER JOIN
                              (SELECT        dbo.tStueckliste.kStueckliste, SUM(dbo.tliefartikel.fEKNetto * dbo.tStueckliste.fAnzahl) AS GesamtEkNetto
-                               FROM         dbo.tStueckliste INNER JOIN dbo.tliefartikel ON dbo.tStueckliste.kArtikel = dbo.tliefartikel.tArtikel_kArtikel
+                               FROM            dbo.tStueckliste INNER JOIN
+                                                         dbo.tliefartikel ON dbo.tStueckliste.kArtikel = dbo.tliefartikel.tArtikel_kArtikel
                                GROUP BY dbo.tStueckliste.kStueckliste) AS EK ON EK.kStueckliste = AVAL.kStueckliste
-            WHERE			(KA.kKategorie IN (SELECT        kKategorie
-								   FROM          dbo.tkategorie
-                                   WHERE        (kOberKategorie = 41))) AND (1 = AVAL.Zustand)
-            ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $limit ROWS ONLY";
+WHERE        (KA.kKategorie IN
+                             (SELECT        kKategorie
+                               FROM            dbo.tkategorie
+                               WHERE        (kOberKategorie = 41))) AND (1 = AVAL.Zustand)
+ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $limit ROWS ONLY";
 
   
    
@@ -64,15 +69,15 @@
             // echo "<td id='td-hersteller'>" .$row["Hersteller"] . "</td>";
             echo "<td id='td-hersteller'> Brennenstuhl </td>";
             echo "<td id='td-plattform-id'>" .$row["ASIN"] . "</td>";
-            echo "<td id='td-ek-netto'>" .$row["GesamtEkNetto"] . "</td>";
-            echo "<td id='td-mehrwertsteuer'> 19% </td>";
-            echo "<td id='td-versandklasse'> GLS | 3,26 € </td>";
-            echo "<td id='td-gewicht'> 7,5 kg </td>";
+            echo "<td id='td-ek-netto'>" . floatval($row["GesamtEkNetto"]) . "</td>";
+            echo "<td id='td-mehrwertsteuer'>" . floatval($row["fSteuersatz"]) . "</td>";
+            echo "<td id='td-versandklasse'>" .$row["cName"] . "</td>";
+            echo "<td id='td-gewicht'>" . floatval($row["Versandgewicht"]) . "</td>";
             echo "<td id='td-nullpreis'> 14,44 €</td>";
             echo "<td id='td-vk-preis'> 29,95 €</td>";
             echo "<td id='td-marge-euro'> 1,22 €</td>";
             echo "<td id='td-marge-prozent'> 7 %</td>";
-            echo "<td id='td-bestand'> 21 </td>";
+            echo "<td id='td-bestand'>" . floatval($row["BestandGesamt"]) . "</td>";
             echo "<td id='td-ordner'> Faltkartons </td>";
             echo "</tr>";
         }
