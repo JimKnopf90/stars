@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="../css/admin-stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="../css/admin-table-stylesheet.css">
 		<link rel="icon" href="../admin-image/stars-logo.png">
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jequery.min.js">
         </script>
@@ -22,13 +23,13 @@
                 <ul>                
                     <li>
                         <button type="button" class="active">
-                            Anlegen
+                            Bearbeiten
                         </button>
                     </li>
                     
                     <li>
                         <button type="button" class="inactive">
-                            Bearbeiten
+                            Hinzufügen
                         </button>
                     </li>
                     
@@ -44,16 +45,16 @@
         <div class="sidebar">
             <ul>                                
                 <li>
-                    <a class="btnSidebar" href="#">
-                        <button type="button" class="active">
+                    <a class="btnSidebar" href="admin-startseite.php">
+                        <button type="button" class="inactive">
                             Benutzer
                         </button>
                     </a>
                 </li>
 
                 <li>
-                    <a class="btnSidebar" href="versandklassen.php">
-                        <button type="button" class="inactive">
+                    <a class="btnSidebar" href="#">
+                        <button type="button" class="active">
                             Versandklassen
                         </button>
                     </a>
