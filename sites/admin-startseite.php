@@ -10,39 +10,42 @@
 		<title>StaRs | Adminbereich</title>
 	</head>
 	<body>
-        <!-- <header>
-            <div id="header-button">
-            <ul>
-                    <li><img class="stars-logo" src="../admin-image/stars-logo.png"></li>
-                    <li>
-                        <button type="button" class="active">
-                            User Bearbeiten
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="header-menu">
-                            Rechte verwalten
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </header> -->
         <header>
-            <img id="stars-logo" src="../admin-image/stars-logo.png" />
+            <!-- <div class="logo">
+                <a href="admin-startseite.php">
+                    <img id="stars-logo" src="../admin-image/stars-logo.png" />
+                </a>   
+            </div> -->
+            
+            <div class="nav-bar">
+                
+                <ul>                
+                    <li>
+                        <button type="button" class="active">
+                            Anlegen
+                        </button>
+                    </li>
+                    
+                    <li>
+                        <button type="button" class="inactive">
+                            Bearbeiten
+                        </button>
+                    </li>
+                    
+                    <li>
+                        <button type="button" class="inactive">
+                            Rechte
+                        </button>
+                    </li>
+                </ul>    
+            </div>
         </header>
+        
         <div class="sidebar">
-            <ul>                
+            <ul>                                
                 <li>
                     <a class="btnSidebar" href="#">
                         <button type="button" class="active">
-                            Dashboard
-                        </button>
-                    </a>
-                </li>
-                
-                <li>
-                    <a class="btnSidebar" href="#">
-                        <button type="button" class="inactive">
                             Benutzer
                         </button>
                     </a>
@@ -87,9 +90,19 @@
                         </button>
                     </a>
                 </li>
+                
+                <li>
+                    <a class="btnSidebar" href="admin-login.php">
+                        <button type="button" class="logout" >
+                            Logout
+                        </button>
+                    </a>
+                </li>
             </ul>
         </div>  
-        
+        <div class="content">
+            
+        </div>
         <!-- <img class="btn" src="../admin-image/homebutton.png" /> -->
         
     </body>

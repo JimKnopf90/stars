@@ -7,11 +7,27 @@ body, html{
 }
 
 #stars-logo{
-    width: 115px;
-    height: 115px;
-    margin-left: 60px;
+    width: 100px;
+    height: 100px;
+    margin-left: 75px;
+    margin-right: 75px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.active{
+    background: #0a52ca;
+    cursor: pointer;
+    width: 200px;
+    height: 60px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Acme', sans-serif;
+    color: white;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    box-shadow: inset 0px -5px 45px rgba(100,100,100,0.2);;    
 }
 
 .inactive{
@@ -43,9 +59,42 @@ body, html{
     box-shadow: inset 0px -5px 45px rgba(100,100,100,0.2);
 }
 
-.active{
-    background: #0a52ca;
-    cursor: pointer;
+header{
+    background: #292931;
+}
+
+.nav-bar ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    margin-left: 250px;
+    padding-top: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.nav-bar ul li{
+    margin: 0;
+    display: inline;
+    padding: 0;
+}
+
+.logout{
+    width: 200px;
+    height: 60px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Acme', sans-serif;
+    color: white;
+    background: rgba(0,0,0,0.3);
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    box-shadow: inset 0px -5px 45px rgba(100,100,100,0.2);
+}
+
+.logout:hover{
+    background: #c40e0e;
     width: 200px;
     height: 60px;
     padding: 10px;
@@ -55,17 +104,17 @@ body, html{
     outline: none;
     border: 1px solid rgba(0,0,0,0.3);
     border-radius: 5px;
-    box-shadow: inset 0px -5px 45px rgba(100,100,100,0.2);;    
+    box-shadow: inset 0px -5px 45px rgba(100,100,100,0.2);
+    cursor: pointer;
 }
 
 .sidebar{
     float: left;
-    background: #838390;
+    background: #4a4a56;
     width: 250px;
     height: 100%;
     overflow: hidden;
 }
-
 
 .sidebar ul{
     margin: 0;
@@ -80,6 +129,12 @@ body, html{
     margin-bottom: 20px;
 }
 
+.content{
+    background: #9d9da3;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
 
 
 
