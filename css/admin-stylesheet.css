@@ -1,52 +1,85 @@
-.stars-logo{
-    margin: 0;
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-body{
+body, html{
     background: #292931;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.login{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#stars-logo{
+    width: 115px;
+    height: 115px;
+    margin-left: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.login h1{
-    text-align: center;
-    color: white;
-    font-family: sans-serif;
-    font-size: 35px;
-}
-
-input{
-    display: block;
-    width: 350px;
-    height: 40px;
+.inactive{
+    width: 200px;
+    height: 60px;
     padding: 10px;
-    font-size: 14px;
-    font-family: sans-serif;
+    font-size: 18px;
+    font-family: 'Acme', sans-serif;
     color: white;
     background: rgba(0,0,0,0.3);
     outline: none;
     border: 1px solid rgba(0,0,0,0.3);
     border-radius: 5px;
     box-shadow: inset 0px -5px 45px rgba(100,100,100,0.2);
-    margin-bottom: 10px;
 }
 
-.login #btn-login{
+.inactive:hover{
     background: #0a52ca;
+    cursor: pointer;
+    width: 200px;
+    height: 60px;
+    padding: 10px;
     font-size: 18px;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 20px;
+    font-family: 'Acme', sans-serif;
+    color: white;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    box-shadow: inset 0px -5px 45px rgba(100,100,100,0.2);
 }
+
+.active{
+    background: #0a52ca;
+    cursor: pointer;
+    width: 200px;
+    height: 60px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Acme', sans-serif;
+    color: white;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    box-shadow: inset 0px -5px 45px rgba(100,100,100,0.2);;    
+}
+
+.sidebar{
+    float: left;
+    background: #838390;
+    width: 250px;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.sidebar ul{
+    margin: 0;
+    padding: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(10%, 5%);
+}
+
+.sidebar ul li{
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+
+
 
