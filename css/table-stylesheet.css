@@ -3,6 +3,7 @@ table{
     border-spacing: 0px;
     margin-top: 5px;
     table-layout: fixed;
+       
 }
 
 table tr{
@@ -29,6 +30,13 @@ tr td{
     width: 20px;
     height: 20px;
     margin-right: auto;
+}
+
+tbody{
+    display: block;
+    height: 900px;
+    overflow: auto;
+    width: 100%;
 }
 
 tbody tr:nth-child(even) { 
@@ -65,10 +73,20 @@ tbody tr:nth-child(even) {
     padding-right: 10px;
 }
 
+#txt-plattform{
+    width: 70px;
+    margin-bottom: 10px;
+}
+
 #th-artikelnummer{
     width: 6%;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+#txt-artikelnummer{
+    width: 120px; 
+    margin-bottom: 10px;
 }
 
 #td-artikelnummer{
@@ -89,6 +107,11 @@ tbody tr:nth-child(even) {
     padding-right: 10px;
 }
 
+#txt-artikelname{
+    width: 240px; 
+    margin-bottom: 10px;
+}
+
 #th-hersteller{
     width: 8%;
     padding-left: 10px;
@@ -100,6 +123,12 @@ tbody tr:nth-child(even) {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+#txt-hersteller{
+    width: 100px;
+    margin-bottom: 10px;
+}
+
 
 #th-plattform-id{
     width: 8%;
@@ -119,12 +148,21 @@ tbody tr:nth-child(even) {
     padding-right: 10px;
 }
 
+#txt-plattformid{
+    width: 100px;
+    margin-bottom: 10px;    
+}
+
 #th-ek-netto{
     width: 3%;
     padding-left: 10px;
     padding-right: 10px;
 }
 
+#txt-eknetto{
+    width: 80px;
+    margin-bottom: 10px;    
+}
 
 #td-ek-netto{
     width: 3%;
@@ -136,6 +174,11 @@ tbody tr:nth-child(even) {
     width: 3%;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+#txt-mwst{
+    width: 30px;
+    margin-bottom: 10px;
 }
 
 #td-mehrwertsteuer{
@@ -156,6 +199,11 @@ tbody tr:nth-child(even) {
     padding-right: 10px;    
 }
 
+#txt-versandklasse{
+    width: 100px;
+    margin-bottom: 10px;
+}
+
 #th-gewicht{
     width: 3%;
     padding-left: 10px;
@@ -166,6 +214,11 @@ tbody tr:nth-child(even) {
     width: 3%;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+#txt-gewicht{
+    width: 50px;
+    margin-bottom: 10px;
 }
 
 #th-nullpreis{
@@ -180,6 +233,11 @@ tbody tr:nth-child(even) {
     padding-right: 10px;   
 }
 
+#txt-nullpreis{
+    width: 60px;
+    margin-bottom: 10px;
+}
+
 #th-vk-preis{
     width: 5%;
     padding-left: 10px;
@@ -190,6 +248,11 @@ tbody tr:nth-child(even) {
     width: 5%;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+#txt-vkpreis{
+    width: 70px;
+    margin-bottom: 10px;
 }
 
 #th-marge-euro{
@@ -204,6 +267,11 @@ tbody tr:nth-child(even) {
     padding-right: 10px; 
 }
 
+#txt-margeeuro{
+    width: 70px;
+    margin-bottom: 10px;
+}
+
 #th-marge-prozent{
     width: 5%;
     padding-left: 10px;
@@ -214,6 +282,11 @@ tbody tr:nth-child(even) {
     width: 5%;
     padding-left: 10px;
     padding-right: 10px;  
+}
+
+#txt-margeprozent{
+    width: 70px;
+    margin-bottom: 10px;
 }
 
 #th-bestand{
@@ -228,6 +301,11 @@ tbody tr:nth-child(even) {
     padding-right: 10px;    
 }
 
+#txt-bestand{
+width: 60px;
+    margin-bottom: 10px;
+}
+
 #th-ordner{
     width: 5%;
     padding-left: 10px;
@@ -239,6 +317,41 @@ tbody tr:nth-child(even) {
     padding-left: 10px;
     padding-right: 10px; 
 }
+
+#txt-ordner{
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+#paging{
+	font-size: 16px;
+    margin: 10px;
+    text-align: center;
+}
+
+.pagingElement {        
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    border: 1px solid Grey;
+    padding-top: 10px;
+    color: Orange;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pagingElement:hover {        
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    border: 1px solid Grey;
+    background: Orange;
+    padding-top: 10px;
+    color: Grey;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 
 
 
