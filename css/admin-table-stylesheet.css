@@ -1,0 +1,20 @@
+table{
+    text-align: left;
+    background: white;
+    border: solid 1px grey;
+    margin-left: 300px;
+    margin-top: 100px;
+}
+
+table th{
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+table td{
+    text-align: center;
+}
+
+table tr{
+    padding-right: 100px;
+}

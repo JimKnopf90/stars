@@ -8,6 +8,13 @@
 		<link rel="icon" href="../admin-image/stars-logo.png">
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jequery.min.js">
         </script>
+        <script>
+	function kb_source_2_target() {
+		$.get('source.html', function(data) {
+			$('#target').html(data);	
+		})
+	}
+</script>
 		<title>StaRs | Adminbereich</title>
 	</head>
 	<body>
@@ -23,21 +30,16 @@
                 <ul>                
                     <li>
                         <button type="button" class="active">
+                            Übersicht
+                        </button>
+                    </li>
+                    
+                    <li>
+                        <button type="button" class="inactive">
                             Bearbeiten
                         </button>
                     </li>
                     
-                    <li>
-                        <button type="button" class="inactive">
-                            Hinzufügen
-                        </button>
-                    </li>
-                    
-                    <li>
-                        <button type="button" class="inactive">
-                            Rechte
-                        </button>
-                    </li>
                 </ul>    
             </div>
         </header>
@@ -102,8 +104,46 @@
             </ul>
         </div>  
         <div class="content">
-            
+            <table>
+                <tr>
+                    <th>Versandklasse</th>
+                    <th>Kosten</th>
+                    <th>Maximale Maße (L x B x H)</th>
+                    <th>Maximales Gewicht</th>
+                </tr>
+                <tr>
+                    <td>Versandklasse X</td>
+                    <td>
+                        <input class="editable-input" type="text" name="preis" />
+                    </td>
+                    <td>350 x 250 x 20 mm</td>
+                    <td>0,500 kg</td>
+                    <td>
+                        <button class="btnSafe" type="submit" name="speichern" value="safe">
+                            Speichern
+                        </button>
+                    </td>
+                </tr
+                
+                <tr>
+                    <td>Versandklasse X</td>
+                    <td>
+                        <input class="editable-input" type="text" name="preis" />
+                    </td>
+                    <td>350 x 250 x 20 mm</td>
+                    <td>1,000 kg</td>
+                    <td>
+                        <button class="btnSafe" type="submit" name="speichern" value="safe">
+                            Speichern
+                        </button>
+                    </td>
+                </tr> 
+                
+                
+            </table>    
         </div>
+        
+        
         <!-- <img class="btn" src="../admin-image/homebutton.png" /> -->
         
     </body>
