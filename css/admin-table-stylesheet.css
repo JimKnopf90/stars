@@ -1,20 +1,55 @@
 table{
-    text-align: left;
-    background: white;
-    border: solid 1px grey;
-    margin-left: 300px;
-    margin-top: 100px;
+    border-spacing: 0;
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
 }
 
 table th{
-    font-size: 22px;
-    font-weight: bolder;
+    font-size: 30px;
 }
 
 table td{
     text-align: center;
+    font-size: 18px;
+    border-bottom: solid 1px lightgray;
 }
 
-table tr{
-    padding-right: 100px;
+.table-tr-td:hover{
+    background: #0a52ca;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.versandklasse{
+    width: 200px;
+    height: 30px;
+    margin: 0;
+    padding-right: 10px;
+}
+
+.versandkosten{
+    width: 200px;
+    height: 30px;
+    margin: 0;
+    padding-right: 10px;
+}
+
+.gewicht{
+    width: 200px;
+    height: 30px;
+    margin: 0;
+    padding-right: 10px;
+}
+
+.masse{
+    width: 200px;
+    height: 30px;
+    margin: 0;
+    padding-right: 10px;
 }

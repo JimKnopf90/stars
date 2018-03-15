@@ -30,16 +30,9 @@
                 <ul>                
                     <li>
                         <button type="button" class="active">
-                            Übersicht
-                        </button>
-                    </li>
-                    
-                    <li>
-                        <button type="button" class="inactive">
                             Bearbeiten
                         </button>
-                    </li>
-                    
+                    </li>                    
                 </ul>    
             </div>
         </header>
@@ -104,41 +97,34 @@
             </ul>
         </div>  
         <div class="content">
-            <table>
-                <tr>
-                    <th>Versandklasse</th>
-                    <th>Kosten</th>
-                    <th>Maximale Maße (L x B x H)</th>
-                    <th>Maximales Gewicht</th>
+            <table id="table-versandklassen">
+                <tr id="table-header">
+                    <th class="versandklasse">Versandklasse</th>
+                    <th class="versandkosten">Versandkosten</th>
+                    <th class="gewicht">max. Gewicht</th>
+                    <th class="masse">max. Maße</th> <!-- zur übersicht -->
                 </tr>
-                <tr>
-                    <td>Versandklasse X</td>
-                    <td>
-                        <input class="editable-input" type="text" name="preis" />
-                    </td>
-                    <td>350 x 250 x 20 mm</td>
-                    <td>0,500 kg</td>
-                    <td>
-                        <button class="btnSafe" type="submit" name="speichern" value="safe">
-                            Speichern
-                        </button>
-                    </td>
-                </tr
                 
-                <tr>
-                    <td>Versandklasse X</td>
-                    <td>
-                        <input class="editable-input" type="text" name="preis" />
-                    </td>
-                    <td>350 x 250 x 20 mm</td>
-                    <td>1,000 kg</td>
-                    <td>
-                        <button class="btnSafe" type="submit" name="speichern" value="safe">
-                            Speichern
-                        </button>
-                    </td>
-                </tr> 
+                <tr class="table-tr-td">
+                    <td class="versandklasse">Versandklasse X</td>
+                    <td class="versandkosten">1,20 €</td>
+                    <td class="gewicht">0,500 kg</td>
+                    <td class="masse">300 x 50 x 50 mm</td> <!-- zur übersicht -->
+                </tr>
                 
+                <tr class="table-tr-td">
+                    <td class="versandklasse">Versandklasse Y</td>
+                    <td class="versandkosten">2,15 €</td>
+                    <td class="gewicht">1,000 kg</td>
+                    <td class="masse">350 x 210 x 20 mm</td> <!-- zur übersicht -->
+                </tr>
+                
+                <tr class="table-tr-td">
+                    <td class="versandklasse">Fester Wert</td>
+                    <td class="versandkosten">editierbar</td>
+                    <td class="gewicht">editierbar</td>
+                    <td class="masse">editierbar</td> <!-- zur übersicht -->
+                </tr>
                 
             </table>    
         </div>
