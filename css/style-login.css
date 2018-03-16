@@ -8,6 +8,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border: solid 5px orange;
 
 }
 
@@ -19,7 +20,8 @@
 }
 
 ::-webkit-input-placeholder {
-    color: black;
+    color: lightgray;
+    font-weight: bold;
 }
  
 :-moz-placeholder {
@@ -42,8 +44,22 @@ input{
     margin-bottom: 20px;
     background-color: white;
     padding-left: 10px;
-    border: solid 2px black;
-    
+    border: solid 5px orange;   
 }
 
+.btnLogin{
+    width: 300px;
+    height: 50px;
+    background: transparent;
+    border-radius: 5px;
+    border: solid 1px black;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.btnLogin:hover{
+    background: red;
+    color: white;
+    cursor: pointer;
+}
 

@@ -27,7 +27,7 @@ $_SESSION = array();
                     <input type="password" name="password" placeholder="Passwort" required="required">
                 </div>
     
-                <input type="submit" value="Einloggen" class="btn btn-primary btn-lg outline">
+                <button type="submit" value="Einloggen" class="btnLogin">Einloggen</button>
                 
             </form>
         </div>    
