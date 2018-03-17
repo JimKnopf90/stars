@@ -8,30 +8,31 @@
 		<link rel="icon" href="../admin-image/stars-logo.png">
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jequery.min.js">
         </script>
-        <script>
-	function kb_source_2_target() {
-		$.get('source.html', function(data) {
-			$('#target').html(data);	
-		})
-	}
-</script>
 		<title>StaRs | Adminbereich</title>
 	</head>
 	<body>
         <header>
-        <?php  include("../business-logic/mVersandklasse.php"); ?>
-            <!-- <div class="logo">
-                <a href="admin-startseite.php">
-                    <img id="stars-logo" src="../admin-image/stars-logo.png" />
-                </a>   
-            </div> -->
-            
+            <a href="admin-startseite.php">
+                <img id="stars-logo" src="../admin-image/stars-logo.png" />
+            </a>
             <div class="nav-bar">
                 
                 <ul>                
                     <li>
                         <button type="button" class="active">
+                            Übersicht
+                        </button>
+                    </li>
+                    
+                    <li>
+                        <button type="button" class="inactive">
                             Bearbeiten
+                        </button>
+                    </li>
+                    
+                    <li>
+                        <button type="button" class="inactive">
+                            Hinzufügen
                         </button>
                     </li>                    
                 </ul>    
@@ -40,6 +41,14 @@
         
         <div class="sidebar">
             <ul>                                
+                <li>
+                    <a class="btnSidebar" href="admin-startseite.php">
+                        <button type="button" class="inactive">
+                            Dashboard
+                        </button>
+                    </a>
+                </li>
+                
                 <li>
                     <a class="btnSidebar" href="admin-startseite.php">
                         <button type="button" class="inactive">
