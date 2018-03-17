@@ -39,12 +39,12 @@ ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $lim
   
    
         //Table beginn
-        echo "<table>";
+        echo "<table><thead>";
         
        
         // Headline
         
-        echo "<tr><th><a href='login.php'><img class='icon-art-settings' src='../image/icon-art-setting.png' /></a></th>";
+        echo "<tr><th id='th-edit'><a href='login.php'><img class='icon-art-settings' src='../image/icon-art-setting.png' /></a></th>";
         echo "<th id='th-plattform'>Plattform <br><input id='txt-plattform'></th>";
         echo "<th id='th-artikelnummer'>Artikelnummer <br><form><span><input id='txt-artikelnummer'></span></form></th>";
         echo "<th id='th-artikelname'>Artikelname <br><input id='txt-artikelname'></th>";
@@ -59,13 +59,13 @@ ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $lim
         echo "<th id='th-marge-euro'>Marge € <br><input id='txt-margeeuro'></th>";
         echo "<th id='th-marge-prozent'>Marge % <br><input id='txt-margeprozent'></th>";
         echo "<th id='th-bestand'>Bestand <br><input id='txt-bestand'></th>";
-        echo "<th id='th-ordner'>Ordner <br><input id='txt-ordner'></th></tr>";
+        echo "<th id='th-ordner'>Ordner <br><input id='txt-ordner'></th></tr></theas>";
        
-        
+        echo "<tbody>";
         foreach ($dbh->query($sql) as $row) {
             
             echo "<tr class='hover' >";
-            echo "<td> <a href='login.php'><img class='icon-art-setting' src='../image/icon-art-setting.png' /></a></td>";
+            echo "<td id='td-edit'> <a href='login.php'><img class='icon-art-setting' src='../image/icon-art-setting.png' /></a></td>";
             echo "<td id='td-plattform'>" .$row["Plattform"] . "</td>";
             echo "<td id='td-artikelnummer'>" .$row["Artikelnummer"] . "</td>";
             echo "<td id='td-artikelname'>" .$row["Bezeichnung"] . "</td>";
@@ -84,9 +84,8 @@ ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $lim
             echo "</tr>";
         }
         
-        //Table conclusion
-       
-      
+        //Table conclusion       
+        echo "</tbody>";
         echo "</table>";
         
         $sql = "SELECT DISTINCT COUNT(Artikelnummer)

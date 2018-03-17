@@ -4,11 +4,11 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
-		<link rel="stylesheet" type="text/css" href="../css/table-stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="../css/table-stylesheet.css">		
 		<link rel="icon" href="../image/icon.jpg">
         <script src="../js/products.js" type="text/javascript"></script>
         <script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script>
-         <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
         
         
 		
