@@ -40,12 +40,13 @@ ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $lim
    
         //Table beginn
         echo "<table>";
-        echo "<form>";
+        
+       
         // Headline
         
         echo "<tr><th><a href='login.php'><img class='icon-art-settings' src='../image/icon-art-setting.png' /></a></th>";
         echo "<th id='th-plattform'>Plattform <br><input id='txt-plattform'></th>";
-        echo "<th id='th-artikelnummer'>Artikelnummer <br><input id='txt-artikelnummer'></th>";
+        echo "<th id='th-artikelnummer'>Artikelnummer <br><form><span><input id='txt-artikelnummer'></span></form></th>";
         echo "<th id='th-artikelname'>Artikelname <br><input id='txt-artikelname'></th>";
         echo "<th id='th-hersteller'>Hersteller <br><input id='txt-hersteller'></th>";
         echo "<th id='th-plattform-id'>Plattform-ID <br><input id='txt-plattformid'></th>";
@@ -59,7 +60,7 @@ ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $lim
         echo "<th id='th-marge-prozent'>Marge % <br><input id='txt-margeprozent'></th>";
         echo "<th id='th-bestand'>Bestand <br><input id='txt-bestand'></th>";
         echo "<th id='th-ordner'>Ordner <br><input id='txt-ordner'></th></tr>";
-        
+       
         
         foreach ($dbh->query($sql) as $row) {
             
@@ -71,7 +72,7 @@ ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $lim
             echo "<td id='td-hersteller'> Brennenstuhl </td>";
             echo "<td id='td-plattform-id'>" .$row["ASIN"] . "</td>";
             echo "<td id='td-ek-netto'>" . number_format(floatval($row["GesamtEkNetto"]),2, ",", ".") . " &#8364</td>";
-            echo "<td id='td-mehrwertsteuer'>" . floatval($row["fSteuersatz"]) . " %</td>";
+            echo "<td id='td-mehrwertsteuer'><div id='steuer'>" . floatval($row["fSteuersatz"]) . " %</div></td>";
             echo "<td id='td-versandklasse'>" .$row["cName"] . "</td>";
             echo "<td id='td-gewicht'>" . number_format(floatval($row["Versandgewicht"]),2, ",", ".") . "</td>";
             echo "<td id='td-nullpreis'> 14,44 €</td>";
@@ -84,7 +85,8 @@ ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $lim
         }
         
         //Table conclusion
-        echo "</form>";
+       
+      
         echo "</table>";
         
         $sql = "SELECT DISTINCT COUNT(Artikelnummer)
