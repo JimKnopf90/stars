@@ -16,8 +16,7 @@
         $page=1;        
     };    
     
-     $start_from = ($page-1) * $limit;   
-     
+     $start_from = ($page-1) * $limit;      
     
     $sql = "SELECT DISTINCT 'Amazon' AS Plattform, AVAL.kArtikel, AVAL.kStueckliste, AVAL.Artikelnummer, AVAL.Bezeichnung, AVAL.EAN, AVAL.ASIN, AVAL.PreisAmazon, AVAL.Hersteller, AVAL.IstStuecklistenkomponente, 
                          AVAL.VerkaufspreisBrutto, EK.GesamtEkNetto, Steuer.fSteuersatz, dbo.tVersandklasse.cName, AVAL.BestandGesamt, AVAL.Versandgewicht
@@ -33,21 +32,18 @@ FROM            ArtikelVerwaltung.vArtikelliste AS AVAL INNER JOIN
 WHERE        (KA.kKategorie IN
                              (SELECT        kKategorie
                                FROM            dbo.tkategorie
-                               WHERE        (kOberKategorie = 41))) AND (1 = AVAL.Zustand)
-ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $limit ROWS ONLY";
-
+                               WHERE        (kOberKategorie = 41))) AND (1 = AVAL.Zustand) ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $limit ROWS ONLY";
+   
   
    
         //Table beginn
-        echo "<table><thead>";
-        
+        echo "<table><thead>";        
        
-        // Headline
-        
+        // Headline        
         echo "<tr><th id='th-edit'><a href='login.php'><img class='icon-art-settings' src='../image/icon-art-setting.png' /></a></th>";
         echo "<th id='th-plattform'>Plattform <br><input id='txt-plattform'></th>";
         echo "<th id='th-artikelnummer'>Artikelnummer <br><form><span><input id='txt-artikelnummer'></span></form></th>";
-        echo "<th id='th-artikelname'>Artikelname <br><input id='txt-artikelname'></th>";
+        echo "<th id='th-artikelname'>Artikelname <br><form action='../business-logic/mProducts.php' method='post'><input id='txt-artikelname' name='artikelname'></form></th>";
         echo "<th id='th-hersteller'>Hersteller <br><input id='txt-hersteller'></th>";
         echo "<th id='th-plattform-id'>Plattform-ID <br><input id='txt-plattformid'></th>";
         echo "<th id='th-ek-netto'>EK-Netto <br><input id='txt-eknetto'></th>";
@@ -59,8 +55,8 @@ ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $lim
         echo "<th id='th-marge-euro'>Marge € <br><input id='txt-margeeuro'></th>";
         echo "<th id='th-marge-prozent'>Marge % <br><input id='txt-margeprozent'></th>";
         echo "<th id='th-bestand'>Bestand <br><input id='txt-bestand'></th>";
-        echo "<th id='th-ordner'>Ordner <br><input id='txt-ordner'></th></tr></theas>";
-       
+        echo "<th id='th-ordner'>Ordner <br><input id='txt-ordner'></th></tr></thead>";       
+     
         echo "<tbody>";
         foreach ($dbh->query($sql) as $row) {
             
@@ -101,11 +97,24 @@ ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $lim
         
         $pagLink = "<div id='paging' class='pagination'>";
         
-        for ($i=1; $i<=$total_pages; $i++) {
-            $pagLink .= "<a class='pagingElement' href='products.php?page=".$i."'>".$i."</a>";
-        };
-        echo $pagLink . "</div>";  
+        for ($i=1; $i<=$total_pages; $i++) {          
+            if ($i <= 10) {
+                $pagLink .= "<a class='pagingElement' href='products.php?page=".$i."'>".$i."</a>";
+            } else {
+                if ($i == 11) {
+                    $pagLink .= "<select><option class='pagingElement' value='products.php?page=".$i."'>".$i."</option>";
+                } else {
+                     $pagLink .= "<option>".$i."</option>";
 
+                }
+              
+            }
+            
+        };
+        
+        echo $pagLink . "</select><div id='counter'>" . $total_records . " Zeile(n)</div></div>";         
+        
+        
 
 
 ?>

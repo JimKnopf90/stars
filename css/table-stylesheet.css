@@ -1,7 +1,8 @@
 table {
     width: 1800px;
     table-layout: fixed;
-    border: #D9D9D9 solid;
+    border-left: #D9D9D9 solid;
+    border-right: #D9D9D9 solid;
     border-spacing: 0px;
     margin-left: auto;
     margin-right: auto;
@@ -315,11 +316,19 @@ tr th{
     margin-top: 5px;
 }
 
+#paging {
+    border-top: solid gray 2px;   
+    text-align: center;
+    width: 1800px;
+    background: #D9D9D9;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .pagingElement {        
     display: inline-block;
     width: 40px;
-    height: 30px;
-    border: 1px solid Grey;
+    height: 30px;   
     padding-top: 10px;
     color: Orange;
     text-decoration: none;
@@ -338,9 +347,10 @@ tr th{
     font-weight: bold;
 }
 
-#paging{
-	font-size: 16px;
-    margin: 10px;
-    text-align: center;
+#counter{
+    float: right;   
+    padding-top: 10px;
+    padding-right: 10px;
 }
+
 
