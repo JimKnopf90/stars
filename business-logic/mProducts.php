@@ -1,8 +1,6 @@
 <?php
 
-    include("mConErp.php");   
-    
-    
+    include("mConErp.php");      
     
     $dbh = new PDO ("sqlsrv:Server=$hostname;Database=$dbname","$dbusername","$pw");
     

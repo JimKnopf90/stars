@@ -6,11 +6,11 @@
 		<link rel="stylesheet" type="text/css" href="../css/admin-stylesheet.css">
 		<link rel="stylesheet" type="text/css" href="../css/admin-table-stylesheet.css">
 		<link rel="icon" href="../admin-image/stars-logo.png">
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jequery.min.js">
-        </script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jequery.min.js"></script>
+		<script src="../js/versandklassen.js" type="text/javascript"></script>        
 		<title>StaRs | Adminbereich</title>
 	</head>
-	<body>
+	<body>	
         <header>
             <a href="admin-startseite.php">
                 <img id="stars-logo" src="../admin-image/stars-logo.png" />
@@ -107,36 +107,44 @@
             </ul>
         </div>  
         <div class="content">
-            <table id="table-versandklassen">
+           <!-- <table id="table-versandklassen">
                 <tr id="table-header">
                     <th class="versandklasse">Versandklasse</th>
                     <th class="versandkosten">Versandkosten</th>
                     <th class="gewicht">max. Gewicht</th>
-                    <th class="masse">max. Maße</th> <!-- zur übersicht -->
+                    <th class="masse">max. Maße</th> 
                 </tr>
                 
                 <tr class="table-tr-td">
                     <td class="versandklasse">Versandklasse X</td>
                     <td class="versandkosten">1,20 €</td>
                     <td class="gewicht">0,500 kg</td>
-                    <td class="masse">300 x 50 x 50 mm</td> <!-- zur übersicht -->
+                    <td class="masse">300 x 50 x 50 mm</td> 
                 </tr>
                 
                 <tr class="table-tr-td">
                     <td class="versandklasse">Versandklasse Y</td>
                     <td class="versandkosten">2,15 €</td>
                     <td class="gewicht">1,000 kg</td>
-                    <td class="masse">350 x 210 x 20 mm</td> <!-- zur übersicht -->
+                    <td class="masse">350 x 210 x 20 mm</td> 
                 </tr>
                 
                 <tr class="table-tr-td">
                     <td class="versandklasse">Fester Wert</td>
                     <td class="versandkosten">editierbar</td>
                     <td class="gewicht">editierbar</td>
-                    <td class="masse">editierbar</td> <!-- zur übersicht -->
+                    <td class="masse">editierbar</td> 
                 </tr>
                 
-            </table>    
+            </table> -->               
+            <?php  
+	           include("../business-logic/mLoadVersandklasse.php");	
+	           ?>       
+ 
+
+
+
+	           
         </div>
         
         
