@@ -18,12 +18,12 @@ echo "<th>max. Maﬂe</th></tr></thead>";
 foreach ($dbh->query($sql) as $row) {
     
     echo "<tr>"; 
-    echo "<td>" .$row["VersandklassenID"] . "</td>";
+    echo "<td id='versandklassenID'>" .$row["VersandklassenID"] . "</td>";
     echo "<td>" .$row["VersandklasseJTL"] . "</td>";
     echo "<td>" . number_format(floatval($row["Preis"]),2, ",", ".") . "</td>";
     echo "<td>" . number_format(floatval($row["GewichtMax"]),2, ",", ".") . "</td>";
     echo "<td>" . number_format(floatval($row["MesswerteMax"]),2, ",", ".") . "</td>";  
-    echo "<td><form action='../sites/versandklassen-edit.php'><input type=button name=id value=". $row["VersandklassenID"] ." id='btnEdit'></form></td>";
+    echo "<td><form action='../sites/versandklassen-edit.php'><input type='button' value=". $row["VersandklassenID"] ." id='btnEdit'></form></td>";
     echo "</tr>";
             
     }

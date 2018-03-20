@@ -11,16 +11,13 @@
 		<title>StaRs | Adminbereich</title>
 	</head>
 	<body>	
-      <form>
-      	<input type="text">
-      	<input type="text">
-      	<input type="text">
-      	<input type="text">
-      </form>
-         <?php  
-         echo $_POST["id"]
-	           //include("../business-logic/mLoadVersandklassEdit.php");	
+      
+      	 <?php  
+         $idVersandklasse = $_GET['idVersanklasse'];
+         include("../business-logic/mLoadVersandklassEdit.php");	
 	           ?>       
+      
+        
  
     </body>
 </html>
