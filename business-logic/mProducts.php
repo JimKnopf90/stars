@@ -1,4 +1,19 @@
 <?php
+    
+    // TR: Versandklassen werden aus der Stars-DB gelesen und gespeichert.
+    include("mCon.php");
+    
+    $dbh = new PDO ("sqlsrv:Server=$hostname;Database=$dbname","$dbusername","$pw");
+    
+    $sth = $dbh->prepare("SELECT * FROM tVersandklassen");
+    $sth->execute();    
+    
+    $result = $sth->fetchAll();
+    //print_r($result);
+    
+    echo $result[0]['VersandklasseJTL'];
+
+
 
     include("mConErp.php");      
     
@@ -69,7 +84,7 @@ WHERE        (KA.kKategorie IN
             echo "<td id='td-mehrwertsteuer'><div id='steuer'>" . floatval($row["fSteuersatz"]) . " %</div></td>";
             echo "<td id='td-versandklasse'>" .$row["cName"] . "</td>";
             echo "<td id='td-gewicht'>" . number_format(floatval($row["Versandgewicht"]),2, ",", ".") . "</td>";
-            echo "<td id='td-nullpreis'> 14,44 €</td>";
+            echo "<td id='td-nullpreis'>" . floatval($row["GesamtEkNetto"]) * 1,19 * 1.217  . "</td>";
             echo "<td id='td-vk-preis'> 29,95 €</td>";
             echo "<td id='td-marge-euro'> 1,22 €</td>";
             echo "<td id='td-marge-prozent'> 7 %</td>";

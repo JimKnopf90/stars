@@ -7,7 +7,7 @@ $dbh = new PDO ("sqlsrv:Server=$hostname;Database=$dbname","$dbusername","$pw");
 $sql = "SELECT VersandklassenID, VersandklasseJTL, Preis, GewichtMax, MesswerteMax
                 FROM tVersandklassen";
         
-echo "<table><thead>";
+echo "<table id='tblVersandklassen'><thead>";
 // Headline
 echo "<tr><th>ID</th>";
 echo "<th>Versandklasse</th>";
@@ -23,7 +23,7 @@ foreach ($dbh->query($sql) as $row) {
     echo "<td>" . number_format(floatval($row["Preis"]),2, ",", ".") . "</td>";
     echo "<td>" . number_format(floatval($row["GewichtMax"]),2, ",", ".") . "</td>";
     echo "<td>" . number_format(floatval($row["MesswerteMax"]),2, ",", ".") . "</td>";  
-    echo "<td><form action='../sites/versandklassen-edit.php'><input type='button' value=". $row["VersandklassenID"] ." id='btnEdit'></form></td>";
+    echo "<td><form action='../sites/versandklassen-edit.php'><input type='button' value=". $row["VersandklassenID"] ." class='btnEdit'></form></td>";
     echo "</tr>";
             
     }
