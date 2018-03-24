@@ -198,6 +198,18 @@ tr th{
     padding-right: 10px;    
 }
 
+#th-versandklassenid{
+    width: 105px;  
+    padding-right: 10px;
+    display: none;
+}
+
+#td-versandklassenid{
+    width: 111px;  
+    padding-right: 10px; 
+    display: none;
+}
+
 #txt-versandklasse{
     width: 105px;
     margin-bottom: 10px;

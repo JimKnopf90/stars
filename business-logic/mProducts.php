@@ -11,9 +11,14 @@
     $result = $sth->fetchAll();
     //print_r($result);
     
-    echo $result[0]['VersandklasseJTL'];
-
-
+       
+    // TR: Versandklassen werden in einem zweidimensionalem Array gespeichert.
+    $versandklassen = array();
+    
+    for ($i=0; $i < count($result); $i++) {        
+        $versandklassen[] = array( $result[$i]['VersandklasseJTL'] => $result[$i]['Preis']);
+    }   
+    
 
     include("mConErp.php");      
     
@@ -32,7 +37,7 @@
      $start_from = ($page-1) * $limit;      
     
     $sql = "SELECT DISTINCT 'Amazon' AS Plattform, AVAL.kArtikel, AVAL.kStueckliste, AVAL.Artikelnummer, AVAL.Bezeichnung, AVAL.EAN, AVAL.ASIN, AVAL.PreisAmazon, AVAL.Hersteller, AVAL.IstStuecklistenkomponente, 
-                         AVAL.VerkaufspreisBrutto, EK.GesamtEkNetto, Steuer.fSteuersatz, dbo.tVersandklasse.cName, AVAL.BestandGesamt, AVAL.Versandgewicht
+                         AVAL.VerkaufspreisBrutto, EK.GesamtEkNetto, Steuer.fSteuersatz, dbo.tVersandklasse.kVersandklasse, dbo.tVersandklasse.cName, AVAL.BestandGesamt, AVAL.Versandgewicht
 FROM            ArtikelVerwaltung.vArtikelliste AS AVAL INNER JOIN
                          dbo.tkategorieartikel AS KA ON AVAL.kArtikelForKategorieArtikel = KA.kArtikel INNER JOIN
                          dbo.tArtikel AS Art ON Art.kArtikel = AVAL.kArtikel INNER JOIN
@@ -53,7 +58,7 @@ WHERE        (KA.kKategorie IN
         echo "<table><thead>";        
        
         // Headline        
-        echo "<tr><th id='th-edit'><a href='login.php'><img class='icon-art-settings' src='../image/icon-art-setting.png' /></a></th>";
+        echo "<tr><th id='th-edit'><a href='login.php'><img class='icon-art-settings' src='../image/icon-art-setting.png'/></a></th>";
         echo "<th id='th-plattform'>Plattform <br><input id='txt-plattform'></th>";
         echo "<th id='th-artikelnummer'>Artikelnummer <br><form><span><input id='txt-artikelnummer'></span></form></th>";
         echo "<th id='th-artikelname'>Artikelname <br><form action='../business-logic/mProducts.php' method='post'><input id='txt-artikelname' name='artikelname'></form></th>";
@@ -61,6 +66,7 @@ WHERE        (KA.kKategorie IN
         echo "<th id='th-plattform-id'>Plattform-ID <br><input id='txt-plattformid'></th>";
         echo "<th id='th-ek-netto'>EK-Netto <br><input id='txt-eknetto'></th>";
         echo "<th id='th-mehrwertsteuer'>MwSt. <br><input id='txt-mwst'></th>";
+        echo "<th id='th-versandklassenid> Versandklassen-ID </th>";
         echo "<th id='th-versandklasse'>Versandklasse <br><input id='txt-versandklasse'></th>";
         echo "<th id='th-gewicht'>Gewicht <br><input id='txt-gewicht'></th>";
         echo "<th id='th-nullpreis'>Nullpreis <br><input id='txt-nullpreis'></th>";
@@ -74,7 +80,7 @@ WHERE        (KA.kKategorie IN
         foreach ($dbh->query($sql) as $row) {
             
             echo "<tr class='hover' >";
-            echo "<td id='td-edit'> <a href='login.php'><img class='icon-art-setting' src='../image/icon-art-setting.png' /></a></td>";
+            echo "<td id='td-edit' class='btnEdit'><a><img class='icon-art-setting' src='../image/icon-art-setting.png' /></a></td>";
             echo "<td id='td-plattform'>" .$row["Plattform"] . "</td>";
             echo "<td id='td-artikelnummer'>" .$row["Artikelnummer"] . "</td>";
             echo "<td id='td-artikelname'>" .$row["Bezeichnung"] . "</td>";
@@ -82,7 +88,8 @@ WHERE        (KA.kKategorie IN
             echo "<td id='td-plattform-id'>" .$row["ASIN"] . "</td>";
             echo "<td id='td-ek-netto'>" . number_format(floatval($row["GesamtEkNetto"]),2, ",", ".") . " &#8364</td>";
             echo "<td id='td-mehrwertsteuer'><div id='steuer'>" . floatval($row["fSteuersatz"]) . " %</div></td>";
-            echo "<td id='td-versandklasse'>" .$row["cName"] . "</td>";
+            echo "<td id='td-versandklassenid'>" .$row["kVersandklasse"] . "</td>";
+            echo "<td id='td-versandklasse'>" .$row["cName"] . "</td>";            
             echo "<td id='td-gewicht'>" . number_format(floatval($row["Versandgewicht"]),2, ",", ".") . "</td>";
             echo "<td id='td-nullpreis'>" . floatval($row["GesamtEkNetto"]) * 1,19 * 1.217  . "</td>";
             echo "<td id='td-vk-preis'> 29,95 €</td>";
@@ -126,6 +133,10 @@ WHERE        (KA.kKategorie IN
         };
         
         echo $pagLink . "</select><div id='counter'>" . $total_records . " Zeile(n)</div></div>";         
+        
+        
+        
+        
         
         
 
