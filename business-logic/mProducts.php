@@ -12,11 +12,18 @@
     //print_r($result);
     
        
-    // TR: Versandklassen werden in einem zweidimensionalem Array gespeichert.
+    // TR: Versandklassen werden in einem zweidimensionalem Array gespeichert um Versandkosten zu ermitteln.
     $versandklassen = array();
     
     for ($i=0; $i < count($result); $i++) {        
-        $versandklassen[] = array( $result[$i]['VersandklasseJTL'] => $result[$i]['Preis']);
+        $versandklassen[$result[$i]['VersandklasseJTL']] = array( $result[$i]['VersandklasseJTL'] => $result[$i]['Preis']);
+    }  
+    
+    // TR: Verpackungskosten werden in einem Array gespeichert.
+    $verpackungskosten = array();
+    
+    for ($i=0; $i < count($result); $i++) {
+        $verpackungskosten[$result[$i]['VersandklasseJTL']] = array( $result[$i]['VersandklasseJTL'] => $result[$i]['PreisVerpackungskosten']);
     }   
     
 
@@ -79,6 +86,14 @@ WHERE        (KA.kKategorie IN
         echo "<tbody>";
         foreach ($dbh->query($sql) as $row) {
             
+            $valueVersandkosten = $versandklassen[$row["cName"]][$row["cName"]];
+            $valueVerpackungskosten = $verpackungskosten[$row["cName"]][$row["cName"]];
+            $mwst = $row["VerkaufspreisBrutto"] / 100 * floatval($row["fSteuersatz"]);
+            $amazonKosten = $row["VerkaufspreisBrutto"] / 100 * 15;
+            $summeGesamtkosten = $mwst + $amazonKosten + $row["GesamtEkNetto"] + $valueVersandkosten + $valueVerpackungskosten;
+            $margeEuro = ($row["VerkaufspreisBrutto"] - $summeGesamtkosten);
+            $margeProzent = 100 * $margeEuro / $row["VerkaufspreisBrutto"];
+         
             echo "<tr class='hover' >";
             echo "<td id='td-edit' class='btnEdit'><a><img class='icon-art-setting' src='../image/icon-art-setting.png' /></a></td>";
             echo "<td id='td-plattform'>" .$row["Plattform"] . "</td>";
@@ -90,11 +105,11 @@ WHERE        (KA.kKategorie IN
             echo "<td id='td-mehrwertsteuer'><div id='steuer'>" . floatval($row["fSteuersatz"]) . " %</div></td>";
             echo "<td id='td-versandklassenid'>" .$row["kVersandklasse"] . "</td>";
             echo "<td id='td-versandklasse'>" .$row["cName"] . "</td>";            
-            echo "<td id='td-gewicht'>" . number_format(floatval($row["Versandgewicht"]),2, ",", ".") . "</td>";
-            echo "<td id='td-nullpreis'>" . floatval($row["GesamtEkNetto"]) * 1,19 * 1.217  . "</td>";
-            echo "<td id='td-vk-preis'> 29,95 €</td>";
-            echo "<td id='td-marge-euro'> 1,22 €</td>";
-            echo "<td id='td-marge-prozent'> 7 %</td>";
+            echo "<td id='td-gewicht'>" . number_format(floatval($row["Versandgewicht"]),2, ",", ".") . "</td>";            
+            echo "<td id='td-nullpreis'>" .  number_format((floatval($row["GesamtEkNetto"]) + $valueVersandkosten + $valueVerpackungskosten ) * 1.19 * 1.217, 2, ",", ".")  . "</td>";
+            echo "<td id='td-vk-preis'>". number_format(floatval($row["VerkaufspreisBrutto"]),2, ",", ".") . "</td>";
+            echo "<td id='td-marge-euro'>" . number_format($margeEuro, 2, ",", ".") . "</td>";
+            echo "<td id='td-marge-prozent'> " .  number_format($margeProzent, 2, ",", ".") . " %</td>";
             echo "<td id='td-bestand'>" . floatval($row["BestandGesamt"]) . "</td>";
             echo "<td id='td-ordner'> Faltkartons </td>";
             echo "</tr>";
