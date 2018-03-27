@@ -11,13 +11,13 @@ $sql = "SELECT VersandklassenID, VersandklasseJTL, Preis, PreisVerpackungskosten
 foreach ($dbh->query($sql) as $row) { 
     
     echo "<form action='../business-logic/mSaveVersandklassen.php' method='post'>";
-    echo "<input type='text' name='VersandklassenID' value=" . $row["VersandklassenID"] . ">";
-    echo "<input type='text' name='VersandklasseJTL' value=" . $row["VersandklasseJTL"] . ">";
-    echo "<input type='text' name='Preis' value=" . number_format(floatval($row["Preis"]),2, ",", ".") . ">";
-    echo "<input type='text' name='PreisVerpackungskosten' value=" . number_format(floatval($row["PreisVerpackungskosten"]),2, ",", ".") . ">";
-    echo "<input type='text' name='GewichtMax' value=" . number_format(floatval($row["GewichtMax"]),2, ",", ".") . ">";
-    echo "<input type='text' name='MesswerteMax' value=" . number_format(floatval($row["MesswerteMax"]),2, ",", ".") . ">";  
-    echo "<input type='submit'></form>";   
+    echo "<input id='input_delete' type='text' name='VersandklassenID' value=" . $row["VersandklassenID"] . ">";
+    echo "<input class='input_text' type='text' name='VersandklasseJTL' value=" . $row["VersandklasseJTL"] . ">";
+    echo "<input class='input_text' type='text' name='Preis' value=" . number_format(floatval($row["Preis"]),2, ",", ".") . "€" . ">";
+    echo "<input class='input_text' type='text' name='PreisVerpackungskosten' value=" . number_format(floatval($row["PreisVerpackungskosten"]),2, ",", ".") . "€" . ">";
+    echo "<input class='input_text' type='text' name='GewichtMax' value=" . number_format(floatval($row["GewichtMax"]),2, ",", ".") . "kg". ">";
+    echo "<input class='input_text' type='text' name='MesswerteMax' value=" . number_format(floatval($row["MesswerteMax"]),2, ",", ".") . ">";  
+    echo "<input id='btn_submit' type='submit' value='Daten Speichern'></form>";   
    
             
     }

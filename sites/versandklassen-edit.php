@@ -8,15 +8,15 @@
 		<link rel="icon" href="../admin-image/stars-logo.png">
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jequery.min.js"></script>
 		<script src="../js/versandklassen.js" type="text/javascript"></script>        
-		<title>StaRs | Adminbereich</title>
+		<title>StaRs | Artikel bearbeiten</title>
 	</head>
 	<body>	
-      
+      <div id="displayblock">
       	 <?php  
          $idVersandklasse = $_GET['idVersanklasse'];
          include("../business-logic/mLoadVersandklassEdit.php");	
 	           ?>       
-      
+      </div>
         
  
     </body>
