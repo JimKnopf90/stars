@@ -20,6 +20,10 @@ tbody {
     margin-top: 67px;
 }
 
+#btnSubmit {
+    display: none;
+}
+
 .hover:hover{
     background-color: #ffc354;
     cursor: pointer;

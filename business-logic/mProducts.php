@@ -43,7 +43,7 @@
     
      $start_from = ($page-1) * $limit;      
     
-    $sql = "SELECT DISTINCT 'Amazon' AS Plattform, AVAL.kArtikel, AVAL.kStueckliste, AVAL.Artikelnummer, AVAL.Bezeichnung, AVAL.EAN, AVAL.ASIN, AVAL.PreisAmazon, AVAL.Hersteller, AVAL.IstStuecklistenkomponente, 
+    $sql = "SELECT DISTINCT 'Amazon' AS Plattform, AVAL.kArtikel, AVAL.kStueckliste, AVAL.Artikelnummer, AVAL.Bezeichnung, AVAL.EAN, AVAL.ASIN, AVAL.PreisAmazon, COALESCE(AVAL.Hersteller, 'kein Wert') As Hersteller, AVAL.IstStuecklistenkomponente, 
                          AVAL.VerkaufspreisBrutto, EK.GesamtEkNetto, Steuer.fSteuersatz, dbo.tVersandklasse.kVersandklasse, dbo.tVersandklasse.cName, AVAL.BestandGesamt, AVAL.Versandgewicht
 FROM            ArtikelVerwaltung.vArtikelliste AS AVAL INNER JOIN
                          dbo.tkategorieartikel AS KA ON AVAL.kArtikelForKategorieArtikel = KA.kArtikel INNER JOIN
@@ -57,20 +57,27 @@ FROM            ArtikelVerwaltung.vArtikelliste AS AVAL INNER JOIN
 WHERE        (KA.kKategorie IN
                              (SELECT        kKategorie
                                FROM            dbo.tkategorie
-                               WHERE        (kOberKategorie = 41))) AND (1 = AVAL.Zustand) ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $limit ROWS ONLY";
+                               WHERE        (kOberKategorie = 41))) AND (1 = AVAL.Zustand) ";
    
   
-   
-        //Table beginn
-        echo "<table><thead>";        
+
+        // TR: Werte für die Suche auslesen.
+        // $plattformSearch = isset($_GET['txt-plattform']) ? $_GET['txt-plattform'] : '';    
+        $artikelnummerSearch = isset($_GET['txt-artikelnummer']) ? $_GET['txt-artikelnummer'] : '';
+        $artikelnameSearch = isset($_GET['txt-artikelname']) ? $_GET['txt-artikelname'] : '';
+        $herstellerSearch = isset($_GET['txt-hersteller']) ? $_GET['txt-hersteller'] : '';
+        $plattformIDSearch = isset($_GET['txt-plattformid']) ? $_GET['txt-plattformid'] : '';
+        
+        // TR: Table beginn
+        echo "<form action='../sites/products.php' method='get'><table><thead>";      
        
-        // Headline        
+        // TR: Headline        
         echo "<tr><th id='th-edit'><a href='login.php'><img class='icon-art-settings' src='../image/icon-art-setting.png'/></a></th>";
-        echo "<th id='th-plattform'>Plattform <br><input id='txt-plattform'></th>";
-        echo "<th id='th-artikelnummer'>Artikelnummer <br><form><span><input id='txt-artikelnummer'></span></form></th>";
-        echo "<th id='th-artikelname'>Artikelname <br><form action='../business-logic/mProducts.php' method='post'><input id='txt-artikelname' name='artikelname'></form></th>";
-        echo "<th id='th-hersteller'>Hersteller <br><input id='txt-hersteller'></th>";
-        echo "<th id='th-plattform-id'>Plattform-ID <br><input id='txt-plattformid'></th>";
+        echo "<th id='th-plattform'>Plattform <br><form><input id='txt-plattform'></form></th>";        
+        echo "<th id='th-artikelnummer'>Artikelnummer <br><span><input name='txt-artikelnummer' id='txt-artikelnummer' value='" . $artikelnummerSearch ."'></span></th>";
+        echo "<th id='th-artikelname'>Artikelname <br><input id='txt-artikelname' name='txt-artikelname' value='" . $artikelnameSearch ."'></th>";
+        echo "<th id='th-hersteller'>Hersteller <br><input id='txt-hersteller' name='txt-hersteller' value='" . $herstellerSearch ."'></th>";
+        echo "<th id='th-plattform-id'>Plattform-ID <br><input id='txt-plattformid' name='txt-plattformid' value='" . $plattformIDSearch ."'></th>";
         echo "<th id='th-ek-netto'>EK-Netto <br><input id='txt-eknetto'></th>";
         echo "<th id='th-mehrwertsteuer'>MwSt. <br><input id='txt-mwst'></th>";
         echo "<th id='th-versandklassenid> Versandklassen-ID </th>";
@@ -81,8 +88,21 @@ WHERE        (KA.kKategorie IN
         echo "<th id='th-marge-euro'>Marge â‚¬ <br><input id='txt-margeeuro'></th>";
         echo "<th id='th-marge-prozent'>Marge % <br><input id='txt-margeprozent'></th>";
         echo "<th id='th-bestand'>Bestand <br><input id='txt-bestand'></th>";
-        echo "<th id='th-ordner'>Ordner <br><input id='txt-ordner'></th></tr></thead>";       
-     
+        echo "<th id='th-ordner'>Ordner <br><input id='txt-ordner'><input type='submit' id='btnSubmit'></th></tr></thead>";   
+        
+        
+        // TR: Suche
+        // if (isset($_GET["txt-plattform"])) $sql .= " AND Plattform LIKE '%" . $_GET["txt-plattform"] . "%'";  
+        if ($artikelnummerSearch != '') $sql .= " AND Artikelnummer LIKE '%" . $_GET["txt-artikelnummer"] . "%'";  
+        if ($artikelnameSearch != '') $sql .= " AND Bezeichnung LIKE '%" . $_GET["txt-artikelname"] . "%'";  
+        if ($herstellerSearch != '') $sql .= " AND Hersteller LIKE '%" . $_GET["txt-hersteller"] . "%'";  
+        if ($plattformIDSearch != '') $sql .= " AND ASIN LIKE '%" . $_GET["txt-plattformid"] . "%'";  
+        
+        
+        
+      
+        $sql .= " ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $limit ROWS ONLY";         
+        
         echo "<tbody>";
         foreach ($dbh->query($sql) as $row) {
             
@@ -92,14 +112,19 @@ WHERE        (KA.kKategorie IN
             $amazonKosten = $row["VerkaufspreisBrutto"] / 100 * 15;
             $summeGesamtkosten = $mwst + $amazonKosten + $row["GesamtEkNetto"] + $valueVersandkosten + $valueVerpackungskosten;
             $margeEuro = ($row["VerkaufspreisBrutto"] - $summeGesamtkosten);
-            $margeProzent = 100 * $margeEuro / $row["VerkaufspreisBrutto"];
+            
+            if ($row["VerkaufspreisBrutto"] != 0) {
+                $margeProzent = 100 * $margeEuro / $row["VerkaufspreisBrutto"];
+            } else {
+                $margeProzent = 0.0 ;
+            }
          
             echo "<tr class='hover' >";
             echo "<td id='td-edit' class='btnEdit'><a><img class='icon-art-setting' src='../image/icon-art-setting.png' /></a></td>";
             echo "<td id='td-plattform'>" .$row["Plattform"] . "</td>";
             echo "<td id='td-artikelnummer'>" .$row["Artikelnummer"] . "</td>";
             echo "<td id='td-artikelname'>" .$row["Bezeichnung"] . "</td>";
-            echo "<td id='td-hersteller'> Brennenstuhl </td>";
+            echo "<td id='td-hersteller'>" .$row["Hersteller"] .  "</td>";
             echo "<td id='td-plattform-id'>" .$row["ASIN"] . "</td>";
             echo "<td id='td-ek-netto'>" . number_format(floatval($row["GesamtEkNetto"]),2, ",", ".") . " &#8364</td>";
             echo "<td id='td-mehrwertsteuer'><div id='steuer'>" . floatval($row["fSteuersatz"]) . " %</div></td>";
@@ -117,13 +142,20 @@ WHERE        (KA.kKategorie IN
         
         //Table conclusion       
         echo "</tbody>";
-        echo "</table>";
+        echo "</table></form>";        
+       
         
         $sql = "SELECT DISTINCT COUNT(Artikelnummer)
                 FROM ArtikelVerwaltung.vArtikelliste AS AVAL INNER JOIN
                 dbo.tkategorieartikel AS KA ON AVAL.kArtikelForKategorieArtikel = KA.kArtikel
                 WHERE (KA.kKategorie IN (SELECT kKategorie FROM dbo.tkategorie
                 WHERE (kOberKategorie = 41))) AND (1 = AVAL.Zustand)";
+        
+        // TR: Suche
+        if ($artikelnummerSearch != '') $sql .= " AND Artikelnummer LIKE '%" . $_GET["txt-artikelnummer"] . "%'";
+        if ($artikelnameSearch != '') $sql .= " AND Bezeichnung LIKE '%" . $_GET["txt-artikelname"] . "%'";
+        if ($herstellerSearch != '') $sql .= " AND Hersteller LIKE '%" . $_GET["txt-hersteller"] . "%'";  
+        if ($plattformIDSearch != '') $sql .= " AND ASIN LIKE '%" . $_GET["txt-plattformid"] . "%'";  
 
         $count = $dbh->query($sql);
         
@@ -150,9 +182,7 @@ WHERE        (KA.kKategorie IN
         echo $pagLink . "</select><div id='counter'>" . $total_records . " Zeile(n)</div></div>";         
         
         
-        
-        
-        
+           
         
 
 
