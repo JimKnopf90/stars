@@ -251,4 +251,26 @@ p{
     margin: 0;
 }
 
+/* Users Tabelle */
 
+table{
+    border-spacing: 0;
+    width: 80%;
+    margin-top: 10px;
+}
+
+tr:hover{
+    background-color: blue;
+    cursor: pointer;
+}
+
+th{
+    padding-right: 50px;
+    text-align: center;
+    font-size: 22px;
+}
+
+td{
+    padding-right: 50px;
+    text-align: center;
+}

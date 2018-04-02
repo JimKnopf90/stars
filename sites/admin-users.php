@@ -21,13 +21,25 @@
                     
                     <li>
                         <button type="button" class="active">
-                            Historie
+                            Übersicht
                         </button>
                     </li>
                     
                     <li>
                         <button type="button" class="inactive">
-                            Fehlermeldungen
+                            Bearbeiten
+                        </button>
+                    </li>
+                    
+                    <li>
+                        <button type="button" class="inactive">
+                            Hinzufügen
+                        </button>
+                    </li> 
+                    
+                    <li>
+                        <button type="button" class="inactive">
+                            Rechte
                         </button>
                     </li>
                 </ul>    
@@ -38,7 +50,7 @@
             <ul>                                
                 <li>
                     <a class="btnSidebar" href="admin-startseite.php">
-                        <button id="dashboard" type="button" class="active">
+                        <button id="dashboard" type="button" class="inactive">
                             Dashboard
                         </button>
                     </a>
@@ -46,7 +58,7 @@
                 
                 <li>
                     <a class="btnSidebar" href="admin-users.php">
-                        <button id="user" type="button" class="inactive">
+                        <button id="user" type="button" class="active">
                             Benutzer
                         </button>
                     </a>
@@ -102,7 +114,32 @@
             </ul>
         </div>  
         <div class="content">
-                
+            <table>
+                <tr>
+                    <th>Benutername</th>
+                    <th>E-Mail</th>
+                    <th>Vorname</th>
+                    <th>Name</th>
+                    <th>Rolle</th>
+                    <th>Optionen</th>
+                </tr>
+                <tr>
+                    <td>JimKnopf</td>
+                    <td>JimKnopf@test.de</td>
+                    <td>Timm</td>
+                    <td>Reichert</td>
+                    <td>Superadmin</td>
+                    <td>Bearbeiten - Löschen</td>
+                </tr>
+                <tr>
+                    <td>CapslockJesus</td>
+                    <td>d.reichert@verpacking.com</td>
+                    <td>Daniel</td>
+                    <td>Reichert</td>
+                    <td>Superadmin</td>
+                    <td>Bearbeiten - Löschen</td>
+                </tr>
+            </table>           
         </div>
         <!-- <img class="btn" src="../admin-image/homebutton.png" /> -->
         
