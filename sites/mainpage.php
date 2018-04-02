@@ -22,14 +22,14 @@ if(isset($_SESSION["username"])) {
                 <ul id="nav">
                     <li><a class="active" href="mainpage.php">Startseite</a></li>
                     <li><a class="inactive" href="products.php">Produkte</a></li>
-                    <li><a class="inactive" href="mainpage.php">Stammartikel</a></li>
-                    <li><a class="inactive" href="mainpage.php">Fehlermeldungen</a></li>
                     <li><a class="inactive" id="rechts" href="statistic.php">Statistiken</a></li>
-                    <a href="login.php"><img class="icons"src="../image/icon-information.png" /></a>
+                </ul>
+                <div id="nav-icons">
+                <a href="login.php"><img class="icons"src="../image/icon-information.png" /></a>
                     <a href="login.php"><img class="icons" src="../image/icon-help.png" /></a>
                     <a href="login.php"><img class="icons" src="../image/icon-settings.png" /></a>
                     <a href="login.php"><img class="icons" src="../image/icon-logout.png" /></a>
-                </ul>
+                </div>
             </nav>
         </header>
         <div class="background">

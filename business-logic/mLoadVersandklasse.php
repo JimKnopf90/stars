@@ -14,7 +14,7 @@ echo "<th>Versandklasse</th>";
 echo "<th>Versandkosten</th>";
 echo "<th>Verpackungskosten</th>";
 echo "<th>max. Gewicht</th>";     
-echo "<th>max. Maﬂe</th></tr></thead>";     
+echo "<th>max. Ma&szlig;e</th></tr></thead>";     
         
 foreach ($dbh->query($sql) as $row) {
     
