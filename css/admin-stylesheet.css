@@ -148,18 +148,17 @@ header{
 
 /* NEUES FENSTER */
 
-input{
-}
+/* vvvvvvvvvv Hier die ID vorrübergehend ausgeblendet vvvvvvvvvv */
+                        #input_delete{
+                            width:0px;
+                            height: 0px;
+                            background: transparent;
+                            content: none;
+                            border: none;
+                            margin: 0;
+                        }
+/* ^^^^^^^ Hier die ID vorrübergehend ausgeblendet ^^^^^^^ */
 
-/* Hier die ID vorrübergehend ausgeblendet */
-#input_delete{
-    width:0px;
-    height: 0px;
-    background: transparent;
-    content: none;
-    border: none;
-    margin: 0;
-}
 
 .input_text{
     display: block;
@@ -253,24 +252,185 @@ p{
 
 /* Users Tabelle */
 
-table{
+#user-table{
     border-spacing: 0;
-    width: 80%;
-    margin-top: 10px;
+    margin: 0;
+    margin-left: 20%;
+    margin-top: 20px;
+    position: absolute;
 }
 
-tr:hover{
-    background-color: blue;
-    cursor: pointer;
-}
-
-th{
-    padding-right: 50px;
-    text-align: center;
+#user-table th{
     font-size: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-td{
-    padding-right: 50px;
+#user-table td{
+    font-size: 18px;
+    border-bottom: 1px solid white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.user-table-hover:hover{
+    background-color: #2869d7;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+.admin{
+    background-color: #c40e0e;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.normal{
+    background-color: green;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* USER HINZUFÜGEN */
+
+#content-new-user{
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+#new-user{
+    font-size: 26px;
+    font-weight: bolder;
+}
+
+.inputs form{
+    border-spacing: 0;
+    margin: 0;
+    margin-left: 10%;
+    margin-top: 20px;
+    position: absolute;
+    margin-top: 20px;
+}
+
+.inputs span{
+    font-size: 24px;
+}
+
+#input-new-user{
+    margin-top: 20px;
+}
+
+.inputs input{
+    display: block;
+    width: 290px;
+    height: 30px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Acme', sans-serif;
+    color: white;
+    background: rgba(0,0,0,0.3);
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    box-shadow: inset 0px -5px 45px rgba(100,100,100,0.2);
+    margin-bottom: 10px;
+}
+
+#add-user{
+    margin-top: 5px;
+    background: rgba(0,0,0,0.8);
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Acme', sans-serif;
+    color: white;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    box-shadow: inset 0px -5px 45px rgba(100,100,100,0.2);  
+}
+
+#add-user:hover{
+    margin-top: 5px;
+    background: green;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Acme', sans-serif;
+    color: white;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    box-shadow: inset 0px -5px 45px rgba(100,100,100,0.2);    
+}
+
+#content-reset{
+    margin-top: 5px;
+    background: rgba(0,0,0,0.8);
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Acme', sans-serif;
+    color: white;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    box-shadow: inset 0px -5px 45px rgba(100,100,100,0.2);    
+}
+
+#content-reset:hover{
+    margin-top: 5px;
+    background: #f73846;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Acme', sans-serif;
+    color: white;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    box-shadow: inset 0px -5px 45px rgba(100,100,100,0.2);
+}
+
+.inputs select{
+    display: block;
+    width: 310px;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Acme', sans-serif;
+    color: white;
+    background: rgba(0,0,0,0.3);
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    box-shadow: inset 0px -5px 45px rgba(100,100,100,0.2);
+    margin-bottom: 10px;
     text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

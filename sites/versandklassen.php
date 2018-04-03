@@ -50,7 +50,7 @@
                 </li>
                 
                 <li>
-                    <a class="btnSidebar" href="admin-startseite.php">
+                    <a class="btnSidebar" href="admin-users.php">
                         <button type="button" class="inactive">
                             Benutzer
                         </button>
