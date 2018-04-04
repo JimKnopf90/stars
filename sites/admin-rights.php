@@ -29,18 +29,16 @@
                     
                     <li>
                         <a href="admin-users-add-new.php">
-                            <button type="button" class="active">
+                            <button type="button" class="inactive">
                                 Hinzufügen
                             </button>
                         </a>
                     </li> 
                     
                     <li>
-                        <a href="admin-rights.php">
-                            <button type="button" class="inactive">
-                                Rechte
-                            </button>
-                        </a>
+                        <button type="button" class="active">
+                            Rechte
+                        </button>
                     </li>
                 </ul>    
             </nav>
@@ -114,58 +112,12 @@
             </ul>
         </div>  
         <div class="content">
-            <div id="content-new-user">
-                <span id="new-user">Neuen Benutzer hinzufügen</span>
-                
-                <div id="input-new-user">
-                    
-                    <form class="inputs">
-                        <div>
-                            <label for="username"><span class="prelabel">Benutzername:</span></label>
-                            <input type="text" name="username" id="username" required="required">
-                        </div>
-                        <div>
-                            <label for="vorname"><span class="prelabel">Vorname:</span></label>
-                            <input type="text" name="vorname" id="vorname" required="required">
-                        </div>
-                        <div>
-                            <label for="nachname"><span class="prelabel">Nachname:</span></label>
-                            <input type="text" name="nachname" id="nachname" required="required">
-                        </div> 
-                        
-                        <div>
-                            <label for="email"><span class="prelabel">E-Mail:</span></label>
-                            <input type="text" name="email" id="email" required="required">
-                        </div>
-                        
-                        <div>
-                            <label for="password"><span class="prelabel">Passwort:</span></label>
-                            <input type="password" name="password" id="password" required="required">
-                        </div>
-                        
-                        <div>
-                            <label for="password-wdh"><span class="prelabel">Passwort wiederholen:</span></label>
-                            <input type="password" name="password-wdh" id="password-wdh" required="required">
-                        </div>
-                        <div>
-                            <label for="user-role"><span class="prelabel">User Rolle:</span></label>
-                            <select name="user-role" required="required">
-                                <option></option>
-                                <option>Administrator</option>
-                                <option>Normal</option>
-                            </select>
-                        </div>
-                        <div>
-                            <button type="submit" id="add-user">Anlegen</button>
-                            <button type="reset" id="content-reset">Löschen</button>
-                        </div>
-                        
-                    </form>
-                    
-                </div>   
-                    
-            </div>
+            <form class="rights">
+                <input type="checkbox" value="read">
+                <label for="read">Lesen</label>
+            </form>
         </div>
+           
         <!-- <img class="btn" src="../admin-image/homebutton.png" /> -->
         
     </body>
