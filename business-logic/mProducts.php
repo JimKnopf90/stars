@@ -3,6 +3,9 @@
     // TR: Versandklassen werden aus der Stars-DB gelesen und gespeichert.
     include("mCon.php");
     
+    // TR: Variablen
+    $y = 0;
+    
     $dbh = new PDO ("sqlsrv:Server=$hostname;Database=$dbname","$dbusername","$pw");
     
     $sth = $dbh->prepare("SELECT * FROM tVersandklassen");
@@ -97,8 +100,7 @@ WHERE        (KA.kKategorie IN
         echo "<th id='th-ordner'>Ordner <br><input id='txt-ordner'><input type='submit' id='btnSubmit'></th></tr></thead>";   
         
         
-        // TR: Suche
-        // if (isset($_GET["txt-plattform"])) $sql .= " AND Plattform LIKE '%" . $_GET["txt-plattform"] . "%'";  
+        // TR: Suche       
         if ($artikelnummerSearch != '') $sql .= " AND Artikelnummer LIKE '%" . $_GET["txt-artikelnummer"] . "%'";  
         if ($artikelnameSearch != '') $sql .= " AND Bezeichnung LIKE '%" . $_GET["txt-artikelname"] . "%'";  
         if ($herstellerSearch != '') $sql .= " AND Hersteller LIKE '%" . $_GET["txt-hersteller"] . "%'";  
@@ -111,12 +113,10 @@ WHERE        (KA.kKategorie IN
         if ($bestandSearch != '') $sql .= " AND BestandGesamt = '" . $_GET["txt-bestand"] . "'";
         
               
-        $sql .= " ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $limit ROWS ONLY"; 
-        
+           
         
         echo "<tbody>";
-        foreach ($dbh->query($sql) as $row) {
-            //$list[] = $row;
+        foreach ($dbh->query($sql) as $row) {         
             
             $valueVersandkosten = $versandklassen[$row["cName"]][$row["cName"]];
             $valueVerpackungskosten = $verpackungskosten[$row["cName"]][$row["cName"]];
@@ -130,26 +130,50 @@ WHERE        (KA.kKategorie IN
             } else {
                 $margeProzent = 0.0 ;
             }
-         
-            echo "<tr class='hover' >";
-            echo "<td id='td-edit' class='btnEdit'><a><img class='icon-art-setting' src='../image/icon-art-setting.png' /></a></td>";
-            echo "<td id='td-plattform'>" .$row["Plattform"] . "</td>";
-            echo "<td id='td-artikelnummer'>" .$row["Artikelnummer"] . "</td>";
-            echo "<td id='td-artikelname'>" .$row["Bezeichnung"] . "</td>";
-            echo "<td id='td-hersteller'>" .$row["Hersteller"] .  "</td>";
-            echo "<td id='td-plattform-id'>" .$row["ASIN"] . "</td>";
-            echo "<td id='td-ek-netto'>" . number_format(floatval($row["GesamtEkNetto"]),2, ",", ".") . " &#8364</td>";
-            echo "<td id='td-mehrwertsteuer'><div id='steuer'>" . floatval($row["fSteuersatz"]) . " %</div></td>";
-            echo "<td id='td-versandklassenid'>" .$row["kVersandklasse"] . "</td>";
-            echo "<td id='td-versandklasse'>" .$row["cName"] . "</td>";            
-            echo "<td id='td-gewicht'>" . number_format(floatval($row["Versandgewicht"]),2, ",", ".") . "</td>";            
-            echo "<td id='td-nullpreis'>" .  number_format((floatval($row["GesamtEkNetto"]) + $valueVersandkosten + $valueVerpackungskosten ) * 1.19 * 1.217, 2, ",", ".")  . "</td>";
-            echo "<td id='td-vk-preis'>". number_format(floatval($row["VerkaufspreisBrutto"]),2, ",", ".") . "</td>";
-            echo "<td id='td-marge-euro'>" . number_format($margeEuro, 2, ",", ".") . "</td>";
-            echo "<td id='td-marge-prozent'> " .  number_format($margeProzent, 2, ",", ".") . " %</td>";
-            echo "<td id='td-bestand'>" . floatval($row["BestandGesamt"]) . "</td>";
-            echo "<td id='td-ordner'> Faltkartons </td>";
-            echo "</tr>";
+            
+            // TR: Array wird mit den Werten der Tabelle gefüllt.
+            $list[$y][0] = $row["Plattform"]; 
+            $list[$y][1] = $row["Artikelnummer"];
+            $list[$y][2] = $row["Bezeichnung"];
+            $list[$y][3] = $row["Hersteller"];
+            $list[$y][4] = $row["ASIN"];
+            $list[$y][5] = number_format(floatval($row["GesamtEkNetto"]),2, ",", ".");
+            $list[$y][6] = floatval($row["fSteuersatz"]);
+            $list[$y][7] = $row["kVersandklasse"];
+            $list[$y][8] = $row["cName"];
+            $list[$y][9] = number_format(floatval($row["Versandgewicht"]),2, ",", ".");
+            $list[$y][10] = number_format((floatval($row["GesamtEkNetto"]) + $valueVersandkosten + $valueVerpackungskosten ) * 1.19 * 1.217, 2, ",", ".");
+            $list[$y][11] = number_format(floatval($row["VerkaufspreisBrutto"]),2, ",", ".");
+            $list[$y][12] = number_format($margeEuro, 2, ",", ".");          
+            $list[$y][13] = number_format($margeProzent, 2, ",", ".");
+            $list[$y][14] = floatval($row["BestandGesamt"]);
+            $list[$y][15] = "Faltkartons";
+            
+            // TR: Tabellen Content
+            if ($y <= 30) {
+                echo "<tr class='hover' >";
+                echo "<td id='td-edit' class='btnEdit'><a><img class='icon-art-setting' src='../image/icon-art-setting.png' /></a></td>";
+                echo "<td id='td-plattform'>" . $list[$y][0] . "</td>";
+                echo "<td id='td-artikelnummer'>" . $list[$y][1] . "</td>";
+                echo "<td id='td-artikelname'>" .   $list[$y][2] . "</td>";
+                echo "<td id='td-hersteller'>" .   $list[$y][3] .  "</td>";
+                echo "<td id='td-plattform-id'>" .   $list[$y][4] . "</td>";
+                echo "<td id='td-ek-netto'>" .   $list[$y][5] . " &#8364</td>";
+                echo "<td id='td-mehrwertsteuer'><div id='steuer'>" . $list[$y][6] . " %</div></td>";
+                echo "<td id='td-versandklassenid'>" . $list[$y][7] . "</td>";
+                echo "<td id='td-versandklasse'>" .$list[$y][8] . "</td>";
+                echo "<td id='td-gewicht'>" . $list[$y][9] . "</td>";
+                echo "<td id='td-nullpreis'>" .  $list[$y][10]  . "</td>";
+                echo "<td id='td-vk-preis'>". $list[$y][11] . "</td>";
+                echo "<td id='td-marge-euro'>" . $list[$y][12] . "</td>";
+                echo "<td id='td-marge-prozent'> " .  $list[$y][13] . " %</td>";
+                echo "<td id='td-bestand'>" . $list[$y][14] . "</td>";
+                echo "<td id='td-ordner'>"  . $list[$y][15] . "</td>";
+                echo "</tr>";
+            }
+            
+            
+            $y = $y + 1;
         }
         
         //Table conclusion       
