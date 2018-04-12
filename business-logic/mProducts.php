@@ -111,12 +111,12 @@ WHERE        (KA.kKategorie IN
         if ($bestandSearch != '') $sql .= " AND BestandGesamt = '" . $_GET["txt-bestand"] . "'";
         
               
-        $sql .= " ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $limit ROWS ONLY";     
+        $sql .= " ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $limit ROWS ONLY"; 
         
-       
         
         echo "<tbody>";
         foreach ($dbh->query($sql) as $row) {
+            //$list[] = $row;
             
             $valueVersandkosten = $versandklassen[$row["cName"]][$row["cName"]];
             $valueVerpackungskosten = $verpackungskosten[$row["cName"]][$row["cName"]];
