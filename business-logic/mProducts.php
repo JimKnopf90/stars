@@ -67,6 +67,12 @@ WHERE        (KA.kKategorie IN
         $artikelnameSearch = isset($_GET['txt-artikelname']) ? $_GET['txt-artikelname'] : '';
         $herstellerSearch = isset($_GET['txt-hersteller']) ? $_GET['txt-hersteller'] : '';
         $plattformIDSearch = isset($_GET['txt-plattformid']) ? $_GET['txt-plattformid'] : '';
+        $eknettoSearch = isset($_GET['txt-eknetto']) ? $_GET['txt-eknetto'] : '';
+        $mwstSearch = isset($_GET['txt-mwst']) ? $_GET['txt-mwst'] : '';
+        $versandklassenSearch = isset($_GET['txt-versandklasse']) ? $_GET['txt-versandklasse'] : '';
+        $gewichtSearch = isset($_GET['txt-gewicht']) ? $_GET['txt-gewicht'] : '';
+        $vkpreisSearch = isset($_GET['txt-vkpreis']) ? $_GET['txt-vkpreis'] : '';
+        $bestandSearch = isset($_GET['txt-bestand']) ? $_GET['txt-bestand'] : '';
         
         // TR: Table beginn
         echo "<form action='../sites/products.php' method='get'><table><thead>";      
@@ -74,20 +80,20 @@ WHERE        (KA.kKategorie IN
         // TR: Headline        
         echo "<tr><th id='th-edit'><a href='login.php'><img class='icon-art-settings' src='../image/icon-art-setting.png'/></a></th>";
         echo "<th id='th-plattform'>Plattform <br><form><input id='txt-plattform'></form></th>";        
-        echo "<th id='th-artikelnummer'>Artikelnummer <br><span><input name='txt-artikelnummer' id='txt-artikelnummer' value='" . $artikelnummerSearch ."'></span></th>";
-        echo "<th id='th-artikelname'>Artikelname <br><input id='txt-artikelname' name='txt-artikelname' value='" . $artikelnameSearch ."'></th>";
-        echo "<th id='th-hersteller'>Hersteller <br><input id='txt-hersteller' name='txt-hersteller' value='" . $herstellerSearch ."'></th>";
-        echo "<th id='th-plattform-id'>Plattform-ID <br><input id='txt-plattformid' name='txt-plattformid' value='" . $plattformIDSearch ."'></th>";
-        echo "<th id='th-ek-netto'>EK-Netto <br><input id='txt-eknetto'></th>";
-        echo "<th id='th-mehrwertsteuer'>MwSt. <br><input id='txt-mwst'></th>";
-        echo "<th id='th-versandklassenid> Versandklassen-ID </th>";
-        echo "<th id='th-versandklasse'>Versandklasse <br><input id='txt-versandklasse'></th>";
-        echo "<th id='th-gewicht'>Gewicht <br><input id='txt-gewicht'></th>";
+        echo "<th id='th-artikelnummer'>Artikelnummer <br><span><input name='txt-artikelnummer' id='txt-artikelnummer' value='" . $artikelnummerSearch . "'></span></th>";
+        echo "<th id='th-artikelname'>Artikelname <br><input id='txt-artikelname' name='txt-artikelname' value='" . $artikelnameSearch . "'></th>";
+        echo "<th id='th-hersteller'>Hersteller <br><input id='txt-hersteller' name='txt-hersteller' value='" . $herstellerSearch . "'></th>";
+        echo "<th id='th-plattform-id'>Plattform-ID <br><input id='txt-plattformid' name='txt-plattformid' value='" . $plattformIDSearch . "'></th>";
+        echo "<th id='th-ek-netto'>EK-Netto <br><input id='txt-eknetto' name='txt-eknetto' value='" . $eknettoSearch . "'.></th>";
+        echo "<th id='th-mehrwertsteuer'>MwSt. <br><input id='txt-mwst' name='txt-mwst' value='" . $mwstSearch . "'.></th>";
+        echo "<th id='th-versandklassenid'>Versandklassen-ID </th>";
+        echo "<th id='th-versandklasse'>Versandklasse <br><input id='txt-versandklasse' name='txt-versandklasse' value='" . $versandklassenSearch . "'.></th>";
+        echo "<th id='th-gewicht'>Gewicht <br><input id='txt-gewicht' name='txt-gewicht' value='" . $gewichtSearch . "'.></th>";
         echo "<th id='th-nullpreis'>Nullpreis <br><input id='txt-nullpreis'></th>";
-        echo "<th id='th-vk-preis'>VK Preis <br><input id='txt-vkpreis'></th>";
+        echo "<th id='th-vk-preis'>VK Preis <br><input id='txt-vkpreis' name='txt-vkpreis' value='" . $vkpreisSearch . "'.></th>";
         echo "<th id='th-marge-euro'>Marge € <br><input id='txt-margeeuro'></th>";
         echo "<th id='th-marge-prozent'>Marge % <br><input id='txt-margeprozent'></th>";
-        echo "<th id='th-bestand'>Bestand <br><input id='txt-bestand'></th>";
+        echo "<th id='th-bestand'>Bestand <br><input id='txt-bestand' name='txt-bestand' value='" . $bestandSearch . "'.></th>";
         echo "<th id='th-ordner'>Ordner <br><input id='txt-ordner'><input type='submit' id='btnSubmit'></th></tr></thead>";   
         
         
@@ -96,12 +102,18 @@ WHERE        (KA.kKategorie IN
         if ($artikelnummerSearch != '') $sql .= " AND Artikelnummer LIKE '%" . $_GET["txt-artikelnummer"] . "%'";  
         if ($artikelnameSearch != '') $sql .= " AND Bezeichnung LIKE '%" . $_GET["txt-artikelname"] . "%'";  
         if ($herstellerSearch != '') $sql .= " AND Hersteller LIKE '%" . $_GET["txt-hersteller"] . "%'";  
-        if ($plattformIDSearch != '') $sql .= " AND ASIN LIKE '%" . $_GET["txt-plattformid"] . "%'";  
+        if ($plattformIDSearch != '') $sql .= " AND ASIN LIKE '%" . $_GET["txt-plattformid"] . "%'";
+        if ($eknettoSearch != '') $sql .= " AND GesamtEkNetto LIKE '" . str_replace(',', '.', $_GET["txt-eknetto"]) . "%'";
+        if ($mwstSearch != '') $sql .= " AND fSteuersatz LIKE '" . $_GET["txt-mwst"] . "%'";  
+        if ($versandklassenSearch != '') $sql .= " AND cName LIKE '%" . $_GET["txt-versandklasse"] . "%'";  
+        if ($gewichtSearch != '') $sql .= " AND Versandgewicht LIKE '" . str_replace(',', '.', $_GET["txt-gewicht"]) . "%'";  
+        if ($vkpreisSearch != '') $sql .= " AND VerkaufspreisBrutto LIKE '" . str_replace(',', '.', $_GET["txt-vkpreis"]) . "%'";
+        if ($bestandSearch != '') $sql .= " AND BestandGesamt = '" . $_GET["txt-bestand"] . "'";
         
+              
+        $sql .= " ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $limit ROWS ONLY";     
         
-        
-      
-        $sql .= " ORDER BY AVAL.Bezeichnung, AVAL.kArtikel OFFSET $start_from ROWS FETCH NEXT $limit ROWS ONLY";         
+       
         
         echo "<tbody>";
         foreach ($dbh->query($sql) as $row) {
@@ -147,16 +159,29 @@ WHERE        (KA.kKategorie IN
         
         $sql = "SELECT DISTINCT COUNT(Artikelnummer)
                 FROM ArtikelVerwaltung.vArtikelliste AS AVAL INNER JOIN
-                dbo.tkategorieartikel AS KA ON AVAL.kArtikelForKategorieArtikel = KA.kArtikel
+                     dbo.tkategorieartikel AS KA ON AVAL.kArtikelForKategorieArtikel = KA.kArtikel INNER JOIN
+                     dbo.tArtikel AS Art ON Art.kArtikel = AVAL.kArtikel INNER JOIN
+                     dbo.tSteuersatz AS Steuer ON Art.kSteuerklasse = Steuer.kSteuersatz INNER JOIN
+                     dbo.tVersandklasse ON Art.kVersandklasse = dbo.tVersandklasse.kVersandklasse LEFT OUTER JOIN
+                             (SELECT dbo.tStueckliste.kStueckliste, SUM(dbo.tliefartikel.fEKNetto * dbo.tStueckliste.fAnzahl) AS GesamtEkNetto
+                               FROM dbo.tStueckliste INNER JOIN
+                               dbo.tliefartikel ON dbo.tStueckliste.kArtikel = dbo.tliefartikel.tArtikel_kArtikel
+                               GROUP BY dbo.tStueckliste.kStueckliste) AS EK ON EK.kStueckliste = AVAL.kStueckliste
                 WHERE (KA.kKategorie IN (SELECT kKategorie FROM dbo.tkategorie
                 WHERE (kOberKategorie = 41))) AND (1 = AVAL.Zustand)";
         
-        // TR: Suche
+        // TR: Suche Anzahl
         if ($artikelnummerSearch != '') $sql .= " AND Artikelnummer LIKE '%" . $_GET["txt-artikelnummer"] . "%'";
         if ($artikelnameSearch != '') $sql .= " AND Bezeichnung LIKE '%" . $_GET["txt-artikelname"] . "%'";
         if ($herstellerSearch != '') $sql .= " AND Hersteller LIKE '%" . $_GET["txt-hersteller"] . "%'";  
         if ($plattformIDSearch != '') $sql .= " AND ASIN LIKE '%" . $_GET["txt-plattformid"] . "%'";  
-
+        if ($eknettoSearch != '') $sql .= " AND GesamtEkNetto LIKE '" . str_replace(',', '.', $_GET["txt-eknetto"]) . "%'"; 
+        if ($mwstSearch != '') $sql .= " AND fSteuersatz LIKE '" . $_GET["txt-mwst"] . "%'";  
+        if ($versandklassenSearch != '') $sql .= " AND cName LIKE '%" . $_GET["txt-versandklasse"] . "%'";  
+        if ($gewichtSearch != '') $sql .= " AND Versandgewicht LIKE '" . str_replace(',', '.', $_GET["txt-gewicht"]) . "%'"; 
+        if ($vkpreisSearch != '') $sql .= " AND VerkaufspreisBrutto LIKE '" . str_replace(',', '.', $_GET["txt-vkpreis"]) . "%'"; 
+        if ($bestandSearch != '') $sql .= " AND BestandGesamt = '" . $_GET["txt-bestand"] . "'";
+        
         $count = $dbh->query($sql);
         
         $total_records = $count->fetchColumn();
