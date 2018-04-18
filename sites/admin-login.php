@@ -13,7 +13,7 @@
         <img class="stars-logo" src="../admin-image/stars-logo.png">
         <div class="login">
             <!-- <h1>Login</h1> -->
-            <form method="post" action="admin-startseite.php">
+            <form method="post" action="admin-mainpage.php">
                 <input type="text" id="username" name="user" placeholder="Benutzername" required="required">
                 <input type="password" id="password" name="password" placeholder="Passwort" required="required">
                 <input type="submit" id="btn-login" value="Login">
