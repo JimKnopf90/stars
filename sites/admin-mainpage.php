@@ -15,7 +15,7 @@ if(isset($_SESSION["adminusername"])) {
 	</head>
 	<body>
         <header>
-            <a href="admin-startseite.php">
+            <a href="admin-mainpage.php">
                 <img id="stars-logo" src="../admin-image/stars-logo.png" />
             </a>        
             <nav class="nav-bar">
@@ -41,7 +41,7 @@ if(isset($_SESSION["adminusername"])) {
         <div class="sidebar">
             <ul>                                
                 <li>
-                    <a class="btnSidebar" href="admin-startseite.php">
+                    <a class="btnSidebar" href="admin-mainpage.php">
                         <button id="dashboard" type="button" class="active">
                             Dashboard
                         </button>
