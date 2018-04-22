@@ -8,7 +8,7 @@ try {
     
     $dbh = new PDO ("sqlsrv:Server=$hostname;Database=$dbname","$dbusername","$pw");
     
-    $sql = "SELECT COUNT(*) FROM tUser WHERE username = :username AND password = :password";
+    $sql = "SELECT COUNT(*) FROM tUser WHERE username = :username AND password = :password AND isAdmin = 1";
    
        
     $result = $dbh->prepare($sql);
@@ -20,8 +20,8 @@ try {
    
     if($count == 1) {
         echo 'Login';
-        $_SESSION["username"] = $_POST['username'];
-         header("Location: ../sites/mainpage.php"); 
+        $_SESSION["adminusername"] = $_POST['username'];
+         header("Location: ../sites/admin-startseite.php"); 
         
     } else {
         header("Location: ../sites/failed-login.php"); 

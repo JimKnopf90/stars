@@ -1,3 +1,7 @@
+<?php
+session_start();
+if(isset($_SESSION["adminusername"])) {     
+    ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -16,9 +20,7 @@
             </a>        
             <nav class="nav-bar">
                         
-                <ul>
-                    
-                    
+                <ul>                   
                     <li>
                         <button type="button" class="active">
                             Benutzerübersicht
@@ -111,7 +113,7 @@
         </div>  
         <div class="content">
             <table id="user-table">
-                <tr>
+                <!-- <tr>
                     <th>Benutername</th>
                     <th>E-Mail</th>
                     <th>Vorname</th>
@@ -143,9 +145,17 @@
                     <td><span class="normal">Normal</span></td>
                     <td>Bearbeiten - Löschen</td>
                 </tr>
-            </table>           
+            </table>  -->
+             <?php  
+	           include("../business-logic/mLoadUsers.php");	
+	           ?>                 
         </div>
         <!-- <img class="btn" src="../admin-image/homebutton.png" /> -->
         
     </body>
 </html>
+<?php
+} else {
+    header("Location: ../sites/admin-login.php"); 
+}
+?>

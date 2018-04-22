@@ -1,3 +1,7 @@
+<?php
+session_start();
+if(isset($_SESSION["adminusername"])) {     
+    ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -119,34 +123,29 @@
                 
                 <div id="input-new-user">
                     
-                    <form class="inputs">
+                    <form class="inputs" action="../business-logic/mCreateUser.php" method="post">
                         <div>
                             <label for="username"><span class="prelabel">Benutzername:</span></label>
                             <input type="text" name="username" id="username" required="required">
                         </div>
                         <div>
                             <label for="vorname"><span class="prelabel">Vorname:</span></label>
-                            <input type="text" name="vorname" id="vorname" required="required">
+                            <input type="text" name="forename" id="vorname" required="required">
                         </div>
                         <div>
                             <label for="nachname"><span class="prelabel">Nachname:</span></label>
-                            <input type="text" name="nachname" id="nachname" required="required">
+                            <input type="text" name="lastname" id="nachname" required="required">
                         </div> 
                         
                         <div>
                             <label for="email"><span class="prelabel">E-Mail:</span></label>
-                            <input type="text" name="email" id="email" required="required">
+                            <input type="text" name="mail" id="email" required="required">
                         </div>
                         
                         <div>
                             <label for="password"><span class="prelabel">Passwort:</span></label>
                             <input type="password" name="password" id="password" required="required">
-                        </div>
-                        
-                        <div>
-                            <label for="password-wdh"><span class="prelabel">Passwort wiederholen:</span></label>
-                            <input type="password" name="password-wdh" id="password-wdh" required="required">
-                        </div>
+                        </div>                       
                         <div>
                             <label for="user-role"><span class="prelabel">User Rolle:</span></label>
                             <select name="user-role" required="required">
@@ -170,3 +169,8 @@
         
     </body>
 </html>
+<?php
+} else {
+    header("Location: ../sites/admin-login.php"); 
+}
+?>

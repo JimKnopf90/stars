@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+session_destroy();
+$_SESSION = array();
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -13,8 +19,8 @@
         <img class="stars-logo" src="../admin-image/stars-logo.png">
         <div class="login">
             <!-- <h1>Login</h1> -->
-            <form method="post" action="admin-startseite.php">
-                <input type="text" id="username" name="user" placeholder="Benutzername" required="required">
+            <form action="../business-logic/mLoginAdmin.php" method="post">
+                <input type="text" id="username" name="username" placeholder="Benutzername" required="required">
                 <input type="password" id="password" name="password" placeholder="Passwort" required="required">
                 <input type="submit" id="btn-login" value="Login">
             </form>

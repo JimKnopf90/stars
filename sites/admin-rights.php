@@ -1,3 +1,7 @@
+<?php
+session_start();
+if(isset($_SESSION["adminusername"])) {     
+    ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -122,3 +126,8 @@
         
     </body>
 </html>
+<?php
+} else {
+    header("Location: ../sites/admin-login.php"); 
+}
+?>

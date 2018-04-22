@@ -1,11 +1,13 @@
 <?php
-    
+
     // TR: Versandklassen werden aus der Stars-DB gelesen und gespeichert.
     include("mCon.php");
     
     // TR: Variablen
     $y = 0;
-    
+    $k = 0;
+    $list = [];
+
     $dbh = new PDO ("sqlsrv:Server=$hostname;Database=$dbname","$dbusername","$pw");
     
     $sth = $dbh->prepare("SELECT * FROM tVersandklassen");
@@ -20,7 +22,8 @@
     
     for ($i=0; $i < count($result); $i++) {        
         $versandklassen[$result[$i]['VersandklasseJTL']] = array( $result[$i]['VersandklasseJTL'] => $result[$i]['Preis']);
-    }  
+    }
+
     
     // TR: Verpackungskosten werden in einem Array gespeichert.
     $verpackungskosten = array();
@@ -48,7 +51,7 @@
     
     $sql = "SELECT DISTINCT 'Amazon' AS Plattform, AVAL.kArtikel, AVAL.kStueckliste, AVAL.Artikelnummer, AVAL.Bezeichnung, AVAL.EAN, AVAL.ASIN, AVAL.PreisAmazon, COALESCE(AVAL.Hersteller, 'kein Wert') As Hersteller, AVAL.IstStuecklistenkomponente, 
                          AVAL.VerkaufspreisBrutto, EK.GesamtEkNetto, Steuer.fSteuersatz, dbo.tVersandklasse.kVersandklasse, dbo.tVersandklasse.cName, AVAL.BestandGesamt, AVAL.Versandgewicht
-FROM            ArtikelVerwaltung.vArtikelliste AS AVAL INNER JOIN
+                         FROM            ArtikelVerwaltung.vArtikelliste AS AVAL INNER JOIN
                          dbo.tkategorieartikel AS KA ON AVAL.kArtikelForKategorieArtikel = KA.kArtikel INNER JOIN
                          dbo.tArtikel AS Art ON Art.kArtikel = AVAL.kArtikel INNER JOIN
                          dbo.tSteuersatz AS Steuer ON Art.kSteuerklasse = Steuer.kSteuersatz INNER JOIN
@@ -57,15 +60,15 @@ FROM            ArtikelVerwaltung.vArtikelliste AS AVAL INNER JOIN
                                FROM            dbo.tStueckliste INNER JOIN
                                                          dbo.tliefartikel ON dbo.tStueckliste.kArtikel = dbo.tliefartikel.tArtikel_kArtikel
                                GROUP BY dbo.tStueckliste.kStueckliste) AS EK ON EK.kStueckliste = AVAL.kStueckliste
-WHERE        (KA.kKategorie IN
+                          WHERE        (KA.kKategorie IN
                              (SELECT        kKategorie
                                FROM            dbo.tkategorie
                                WHERE        (kOberKategorie = 41))) AND (1 = AVAL.Zustand) ";
    
   
 
-        // TR: Werte f�r die Suche auslesen.
-        // $plattformSearch = isset($_GET['txt-plattform']) ? $_GET['txt-plattform'] : '';    
+        // TR: Werte für die Suche auslesen.
+        // $plattformSearch = isset($_GET['txt-plattform']) ? $_GET['txt-plattform'] : '';
         $artikelnummerSearch = isset($_GET['txt-artikelnummer']) ? $_GET['txt-artikelnummer'] : '';
         $artikelnameSearch = isset($_GET['txt-artikelname']) ? $_GET['txt-artikelname'] : '';
         $herstellerSearch = isset($_GET['txt-hersteller']) ? $_GET['txt-hersteller'] : '';
@@ -76,31 +79,32 @@ WHERE        (KA.kKategorie IN
         $gewichtSearch = isset($_GET['txt-gewicht']) ? $_GET['txt-gewicht'] : '';
         $vkpreisSearch = isset($_GET['txt-vkpreis']) ? $_GET['txt-vkpreis'] : '';
         $bestandSearch = isset($_GET['txt-bestand']) ? $_GET['txt-bestand'] : '';
+        $nullpreisSearch = isset($_GET['txt-nullpreis']) ? $_GET['txt-nullpreis'] : '';
         
         // TR: Table beginn
         echo "<form action='../sites/products.php' method='get'><table><thead>";      
        
         // TR: Headline        
-        echo "<tr><th id='th-edit'><a href='login.php'><img class='icon-art-settings' src='../image/icon-art-setting.png'/></a></th>";
+        echo "<tr><th id='th-edit'><a ><img class='icon-art-settings' src='../image/icon-art-setting.png'/></a></th>";
         echo "<th id='th-plattform'>Plattform <br><form><input id='txt-plattform'></form></th>";        
         echo "<th id='th-artikelnummer'>Artikelnummer <br><span><input name='txt-artikelnummer' id='txt-artikelnummer' value='" . $artikelnummerSearch . "'></span></th>";
         echo "<th id='th-artikelname'>Artikelname <br><input id='txt-artikelname' name='txt-artikelname' value='" . $artikelnameSearch . "'></th>";
         echo "<th id='th-hersteller'>Hersteller <br><input id='txt-hersteller' name='txt-hersteller' value='" . $herstellerSearch . "'></th>";
         echo "<th id='th-plattform-id'>Plattform-ID <br><input id='txt-plattformid' name='txt-plattformid' value='" . $plattformIDSearch . "'></th>";
-        echo "<th id='th-ek-netto'>EK-Netto <br><input id='txt-eknetto' name='txt-eknetto' value='" . $eknettoSearch . "'.></th>";
-        echo "<th id='th-mehrwertsteuer'>MwSt. <br><input id='txt-mwst' name='txt-mwst' value='" . $mwstSearch . "'.></th>";
+        echo "<th id='th-ek-netto'>EK-Netto <br><input id='txt-eknetto' name='txt-eknetto' value='" . $eknettoSearch . "'></th>";
+        echo "<th id='th-mehrwertsteuer'>MwSt. <br><input id='txt-mwst' name='txt-mwst' value='" . $mwstSearch . "'></th>";
         echo "<th id='th-versandklassenid'>Versandklassen-ID </th>";
-        echo "<th id='th-versandklasse'>Versandklasse <br><input id='txt-versandklasse' name='txt-versandklasse' value='" . $versandklassenSearch . "'.></th>";
-        echo "<th id='th-gewicht'>Gewicht <br><input id='txt-gewicht' name='txt-gewicht' value='" . $gewichtSearch . "'.></th>";
-        echo "<th id='th-nullpreis'>Nullpreis <br><input id='txt-nullpreis'></th>";
-        echo "<th id='th-vk-preis'>VK Preis <br><input id='txt-vkpreis' name='txt-vkpreis' value='" . $vkpreisSearch . "'.></th>";
+        echo "<th id='th-versandklasse'>Versandklasse <br><input id='txt-versandklasse' name='txt-versandklasse' value='" . $versandklassenSearch . "'></th>";
+        echo "<th id='th-gewicht'>Gewicht <br><input id='txt-gewicht' name='txt-gewicht' value='" . $gewichtSearch . "'></th>";
+        echo "<th id='th-nullpreis'>Nullpreis <br><input id='txt-nullpreis' name='txt-nullpreis' value='" . $nullpreisSearch . "'></th>";
+        echo "<th id='th-vk-preis'>VK Preis <br><input id='txt-vkpreis' name='txt-vkpreis' value='" . $vkpreisSearch . "'></th>";
         echo "<th id='th-marge-euro'>Marge € <br><input id='txt-margeeuro'></th>";
         echo "<th id='th-marge-prozent'>Marge % <br><input id='txt-margeprozent'></th>";
-        echo "<th id='th-bestand'>Bestand <br><input id='txt-bestand' name='txt-bestand' value='" . $bestandSearch . "'.></th>";
+        echo "<th id='th-bestand'>Bestand <br><input id='txt-bestand' name='txt-bestand' value='" . $bestandSearch . "'></th>";
         echo "<th id='th-ordner'>Ordner <br><input id='txt-ordner'><input type='submit' id='btnSubmit'></th></tr></thead>";   
         
         
-        // TR: Suche       
+        // TR: Überprüft, ob Werte für die Suche eingegeben wurden. Falls Jja, wird in der SQL Query eingegrenzt.
         if ($artikelnummerSearch != '') $sql .= " AND Artikelnummer LIKE '%" . $_GET["txt-artikelnummer"] . "%'";  
         if ($artikelnameSearch != '') $sql .= " AND Bezeichnung LIKE '%" . $_GET["txt-artikelname"] . "%'";  
         if ($herstellerSearch != '') $sql .= " AND Hersteller LIKE '%" . $_GET["txt-hersteller"] . "%'";  
@@ -111,11 +115,7 @@ WHERE        (KA.kKategorie IN
         if ($gewichtSearch != '') $sql .= " AND Versandgewicht LIKE '" . str_replace(',', '.', $_GET["txt-gewicht"]) . "%'";  
         if ($vkpreisSearch != '') $sql .= " AND VerkaufspreisBrutto LIKE '" . str_replace(',', '.', $_GET["txt-vkpreis"]) . "%'";
         if ($bestandSearch != '') $sql .= " AND BestandGesamt = '" . $_GET["txt-bestand"] . "'";
-        
-              
-           
-        
-        echo "<tbody>";
+      
         foreach ($dbh->query($sql) as $row) {         
             
             $valueVersandkosten = $versandklassen[$row["cName"]][$row["cName"]];
@@ -131,54 +131,44 @@ WHERE        (KA.kKategorie IN
                 $margeProzent = 0.0 ;
             }
             
-            // TR: Array wird mit den Werten der Tabelle gef�llt.
-            $list[$y][0] = $row["Plattform"]; 
-            $list[$y][1] = $row["Artikelnummer"];
-            $list[$y][2] = $row["Bezeichnung"];
-            $list[$y][3] = $row["Hersteller"];
-            $list[$y][4] = $row["ASIN"];
-            $list[$y][5] = number_format(floatval($row["GesamtEkNetto"]),2, ",", ".");
-            $list[$y][6] = floatval($row["fSteuersatz"]);
-            $list[$y][7] = $row["kVersandklasse"];
-            $list[$y][8] = $row["cName"];
-            $list[$y][9] = number_format(floatval($row["Versandgewicht"]),2, ",", ".");
-            $list[$y][10] = number_format((floatval($row["GesamtEkNetto"]) + $valueVersandkosten + $valueVerpackungskosten ) * 1.19 * 1.217, 2, ",", ".");
-            $list[$y][11] = number_format(floatval($row["VerkaufspreisBrutto"]),2, ",", ".");
-            $list[$y][12] = number_format($margeEuro, 2, ",", ".");          
-            $list[$y][13] = number_format($margeProzent, 2, ",", ".");
-            $list[$y][14] = floatval($row["BestandGesamt"]);
-            $list[$y][15] = "Faltkartons";
-            
-            // TR: Tabellen Content
-            if ($y <= 30) {
-                echo "<tr class='hover' >";
-                echo "<td id='td-edit' class='btnEdit'><a><img class='icon-art-setting' src='../image/icon-art-setting.png' /></a></td>";
-                echo "<td id='td-plattform'>" . $list[$y][0] . "</td>";
-                echo "<td id='td-artikelnummer'>" . $list[$y][1] . "</td>";
-                echo "<td id='td-artikelname'>" .   $list[$y][2] . "</td>";
-                echo "<td id='td-hersteller'>" .   $list[$y][3] .  "</td>";
-                echo "<td id='td-plattform-id'>" .   $list[$y][4] . "</td>";
-                echo "<td id='td-ek-netto'>" .   $list[$y][5] . " &#8364</td>";
-                echo "<td id='td-mehrwertsteuer'><div id='steuer'>" . $list[$y][6] . " %</div></td>";
-                echo "<td id='td-versandklassenid'>" . $list[$y][7] . "</td>";
-                echo "<td id='td-versandklasse'>" .$list[$y][8] . "</td>";
-                echo "<td id='td-gewicht'>" . $list[$y][9] . "</td>";
-                echo "<td id='td-nullpreis'>" .  $list[$y][10]  . "</td>";
-                echo "<td id='td-vk-preis'>". $list[$y][11] . "</td>";
-                echo "<td id='td-marge-euro'>" . $list[$y][12] . "</td>";
-                echo "<td id='td-marge-prozent'> " .  $list[$y][13] . " %</td>";
-                echo "<td id='td-bestand'>" . $list[$y][14] . "</td>";
-                echo "<td id='td-ordner'>"  . $list[$y][15] . "</td>";
-                echo "</tr>";
-            }
-            
+            // TR: Array wird mit den Werten der Tabelle gefüllt.
+            $list[$y]['Plattform'] = $row["Plattform"]; 
+            $list[$y]['Artikelnummer'] = $row["Artikelnummer"];
+            $list[$y]['Artikelname'] = $row["Bezeichnung"];
+            $list[$y]['Hersteller'] = $row["Hersteller"];
+            $list[$y]['PlattformID'] = $row["ASIN"];
+            $list[$y]['EkNetto'] = number_format(floatval($row["GesamtEkNetto"]),2, ",", ".");
+            $list[$y]['Mwst'] = floatval($row["fSteuersatz"]);
+            $list[$y]['Versandklasse'] = $row["kVersandklasse"];
+            $list[$y]['VersandklasseName'] = $row["cName"];
+            $list[$y]['Gewicht'] = number_format(floatval($row["Versandgewicht"]),2, ",", ".");
+            $list[$y]['Nullpreis'] = number_format((floatval($row["GesamtEkNetto"]) + $valueVersandkosten + $valueVerpackungskosten ) * 1.19 * 1.217, 2, ",", ".");
+            $list[$y]['VKPreis'] = number_format(floatval($row["VerkaufspreisBrutto"]),2, ",", ".");
+            $list[$y]['MargeEuro'] = number_format($margeEuro, 2, ",", ".");          
+            $list[$y]['MargeProzent'] = number_format($margeProzent, 2, ",", ".");
+            $list[$y]['Bestand'] = floatval($row["BestandGesamt"]);
+            $list[$y]['Ordner'] = "Faltkartons";           
             
             $y = $y + 1;
         }
-        
-        //Table conclusion       
-        echo "</tbody>";
-        echo "</table></form>";        
+
+        //TR: Temp Filter
+        if ($nullpreisSearch != '')
+        {
+            foreach ($list as $listEntry)
+            {
+               if ($listEntry['Nullpreis'] != $nullpreisSearch)
+               {
+                   unset($list[$k]);
+               }
+               $k++;
+            }
+            // TR: Index wird neu durchgezählt-
+            $list = array_values($list);
+        }
+
+        createTable($list);
+             
        
         
         $sql = "SELECT DISTINCT COUNT(Artikelnummer)
@@ -205,6 +195,7 @@ WHERE        (KA.kKategorie IN
         if ($gewichtSearch != '') $sql .= " AND Versandgewicht LIKE '" . str_replace(',', '.', $_GET["txt-gewicht"]) . "%'"; 
         if ($vkpreisSearch != '') $sql .= " AND VerkaufspreisBrutto LIKE '" . str_replace(',', '.', $_GET["txt-vkpreis"]) . "%'"; 
         if ($bestandSearch != '') $sql .= " AND BestandGesamt = '" . $_GET["txt-bestand"] . "'";
+
         
         $count = $dbh->query($sql);
         
@@ -215,7 +206,7 @@ WHERE        (KA.kKategorie IN
         
         for ($i=1; $i<=$total_pages; $i++) {          
             if ($i <= 10) {
-                $pagLink .= "<a class='pagingElement' href='products.php?page=".$i."'>".$i."</a>";
+                $pagLink .= "<a class='pagingElement' href='mProducts.php?page=".$i."'>".$i."</a>";
             } else {
                 if ($i == 11) {
                     $pagLink .= "<select><option class='pagingElement' value='products.php?page=".$i."'>".$i."</option>";
@@ -230,9 +221,69 @@ WHERE        (KA.kKategorie IN
         
         echo $pagLink . "</select><div id='counter'>" . $total_records . " Zeile(n)</div></div>";         
         
+        function SortArray ($_list)
+        {            
+            usort($_list,"CompareDESC");
+            
+            
+        }
         
-           
+        function compareASC($value1, $value2) {
+            
+            if ($value1["PlattformID"] < $value2["PlattformID"]) return -1;
+            else if ($value1["PlattformID"] > $value2["PlattformID"]) return 1;
+            else return 0;
+        
+        }
+        
+        function compareDESC($value1, $value2) {
+            
+            if ($value1["PlattformID"] > $value2["PlattformID"]) return -1;
+            else if ($value1["PlattformID"] < $value2["PlattformID"]) return 1;
+            else return 0;
+            
+        }
+
+/**
+ * @param $_list
+ */
+function createTable ($_list)
+        {
+            // TR: Table Head
+            echo "<tbody>";
+            
+            for ($a = 0; $a < count($_list) ; $a++) {               
+                
+                // TR: Tabellen Content
+                if ($a <= 30) {          
+                    
+                    echo "<tr class='hover' >";
+                    echo "<td id='td-edit' class='btnEdit'><a><img class='icon-art-setting' src='../image/icon-art-setting.png' /></a></td>";
+                    echo "<td id='td-plattform'>" . $_list[$a]['Plattform'] . "</td>";
+                    echo "<td id='td-artikelnummer'>" . $_list[$a]['Artikelnummer'] . "</td>";
+                    echo "<td id='td-artikelname'>" . $_list[$a]['Artikelname'] . "</td>";
+                    echo "<td id='td-hersteller'>" . $_list[$a]['Hersteller'] .  "</td>";
+                    echo "<td id='td-plattform-id'>" . $_list[$a]['PlattformID'] . "</td>";
+                    echo "<td id='td-ek-netto'>" . $_list[$a]['EkNetto'] . " &#8364</td>";
+                    echo "<td id='td-mehrwertsteuer'><div id='steuer'>" . $_list[$a]['Mwst'] . " %</div></td>";
+                    echo "<td id='td-versandklassenid'>" . $_list[$a]['Versandklasse'] . "</td>";
+                    echo "<td id='td-versandklasse'>" .$_list[$a]['VersandklasseName'] . "</td>";
+                    echo "<td id='td-gewicht'>" . $_list[$a]['Gewicht'] . "</td>";
+                    echo "<td id='td-nullpreis'>" .  $_list[$a]['Nullpreis']  . "</td>";
+                    echo "<td id='td-vk-preis'>". $_list[$a]['VKPreis'] . "</td>";
+                    echo "<td id='td-marge-euro'>" . $_list[$a]['MargeEuro'] . "</td>";
+                    echo "<td id='td-marge-prozent'>" .  $_list[$a]['MargeProzent'] . " %</td>";
+                    echo "<td id='td-bestand'>" . $_list[$a]['Bestand'] . "</td>";
+                    echo "<td id='td-ordner'>"  . $_list[$a]['Ordner'] . "</td>";
+                    echo "</tr>";
+                }
+               
+            }
+            
+            //Table Conclusion
+            echo "</tbody>";
+            echo "</table></form>"; 
+        }
         
 
 
-?>

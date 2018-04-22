@@ -45,14 +45,7 @@ if(isset($_SESSION["username"])) {
                 <h3>Bitte überprüfe umgehend die fehlerhaften Artikel! Diese findest du <a href="attentions.php">Hier</a></h3>
                 <h3>Sollte es Probleme geben, wende dich bitte an die zuständige Person.</h3>
                 <h3>Neue <span class="info">Statistiken</span> sind verfügbar!</h3>
-                <h3>Der <span class="info">Repricer</span> ist jetzt auch am Start!</h3>
-                <h3><span class="info">Timm</span> nascht gern Kot.</h3>
-                <h3>Es wurden <span class="info">7</span> neue Artikel gefunden.</h3>
-                <h3>Bitte überprüfe umgehend die fehlerhaften Artikel! Diese findest du <a href="attentions.php">Hier</a></h3>
-                <h3>Sollte es Probleme geben, wende dich bitte an die zuständige Person.</h3>
-                <h3>Neue <span class="info">Statistiken</span> sind verfügbar!</h3>
-                <h3>Der <span class="info">Repricer</span> ist jetzt auch am Start!</h3>
-                <h3><span class="info">Timm</span> nascht gern Kot.</h3>
+                <h3>Der <span class="info">Repricer</span> ist jetzt auch am Start!</h3>              
                 </ul>
             </div>
         </div>
@@ -61,6 +54,6 @@ if(isset($_SESSION["username"])) {
 </html>
 <?php
 } else {
-    echo "erst ein loggen Bro";
+    header("Location: ../sites/login.php"); 
 }
 ?>

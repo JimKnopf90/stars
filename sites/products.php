@@ -1,3 +1,8 @@
+<?php
+session_start();
+if(isset($_SESSION["username"])) {     
+    ?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -41,6 +46,10 @@
 
 <?php
  include("../business-logic/mProducts.php");
+
+} else {
+    header("Location: ../sites/login.php"); 
+}
 ?>
 
 
