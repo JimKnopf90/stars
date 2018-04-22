@@ -21,10 +21,10 @@ try {
     if($count == 1) {
         echo 'Login';
         $_SESSION["adminusername"] = $_POST['username'];
-         header("Location: ../sites/admin-startseite.php"); 
+         header("Location: ../sites/admin-mainpage.php"); 
         
     } else {
-        header("Location: ../sites/failed-login.php"); 
+        header("Location: ../sites/admin-failed-login.php"); 
     }
     
   } catch (PDOException $e) {
