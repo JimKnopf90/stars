@@ -59,11 +59,12 @@
                              (SELECT        dbo.tStueckliste.kStueckliste, SUM(dbo.tliefartikel.fEKNetto * dbo.tStueckliste.fAnzahl) AS GesamtEkNetto
                                FROM            dbo.tStueckliste INNER JOIN
                                                          dbo.tliefartikel ON dbo.tStueckliste.kArtikel = dbo.tliefartikel.tArtikel_kArtikel
+														 WHERE dbo.tliefartikel.tLieferant_kLieferant = 34
                                GROUP BY dbo.tStueckliste.kStueckliste) AS EK ON EK.kStueckliste = AVAL.kStueckliste
                           WHERE        (KA.kKategorie IN
                              (SELECT        kKategorie
                                FROM            dbo.tkategorie
-                               WHERE        (kOberKategorie = 41))) AND (1 = AVAL.Zustand) ";
+                               WHERE        (kOberKategorie = 41))) AND (1 = AVAL.Zustand)";
    
   
 
