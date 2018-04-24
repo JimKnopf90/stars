@@ -80,6 +80,10 @@
         $vkpreisSearch = isset($_GET['txt-vkpreis']) ? $_GET['txt-vkpreis'] : '';
         $bestandSearch = isset($_GET['txt-bestand']) ? $_GET['txt-bestand'] : '';
         $nullpreisSearch = isset($_GET['txt-nullpreis']) ? $_GET['txt-nullpreis'] : '';
+        $nullpreisSearch = isset($_GET['txt-nullpreis']) ? $_GET['txt-nullpreis'] : '';
+        $margeEuroSearch = isset($_GET['txt-margeeuro']) ? $_GET['txt-margeeuro'] : '';
+        $margeProzentSearch = isset($_GET['txt-margeprozent']) ? $_GET['txt-margeprozent'] : '';
+
         
         // TR: Table beginn
         echo "<form action='../sites/products.php' method='get'><table><thead>";      
@@ -98,8 +102,8 @@
         echo "<th id='th-gewicht'>Gewicht <br><input id='txt-gewicht' name='txt-gewicht' value='" . $gewichtSearch . "'></th>";
         echo "<th id='th-nullpreis'>Nullpreis <br><input id='txt-nullpreis' name='txt-nullpreis' value='" . $nullpreisSearch . "'></th>";
         echo "<th id='th-vk-preis'>VK Preis <br><input id='txt-vkpreis' name='txt-vkpreis' value='" . $vkpreisSearch . "'></th>";
-        echo "<th id='th-marge-euro'>Marge € <br><input id='txt-margeeuro'></th>";
-        echo "<th id='th-marge-prozent'>Marge % <br><input id='txt-margeprozent'></th>";
+        echo "<th id='th-marge-euro'>Marge € <br><input id='txt-margeeuro' name='txt-margeeuro' value='" . $margeEuroSearch. "'></th>";
+        echo "<th id='th-marge-prozent'>Marge % <br><input id='txt-margeprozent' name='txt-margeprozent' value='" . $margeProzentSearch. "'></th>";
         echo "<th id='th-bestand'>Bestand <br><input id='txt-bestand' name='txt-bestand' value='" . $bestandSearch . "'></th>";
         echo "<th id='th-ordner'>Ordner <br><input id='txt-ordner'><input type='submit' id='btnSubmit'></th></tr></thead>";   
         
@@ -153,6 +157,32 @@
         }
 
         //TR: Temp Filter
+        if ( $margeProzentSearch != '')
+        {
+            foreach ($list as $listEntry)
+            {
+                if ($listEntry['MargeProzent'] != $margeProzentSearch)
+                {
+                    unset($list[$k]);
+                }
+
+                $k++;
+            }
+        }
+
+        if ( $margeEuroSearch != '')
+        {
+            foreach ($list as $listEntry)
+            {
+                if ($listEntry['MargeEuro'] != $margeEuroSearch)
+                {
+                    unset($list[$k]);
+                }
+
+                $k++;
+            }
+        }
+
         if ($nullpreisSearch != '')
         {
             foreach ($list as $listEntry)
@@ -161,28 +191,20 @@
                {
                    unset($list[$k]);
                }
+
+
+
                $k++;
             }
-            // TR: Index wird neu durchgezählt-
-            $list = array_values($list);
         }
+
+        // TR: Index wird neu durchgezählt-
+        $list = array_values($list);
 
         createTable($list);
              
-       
-        
-        $sql = "SELECT DISTINCT COUNT(Artikelnummer)
-                FROM ArtikelVerwaltung.vArtikelliste AS AVAL INNER JOIN
-                     dbo.tkategorieartikel AS KA ON AVAL.kArtikelForKategorieArtikel = KA.kArtikel INNER JOIN
-                     dbo.tArtikel AS Art ON Art.kArtikel = AVAL.kArtikel INNER JOIN
-                     dbo.tSteuersatz AS Steuer ON Art.kSteuerklasse = Steuer.kSteuersatz INNER JOIN
-                     dbo.tVersandklasse ON Art.kVersandklasse = dbo.tVersandklasse.kVersandklasse LEFT OUTER JOIN
-                             (SELECT dbo.tStueckliste.kStueckliste, SUM(dbo.tliefartikel.fEKNetto * dbo.tStueckliste.fAnzahl) AS GesamtEkNetto
-                               FROM dbo.tStueckliste INNER JOIN
-                               dbo.tliefartikel ON dbo.tStueckliste.kArtikel = dbo.tliefartikel.tArtikel_kArtikel
-                               GROUP BY dbo.tStueckliste.kStueckliste) AS EK ON EK.kStueckliste = AVAL.kStueckliste
-                WHERE (KA.kKategorie IN (SELECT kKategorie FROM dbo.tkategorie
-                WHERE (kOberKategorie = 41))) AND (1 = AVAL.Zustand)";
+
+
         
         // TR: Suche Anzahl
         if ($artikelnummerSearch != '') $sql .= " AND Artikelnummer LIKE '%" . $_GET["txt-artikelnummer"] . "%'";
@@ -197,10 +219,8 @@
         if ($bestandSearch != '') $sql .= " AND BestandGesamt = '" . $_GET["txt-bestand"] . "'";
 
         
-        $count = $dbh->query($sql);
-        
-        $total_records = $count->fetchColumn();
-        $total_pages = ceil($total_records / $limit);  
+
+        $total_pages = ceil(count($list) / $limit);
         
         $pagLink = "<div id='paging' class='pagination'>";
         
@@ -219,7 +239,7 @@
             
         };
         
-        echo $pagLink . "</select><div id='counter'>" . $total_records . " Zeile(n)</div></div>";         
+        echo $pagLink . "</select><div id='counter'>" . count($list) . " Zeile(n)</div></div>";
         
         function SortArray ($_list)
         {            
@@ -244,10 +264,10 @@
             
         }
 
-/**
- * @param $_list
- */
-function createTable ($_list)
+        /**
+         * @param $_list
+         */
+        function createTable ($_list)
         {
             // TR: Table Head
             echo "<tbody>";
