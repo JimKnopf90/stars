@@ -125,7 +125,7 @@
             
             $valueVersandkosten = $versandklassen[$row["cName"]][$row["cName"]];
             $valueVerpackungskosten = $verpackungskosten[$row["cName"]][$row["cName"]];
-            $mwst = $row["VerkaufspreisBrutto"] / 100 * floatval($row["fSteuersatz"]);
+            $mwst = $row["VerkaufspreisBrutto"] - ($row["VerkaufspreisBrutto"] * 100 / (floatval($row["fSteuersatz"]) + 100 )) ;
             $amazonKosten = $row["VerkaufspreisBrutto"] / 100 * 15;
             $summeGesamtkosten = $mwst + $amazonKosten + $row["GesamtEkNetto"] + $valueVersandkosten + $valueVerpackungskosten;
             $margeEuro = ($row["VerkaufspreisBrutto"] - $summeGesamtkosten);
