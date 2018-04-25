@@ -79,7 +79,7 @@ if(isset($_SESSION["adminusername"])) {
                 </li>
                 
                 <li>
-                    <a class="btnSidebar" href="#">
+                    <a class="btnSidebar" href="admin-newsfeed.php">
                         <button id="" type="button" class="inactive">
                             Newsfeed
                         </button>

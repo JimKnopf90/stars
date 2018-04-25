@@ -143,7 +143,6 @@ header{
 
 .content{
     background: #d6d5d5;
-    width: 100%;
     height: 100%;
     margin: 0;
     margin-left: 250px;
@@ -424,6 +423,87 @@ p{
     text-align: center;
 }
 
+
+/* >>>>>>>>>> NEWSFEED BEREICH <<<<<<<<<*/
+
+#newsfeed-content-feeds{
+    
+}
+
+#newsfeed-content-feeds{
+    margin-left: 50px;
+    margin: 50;
+    width: 400px;
+}
+
+#newsfeed-content-feeds h2{
+    padding: 0;
+    margin-left: 50px;
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 0;
+    width: 400px;
+    
+}
+
+#newsfeed-content-feeds h3{
+    margin-left: 50px;
+    font-size: 22px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 0;
+    margin: 0;
+    width: 400px;
+    
+}
+
+#newsfeed-content-feeds h5{
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: 0 ;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin: 0;
+    width: 400px;
+}
+
+#newsfeed-content-feeds h6{
+    margin-left: 50px;
+    color: dimgray;
+    font-size: 16px;
+    font-weight: ;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.beitrag{
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.beitrag a:hover{
+    cursor: pointer;
+    color: #2869d7;
+}
+
+#btn-all-posts{
+    margin-left: 70px;
+}
+
+.beitrag a{
+    text-decoration: none;
+    color: black;
+}
+
+#btn-all-posts{
+    margin-top: 10px;
+    width: 150px;
+    height: 50px;
+    float: left;
+    
+}
 
 
 

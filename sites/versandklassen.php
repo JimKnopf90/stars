@@ -74,7 +74,7 @@
                 </li>
                 
                 <li>
-                    <a class="btnSidebar" href="#">
+                    <a class="btnSidebar" href="admin-newsfeed.php">
                         <button type="button" class="inactive">
                             Newsfeed
                         </button>

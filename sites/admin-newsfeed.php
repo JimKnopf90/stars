@@ -25,13 +25,25 @@ if(isset($_SESSION["adminusername"])) {
                     
                     <li>
                         <button type="button" class="active">
-                            Historie
+                            Übersicht
                         </button>
                     </li>
                     
                     <li>
                         <button type="button" class="inactive">
-                            Fehlermeldungen
+                            Beitrag verfassen
+                        </button>
+                    </li> 
+                    
+                    <li>
+                        <button type="button" class="inactive">
+                            Beiträge bearbeiten
+                        </button>
+                    </li>
+                    
+                    <li>
+                        <button type="button" class="inactive">
+                            Alle Beiträge
                         </button>
                     </li>
                 </ul>    
@@ -42,7 +54,7 @@ if(isset($_SESSION["adminusername"])) {
             <ul>                                
                 <li>
                     <a class="btnSidebar" href="admin-mainpage.php">
-                        <button id="dashboard" type="button" class="active">
+                        <button id="dashboard" type="button" class="inactive">
                             Dashboard
                         </button>
                     </a>
@@ -74,7 +86,7 @@ if(isset($_SESSION["adminusername"])) {
                 
                 <li>
                     <a class="btnSidebar" href="admin-newsfeed.php">
-                        <button id="" type="button" class="inactive">
+                        <button id="" type="button" class="active">
                             Newsfeed
                         </button>
                     </a>
@@ -106,9 +118,64 @@ if(isset($_SESSION["adminusername"])) {
             </ul>
         </div>  
         <div class="content">
+            <div id="newsfeed-content-feeds">
+                <h2>Die letzten Beiträge</h2>
+                <div class="beitrag">
+                    <a href="#">
+                        <h3>Beitrag #1 - Titel des Beitrags</h3>
+                        <h5>Hier der Inhalt auf ca. 50 Zeichen begrenzt. ... </h5>
+                        <h6>Von: Administrator - 24.04.2018</h6>
+                    </a>
+                </div>
                 
+                <div class="beitrag">
+                    <a href="#">
+                        <h3>Beitrag #2 - Titel des Beitrags</h3>
+                        <h5>Wenn der Inhalt mehr als 50 Zeichen hat dann ... </h5>
+                        <h6>Von: Administrator - 24.04.2018</h6>
+                    </a>
+                </div>
+                
+                <div class="beitrag">
+                    <a href="#">
+                        <h3>Beitrag #3 - Titel des Beitrags</h3>
+                        <h5>Nur die 5 neuesten Artikel anzeigen lassen </h5>
+                        <h6>Von: Administrator - 24.04.2018</h6>
+                    </a>
+                </div>
+                
+                <div class="beitrag">
+                    <a href="#">
+                        <h3>Beitrag #4 - Titel des Beitrags</h3>
+                        <h5>Rechts neben den Beiträgen "Schnellbeitrag" </h5>
+                        <h6>Von: Administrator - 24.04.2018</h6>
+                    </a>
+                </div>
+                
+                <div class="beitrag">
+                    <a href="#">
+                        <h3>Beitrag #5 - Titel des Beitrags</h3>
+                        <h5>Hier drunter dann Button für alle Beiträge </h5>
+                        <h6>Von: Administrator - 24.04.2018</h6>
+                    </a>
+                </div>
+                
+                <a href="#">
+                        <button type="button" id="btn-all-posts" >
+                            Alle Beiträge ansehen
+                        </button>
+                </a>
+                
+                <div id="nf-content">
+                <input id="headline" type="text" placeholder="Titel">
+            </div>
+                <!-- <div class="nf-divider"></div> -->
+            </div>
+            
+            
         </div>
-        <!-- <img class="btn" src="../admin-image/homebutton.png" /> -->
+        
+        
         
     </body>
 </html>
