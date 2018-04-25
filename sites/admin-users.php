@@ -112,8 +112,8 @@ if(isset($_SESSION["adminusername"])) {
             </ul>
         </div>  
         <div class="content">
-            <table id="user-table">
-                <!-- <tr>
+            <!-- <table id="user-table">
+                 <tr>
                     <th>Benutername</th>
                     <th>E-Mail</th>
                     <th>Vorname</th>

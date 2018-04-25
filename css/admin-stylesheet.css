@@ -124,7 +124,7 @@ header{
     float: left;
     background: #424242;
     width: 250px;
-    height: 100%;
+    height: 110%;
     overflow: hidden;
 }
 
@@ -427,13 +427,9 @@ p{
 /* >>>>>>>>>> NEWSFEED BEREICH <<<<<<<<<*/
 
 #newsfeed-content-feeds{
-    
-}
-
-#newsfeed-content-feeds{
-    margin-left: 50px;
-    margin: 50;
     width: 400px;
+    float: left;
+    margin-left: 20px;
 }
 
 #newsfeed-content-feeds h2{
@@ -488,22 +484,195 @@ p{
     color: #2869d7;
 }
 
-#btn-all-posts{
-    margin-left: 70px;
-}
-
 .beitrag a{
     text-decoration: none;
     color: black;
 }
 
 #btn-all-posts{
+    margin-top: 25px;
+    background: rgba(0,0,0,0.8);
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Acme', sans-serif;
+    color: white;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    box-shadow: inset 0px -5px 45px rgba(100,100,100,0.2);
+}
+
+#btn-all-posts:hover{
+    margin-top: 25px;
+    background: green;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Acme', sans-serif;
+    color: white;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    box-shadow: inset 0px -5px 45px rgba(100,100,100,0.2);
+}
+
+/* >>>>>>>>>> Hier der Schnellbeitrag <<<<<<<<<< */
+
+.nf-divider{
+    padding-top: 250px;
+    border-left:1px solid gray; 
+    border-right:1px solid gray;
+    box-shadow: 0 0 10px 1px gray;
+    height:500px;
+    float: left;
+    margin-left: 120px;
+}
+
+#nf-content-new-feed{
+    display: block;
+    margin-left: 150px;
+}
+
+#master-content{
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+form{
+    margin: 0;
+    display: block;
+}
+
+form h2{
+    padding: 0;
+    margin-left: 50px;
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 0;
+}
+
+form ul{
+    margin-left: 500px;
+}
+
+form ul li{
+    margin: 0;
+    display: block;
+    list-style: none;
+}
+
+#headline {
+    width: 600px;
+    height: 40px;
+    border-style: none;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+#nf-content-new-feed-post{
+    width: 600px;
+    height: 200px;
+    border-style: none;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+#nf-content-new-feed a{
+    text-decoration: none;
+    color: black;
+}
+
+#btnSubmitContent{
+    margin-top: 20px;
+    margin-bottom: 20px;
     margin-top: 10px;
     width: 150px;
     height: 50px;
-    float: left;
-    
+    border-style: none;
 }
+
+#btnSubmitContent{
+    margin-top: 5px;
+    background: rgba(0,0,0,0.8);
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Acme', sans-serif;
+    color: white;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    box-shadow: inset 0px -5px 45px rgba(100,100,100,0.2);
+}
+
+#btnSubmitContent:hover{
+    margin-top: 5px;
+    background: green;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Acme', sans-serif;
+    color: white;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    box-shadow: inset 0px -5px 45px rgba(100,100,100,0.2);
+}
+
+#btnSubmitPreview{
+    margin-top: 5px;
+    background: rgba(0,0,0,0.8);
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Acme', sans-serif;
+    color: white;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    box-shadow: inset 0px -5px 45px rgba(100,100,100,0.2);
+}
+
+#btnSubmitPreview:hover{
+    margin-top: 5px;
+    background: green;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Acme', sans-serif;
+    color: white;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    box-shadow: inset 0px -5px 45px rgba(100,100,100,0.2);
+}
+
+#nf-content-new-feed span{
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+#nf-content-new-feed input{
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+
 
 
 

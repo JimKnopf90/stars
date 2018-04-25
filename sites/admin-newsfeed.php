@@ -118,65 +118,79 @@ if(isset($_SESSION["adminusername"])) {
             </ul>
         </div>  
         <div class="content">
-            <div id="newsfeed-content-feeds">
-                <h2>Die letzten Beiträge</h2>
-                <div class="beitrag">
-                    <a href="#">
-                        <h3>Beitrag #1 - Titel des Beitrags</h3>
-                        <h5>Hier der Inhalt auf ca. 50 Zeichen begrenzt. ... </h5>
-                        <h6>Von: Administrator - 24.04.2018</h6>
-                    </a>
+                <div id="master-content">
+                    <div id="newsfeed-content-feeds">
+                        <h2>Die letzten Beiträge</h2>
+                        <div class="beitrag">
+                            <a href="#">
+                                <h3>Beitrag #1 - Titel des Beitrags</h3>
+                                <h5>Hier der Inhalt auf ca. 50 Zeichen begrenzt. ... </h5>
+                                <h6>Von: Administrator - 24.04.2018</h6>
+                            </a>
+                        </div>
+
+                        <div class="beitrag">
+                            <a href="#">
+                                <h3>Beitrag #2 - Titel auch Begrenzt</h3>
+                                <h5>Wenn der Inhalt mehr als 50 Zeichen hat dann ... </h5>
+                                <h6>Von: Administrator - 24.04.2018</h6>
+                            </a>
+                        </div>
+
+                        <div class="beitrag">
+                            <a href="#">
+                                <h3>Beitrag #3 - Titel des Beitrags</h3>
+                                <h5>Nur die 5 neuesten Artikel anzeigen lassen </h5>
+                                <h6>Von: Administrator - 24.04.2018</h6>
+                            </a>
+                        </div>
+
+                        <div class="beitrag">
+                            <a href="#">
+                                <h3>Beitrag #4 - Titel des Beitrags</h3>
+                                <h5>Rechts neben den Beiträgen "Schnellbeitrag" </h5>
+                                <h6>Von: Administrator - 24.04.2018</h6>
+                            </a>
+                        </div>
+
+                        <div class="beitrag">
+                            <a href="#">
+                                <h3>Beitrag #5 - Titel des Beitrags</h3>
+                                <h5>Hier drunter dann Button für alle Beiträge </h5>
+                                <h6>Von: Administrator - 24.04.2018</h6>
+                            </a>
+                        </div>
+
+                        <a href="#">
+                                <button type="button" id="btn-all-posts" >
+                                    Alle ansehen
+                                </button>
+                        </a>
+                    </div>    
+                    <div class="nf-divider"></div>
+                    <div id="nf-content-new-feed">
+                        <form action="#" method="post">
+                            <ul>
+                                <h2>Schnellen Beitrag veröffentlichen</h2>
+                                <li>
+                                    <input id="headline" type="text" placeholder="Titel des Beitrages">
+                                </li>
+                                <li>
+                                    <textarea id="nf-content-new-feed-post" type="text" placeholder="max. 250 Zeichen"></textarea>
+                                </li>
+                                <li>
+                                    <input id="btnSubmitPreview" type="button" value="Vorschau">
+                                    <input id="btnSubmitContent" type="button" value="Veröffentlichen">
+                                </li>
+                                <li>
+                                    <span class="content-information">Um einen vollständigen Beitrag zu veröffentlichen klicke bitte <a href="#">HIER</a></span>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
                 </div>
-                
-                <div class="beitrag">
-                    <a href="#">
-                        <h3>Beitrag #2 - Titel des Beitrags</h3>
-                        <h5>Wenn der Inhalt mehr als 50 Zeichen hat dann ... </h5>
-                        <h6>Von: Administrator - 24.04.2018</h6>
-                    </a>
-                </div>
-                
-                <div class="beitrag">
-                    <a href="#">
-                        <h3>Beitrag #3 - Titel des Beitrags</h3>
-                        <h5>Nur die 5 neuesten Artikel anzeigen lassen </h5>
-                        <h6>Von: Administrator - 24.04.2018</h6>
-                    </a>
-                </div>
-                
-                <div class="beitrag">
-                    <a href="#">
-                        <h3>Beitrag #4 - Titel des Beitrags</h3>
-                        <h5>Rechts neben den Beiträgen "Schnellbeitrag" </h5>
-                        <h6>Von: Administrator - 24.04.2018</h6>
-                    </a>
-                </div>
-                
-                <div class="beitrag">
-                    <a href="#">
-                        <h3>Beitrag #5 - Titel des Beitrags</h3>
-                        <h5>Hier drunter dann Button für alle Beiträge </h5>
-                        <h6>Von: Administrator - 24.04.2018</h6>
-                    </a>
-                </div>
-                
-                <a href="#">
-                        <button type="button" id="btn-all-posts" >
-                            Alle Beiträge ansehen
-                        </button>
-                </a>
-                
-                <div id="nf-content">
-                <input id="headline" type="text" placeholder="Titel">
-            </div>
-                <!-- <div class="nf-divider"></div> -->
-            </div>
             
-            
-        </div>
-        
-        
-        
+        </div>   
     </body>
 </html>
 <?php
