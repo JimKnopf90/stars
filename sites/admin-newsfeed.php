@@ -173,17 +173,26 @@ if(isset($_SESSION["adminusername"])) {
                             <ul>
                                 <h2>Schnellen Beitrag veröffentlichen</h2>
                                 <li>
-                                    <input id="headline" type="text" placeholder="Titel des Beitrages">
+                                    <input id="headline" type="text" placeholder="Titel des Beitrages" required="required">
                                 </li>
                                 <li>
-                                    <textarea id="nf-content-new-feed-post" type="text" placeholder="max. 250 Zeichen"></textarea>
+                                    <textarea id="nf-content-new-feed-post" type="text" placeholder="max. 250 Zeichen" required="required"></textarea>
+                                </li>
+                                <li>
+                                    <select id="kategorie" required="required">
+                                        <option></option>
+                                        <option>Wichtige Info's</option>
+                                        <option>Allg. News</option>
+                                        <option>Erweiterungen</option>
+                                    </select>
+                                     <span class="content-information">Um einen vollständigen Beitrag zu veröffentlichen klicke bitte <a href="#">HIER</a></span>
                                 </li>
                                 <li>
                                     <input id="btnSubmitPreview" type="button" value="Vorschau">
-                                    <input id="btnSubmitContent" type="button" value="Veröffentlichen">
+                                    <input id="btnSubmitContent" type="submit" value="Veröffentlichen">
                                 </li>
                                 <li>
-                                    <span class="content-information">Um einen vollständigen Beitrag zu veröffentlichen klicke bitte <a href="#">HIER</a></span>
+                                   
                                 </li>
                             </ul>
                         </form>

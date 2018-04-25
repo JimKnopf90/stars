@@ -34,19 +34,45 @@ if(isset($_SESSION["username"])) {
         </header>
         <div class="background">
         <div class="divider"></div>
-        <!-- <div id="banner"><img src="../image/banner-1.png"/></div> 
-        <div class="divider"></div>-->
             <div id="content-mainpage">
                 <h1>Wilkommen, <?php echo $_SESSION["username"]; ?></h1>
             <div id="news">
-                <h2>Neuigkeiten!</h2>
-                <ul><h3>Es wurden <span class="attention">14</span> fehlerhafte Artikel gefunden.</h3>
-                <h3>Es wurden <span class="info">7</span> neue Artikel gefunden.</h3>
-                <h3>Bitte überprüfe umgehend die fehlerhaften Artikel! Diese findest du <a href="attentions.php">Hier</a></h3>
-                <h3>Sollte es Probleme geben, wende dich bitte an die zuständige Person.</h3>
-                <h3>Neue <span class="info">Statistiken</span> sind verfügbar!</h3>
-                <h3>Der <span class="info">Repricer</span> ist jetzt auch am Start!</h3>              
-                </ul>
+                <div class="beitrag-left">
+                    <div class="beitrag">
+                        <h3>Betaphase bis zur Freigabe von 1.0</h3>
+                        <h5>
+                            <p>Die Webanwendung befindet sich noch für unbestimmte Zeit in der Betaphase</p>
+                            <p><span>Testphase</span></p>
+                            <p>Es werden alle Funktionen der Anwendung getestet. Es kann durchaus vorkommen, dass auch nach der Freigabe des Programmes noch Fehler auftauchen können.</p>
+                            <p>Sollten Fehler auftauchen, bitte an eine E-Mail an: blablabla@blabla.de senden</p>
+                        </h5>
+                        <h6>Von: Daniel Reichert - 25.04.2018</h6>
+                    </div>
+                </div> 
+                <div class="beitrag-right">
+                    <div class="beitrag">
+                        <h3>Beitrag #2 - Hier steht der Titel des Beitrages aus- und fett geschrieben</h3>
+                        <h5>
+                            Der inhalt sollte nicht mehr als 500 Zeichen inkl. Leerzeichen haben.</br>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</br>
+                    At vero eos et accusam et justo duo dolores et ea rebum. </br>
+                    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et e</h5>
+                        <h6>Von: Daniel Reichert - 25.04.2018</h6>
+                    </div>
+                </div>
+                <div class="beitrag-left">
+                    <div class="beitrag">
+                        <h3>Beitrag #1 - Hier steht der Titel des Beitrages aus- und fett geschrieben</h3>
+                        <h5>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                            <p><span>At vero eos et accusam et justo duo dolores et ea rebum.</span></p>
+                            <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                            <p><span>At vero eos et accusam et justo duo dolores et ea rebum.</span> Mehr lesen...</p>
+                            </h5>
+                        <h6>Von: Daniel Reichert - 25.04.2018</h6>
+                    </div>
+                </div> 
             </div>
         </div>
     </div>

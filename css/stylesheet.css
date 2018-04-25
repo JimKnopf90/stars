@@ -93,21 +93,79 @@ nav ul li a{
     padding: 8px 0px 6px 40px;
 }
 
-#content-admin{
-    padding: 8px 0px 6px 40px;
-}
-
 #news{
     padding: 8px 0px 6px 40px;
 }
 
-.attention{
-    color: red;
+.beitrag{
+    border: solid 1px gray;
+    width: 800px;
+    height: 320px;
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin: 20px;
 }
 
-.info{
-    color: forestgreen;
+.beitrag h3{
+    font-weight: bolder;
+    font-size: 22px;
+    margin: 0;
+    padding-top: 10px;
 }
+
+.beitrag h5{
+    font-size: 18px;
+    margin: 0;
+    padding-top: 10px;
+    font-weight: lighter;
+}
+
+.beitrag h6{
+    color: gray;
+    font-size: 18px;
+    margin: 0;
+    padding-top: 10px;
+    font-weight: lighter;
+}
+
+.beitrag span{
+    font-size: 18px;
+    margin: 0;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.beitrag-left{
+    float:left;
+}
+
+.beitrag-right{
+    float:left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
