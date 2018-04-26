@@ -64,12 +64,30 @@
                           WHERE        (KA.kKategorie IN
                              (SELECT        kKategorie
                                FROM            dbo.tkategorie
-                               WHERE        (kOberKategorie = 41))) AND (1 = AVAL.Zustand)";
+                               WHERE        (kOberKategorie = 41))) AND (1 = AVAL.Zustand)
+                               UNION
+                            SELECT DISTINCT 'verpacking_com' AS Plattform, AVAL.kArtikel, AVAL.kStueckliste, AVAL.Artikelnummer, AVAL.Bezeichnung, AVAL.EAN, AVAL.ASIN, AVAL.PreisAmazon, COALESCE(AVAL.Hersteller, 'kein Wert') As Hersteller, AVAL.IstStuecklistenkomponente, 
+                                                     AVAL.VerkaufspreisBrutto, EK.GesamtEkNetto, Steuer.fSteuersatz, dbo.tVersandklasse.kVersandklasse, dbo.tVersandklasse.cName, AVAL.BestandGesamt, AVAL.Versandgewicht
+                                                     FROM            ArtikelVerwaltung.vArtikelliste AS AVAL INNER JOIN
+                                                     dbo.tkategorieartikel AS KA ON AVAL.kArtikelForKategorieArtikel = KA.kArtikel INNER JOIN
+                                                     dbo.tArtikel AS Art ON Art.kArtikel = AVAL.kArtikel INNER JOIN
+                                                     dbo.tSteuersatz AS Steuer ON Art.kSteuerklasse = Steuer.kSteuersatz INNER JOIN
+                                                     dbo.tVersandklasse ON Art.kVersandklasse = dbo.tVersandklasse.kVersandklasse LEFT OUTER JOIN
+                                                         (SELECT        dbo.tStueckliste.kStueckliste, SUM(dbo.tliefartikel.fEKNetto * dbo.tStueckliste.fAnzahl) AS GesamtEkNetto
+                                                           FROM            dbo.tStueckliste INNER JOIN
+                                                                                     dbo.tliefartikel ON dbo.tStueckliste.kArtikel = dbo.tliefartikel.tArtikel_kArtikel
+                                                                                     WHERE dbo.tliefartikel.tLieferant_kLieferant = 34
+                                                           GROUP BY dbo.tStueckliste.kStueckliste) AS EK ON EK.kStueckliste = AVAL.kStueckliste
+                                                      WHERE (KA.kKategorie IN (SELECT kKategorie FROM dbo.tkategorie WHERE KA.kKategorie IN (SELECT kKategorie From tkategorie	
+                                WHERE kOberKategorie IN (SELECT kKategorie From tkategorie	
+                                WHERE kOberKategorie IN (SELECT kKategorie From tkategorie	
+                                WHERE kOberKategorie IN (SELECT kKategorie From tkategorie	
+                                WHERE kOberKategorie = 218 OR kKategorie = 218)))))) AND (1 = AVAL.Zustand)";
    
   
 
         // TR: Werte für die Suche auslesen.
-        // $plattformSearch = isset($_GET['txt-plattform']) ? $_GET['txt-plattform'] : '';
+        $plattformSearch = isset($_GET['txt-plattform']) ? $_GET['txt-plattform'] : '';
         $artikelnummerSearch = isset($_GET['txt-artikelnummer']) ? $_GET['txt-artikelnummer'] : '';
         $artikelnameSearch = isset($_GET['txt-artikelname']) ? $_GET['txt-artikelname'] : '';
         $herstellerSearch = isset($_GET['txt-hersteller']) ? $_GET['txt-hersteller'] : '';
@@ -86,12 +104,12 @@
         $margeProzentSearch = isset($_GET['txt-margeprozent']) ? $_GET['txt-margeprozent'] : '';
 
         
-        // TR: Table beginn
+        // TR: Table Start
         echo "<form action='../sites/products.php' method='get'><table><thead>";      
        
         // TR: Headline        
         echo "<tr><th id='th-edit'><a ><img class='icon-art-settings' src='../image/icon-art-setting.png'/></a></th>";
-        echo "<th id='th-plattform'>Plattform <br><form><input id='txt-plattform'></form></th>";        
+        echo "<th id='th-plattform'>Plattform <br><form><input id='txt-plattform' name='txt-plattform' value='" . $plattformSearch . "'></form></th>";
         echo "<th id='th-artikelnummer'>Artikelnummer <br><span><input name='txt-artikelnummer' id='txt-artikelnummer' value='" . $artikelnummerSearch . "'></span></th>";
         echo "<th id='th-artikelname'>Artikelname <br><input id='txt-artikelname' name='txt-artikelname' value='" . $artikelnameSearch . "'></th>";
         echo "<th id='th-hersteller'>Hersteller <br><input id='txt-hersteller' name='txt-hersteller' value='" . $herstellerSearch . "'></th>";
@@ -110,7 +128,7 @@
         
         
         // TR: Überprüft, ob Werte für die Suche eingegeben wurden. Falls Jja, wird in der SQL Query eingegrenzt.
-        if ($artikelnummerSearch != '') $sql .= " AND Artikelnummer LIKE '%" . $_GET["txt-artikelnummer"] . "%'";  
+        if ($artikelnummerSearch != '') $sql .= " AND Artikelnummer LIKE '%" . $_GET["txt-artikelnummer"] . "%'";
         if ($artikelnameSearch != '') $sql .= " AND Bezeichnung LIKE '%" . $_GET["txt-artikelname"] . "%'";  
         if ($herstellerSearch != '') $sql .= " AND Hersteller LIKE '%" . $_GET["txt-hersteller"] . "%'";  
         if ($plattformIDSearch != '') $sql .= " AND ASIN LIKE '%" . $_GET["txt-plattformid"] . "%'";
@@ -163,6 +181,19 @@
             foreach ($list as $listEntry)
             {
                 if ($listEntry['MargeProzent'] != $margeProzentSearch)
+                {
+                    unset($list[$k]);
+                }
+
+                $k++;
+            }
+        }
+
+        if ( $plattformSearch != '')
+        {
+            foreach ($list as $listEntry)
+            {
+                if ($listEntry['Plattform'] != $plattformSearch)
                 {
                     unset($list[$k]);
                 }

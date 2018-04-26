@@ -12,7 +12,7 @@ foreach ($dbh->query($sql) as $row) {
     
     echo "<form action='../business-logic/mSaveVersandklassen.php' method='post'>";
     echo "<input id='input_delete' type='text' name='VersandklassenID' value=" . $row["VersandklassenID"] . ">";
-    echo "<p>Versandklasse</p> <input class='input_text' type='text' name='VersandklasseJTL' value=" . $row["VersandklasseJTL"] . ">";
+    echo "<p>Versandklasse</p><input class='input_text' type='text' name='VersandklasseJTL' value='" . $row["VersandklasseJTL"] . "'>";
     echo "<p>Versandkosten</p><input class='input_text' type='text' name='Preis' value=" . number_format(floatval($row["Preis"]),2, ",", ".") . "€" . ">";
     echo "<p>Verpackungskosten</p><input class='input_text' type='text' name='PreisVerpackungskosten' value=" . number_format(floatval($row["PreisVerpackungskosten"]),2, ",", ".") . "€" . ">";
     echo "<p>max. Gewicht</p><input class='input_text' type='text' name='GewichtMax' value=" . number_format(floatval($row["GewichtMax"]),2, ",", ".") . "kg". ">";
