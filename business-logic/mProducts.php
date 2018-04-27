@@ -99,9 +99,11 @@
         $vkpreisSearch = isset($_GET['txt-vkpreis']) ? $_GET['txt-vkpreis'] : '';
         $bestandSearch = isset($_GET['txt-bestand']) ? $_GET['txt-bestand'] : '';
         $nullpreisSearch = isset($_GET['txt-nullpreis']) ? $_GET['txt-nullpreis'] : '';
-        $nullpreisSearch = isset($_GET['txt-nullpreis']) ? $_GET['txt-nullpreis'] : '';
         $margeEuroSearch = isset($_GET['txt-margeeuro']) ? $_GET['txt-margeeuro'] : '';
         $margeProzentSearch = isset($_GET['txt-margeprozent']) ? $_GET['txt-margeprozent'] : '';
+
+        // TR: Wert für die Sortierung auslesen.
+        $sort = isset($_GET['sort']) ? $_GET['sort'] : '';
 
         
         // TR: Table Start
@@ -124,21 +126,9 @@
         echo "<th id='th-marge-euro'>Marge € <br><input id='txt-margeeuro' name='txt-margeeuro' value='" . $margeEuroSearch. "'></th>";
         echo "<th id='th-marge-prozent'>Marge % <br><input id='txt-margeprozent' name='txt-margeprozent' value='" . $margeProzentSearch. "'></th>";
         echo "<th id='th-bestand'>Bestand <br><input id='txt-bestand' name='txt-bestand' value='" . $bestandSearch . "'></th>";
-        echo "<th id='th-ordner'>Ordner <br><input id='txt-ordner'><input type='submit' id='btnSubmit'></th></tr></thead>";   
-        
-        
-        // TR: Überprüft, ob Werte für die Suche eingegeben wurden. Falls Jja, wird in der SQL Query eingegrenzt.
-        if ($artikelnummerSearch != '') $sql .= " AND Artikelnummer LIKE '%" . $_GET["txt-artikelnummer"] . "%'";
-        if ($artikelnameSearch != '') $sql .= " AND Bezeichnung LIKE '%" . $_GET["txt-artikelname"] . "%'";  
-        if ($herstellerSearch != '') $sql .= " AND Hersteller LIKE '%" . $_GET["txt-hersteller"] . "%'";  
-        if ($plattformIDSearch != '') $sql .= " AND ASIN LIKE '%" . $_GET["txt-plattformid"] . "%'";
-        if ($eknettoSearch != '') $sql .= " AND GesamtEkNetto LIKE '" . str_replace(',', '.', $_GET["txt-eknetto"]) . "%'";
-        if ($mwstSearch != '') $sql .= " AND fSteuersatz LIKE '" . $_GET["txt-mwst"] . "%'";  
-        if ($versandklassenSearch != '') $sql .= " AND cName LIKE '%" . $_GET["txt-versandklasse"] . "%'";  
-        if ($gewichtSearch != '') $sql .= " AND Versandgewicht LIKE '" . str_replace(',', '.', $_GET["txt-gewicht"]) . "%'";  
-        if ($vkpreisSearch != '') $sql .= " AND VerkaufspreisBrutto LIKE '" . str_replace(',', '.', $_GET["txt-vkpreis"]) . "%'";
-        if ($bestandSearch != '') $sql .= " AND BestandGesamt = '" . $_GET["txt-bestand"] . "'";
-      
+        echo "<th id='th-ordner'>Ordner <br><input id='txt-ordner'><input type='submit' id='btnSubmit'></th></tr></thead>";
+
+
         foreach ($dbh->query($sql) as $row) {         
             
             $valueVersandkosten = $versandklassen[$row["cName"]][$row["cName"]];
@@ -175,22 +165,10 @@
             $y = $y + 1;
         }
 
-        //TR: Temp Filter
-        if ( $margeProzentSearch != '')
+        //TR: Array wird gefilter
+        if ($plattformSearch != '')
         {
-            foreach ($list as $listEntry)
-            {
-                if ($listEntry['MargeProzent'] != $margeProzentSearch)
-                {
-                    unset($list[$k]);
-                }
-
-                $k++;
-            }
-        }
-
-        if ( $plattformSearch != '')
-        {
+            $k = 0;
             foreach ($list as $listEntry)
             {
                 if ($listEntry['Plattform'] != $plattformSearch)
@@ -200,10 +178,162 @@
 
                 $k++;
             }
+            // TR: Index wird neu durchgezählt-
+            $list = array_values($list);
         }
-
-        if ( $margeEuroSearch != '')
+        if ($artikelnummerSearch != '')
         {
+            $k = 0;
+            foreach ($list as $listEntry)
+            {
+                if (strpos($listEntry['Artikelnummer'], $artikelnummerSearch) === false)
+                {
+                    unset($list[$k]);
+                }
+
+                $k++;
+            }
+            // TR: Index wird neu durchgezählt-
+            $list = array_values($list);
+        }
+        if ($artikelnameSearch != '')
+        {
+            $k = 0;
+            foreach ($list as $listEntry)
+            {
+                if (strpos($listEntry['Artikelname'], $artikelnameSearch) === false)
+                {
+                    unset($list[$k]);
+                }
+
+                $k++;
+            }
+            // TR: Index wird neu durchgezählt-
+            $list = array_values($list);
+        }
+        if ($herstellerSearch != '')
+        {
+            $k = 0;
+            foreach ($list as $listEntry)
+            {
+                if (strpos($listEntry['Hersteller'], $herstellerSearch) === false)
+                {
+                    unset($list[$k]);
+                }
+
+                $k++;
+            }
+            // TR: Index wird neu durchgezählt-
+            $list = array_values($list);
+        }
+        if ($plattformIDSearch  != '')
+        {
+            $k = 0;
+            foreach ($list as $listEntry)
+            {
+                if (strpos($listEntry['PlattformID'], $plattformIDSearch) === false)
+                {
+                    unset($list[$k]);
+                }
+
+                $k++;
+            }
+            // TR: Index wird neu durchgezählt-
+            $list = array_values($list);
+        }
+        if ($eknettoSearch   != '')
+        {
+            $k = 0;
+            foreach ($list as $listEntry)
+            {
+                if ($listEntry['EkNetto'] != $eknettoSearch)
+                {
+                    unset($list[$k]);
+                }
+
+                $k++;
+            }
+            // TR: Index wird neu durchgezählt-
+            $list = array_values($list);
+        }
+        if ($mwstSearch   != '')
+        {
+            $k = 0;
+            foreach ($list as $listEntry)
+            {
+                if (strpos($listEntry['Mwst'], $mwstSearch) === false)
+                {
+                    unset($list[$k]);
+                }
+
+                $k++;
+            }
+            // TR: Index wird neu durchgezählt-
+            $list = array_values($list);
+        }
+        if ($versandklassenSearch   != '')
+        {
+            $k = 0;
+            foreach ($list as $listEntry)
+            {
+                if (strpos($listEntry['VersandklasseName'], $versandklassenSearch) === false)
+                {
+                    unset($list[$k]);
+                }
+
+                $k++;
+            }
+            // TR: Index wird neu durchgezählt-
+            $list = array_values($list);
+        }
+        if ($gewichtSearch   != '')
+        {
+            $k = 0;
+            foreach ($list as $listEntry)
+            {
+                if ($listEntry['Gewicht'] != $gewichtSearch)
+                {
+                    unset($list[$k]);
+                }
+
+                $k++;
+            }
+            // TR: Index wird neu durchgezählt-
+            $list = array_values($list);
+        }
+        if ($vkpreisSearch   != '')
+        {
+            $k = 0;
+            foreach ($list as $listEntry)
+            {
+                if ($listEntry['VKPreis'] != $vkpreisSearch)
+                {
+                    unset($list[$k]);
+                }
+
+                $k++;
+            }
+            // TR: Index wird neu durchgezählt-
+            $list = array_values($list);
+        }
+        if ($margeProzentSearch != '')
+        {
+            $k = 0;
+            foreach ($list as $listEntry)
+            {
+                if ($listEntry['MargeProzent'] != $margeProzentSearch)
+                {
+                    unset($list[$k]);
+                }
+
+                $k++;
+            }
+            // TR: Index wird neu durchgezählt-
+            $list = array_values($list);
+        }
+        if ($margeEuroSearch != '')
+        {
+            $k = 0;
             foreach ($list as $listEntry)
             {
                 if ($listEntry['MargeEuro'] != $margeEuroSearch)
@@ -213,42 +343,47 @@
 
                 $k++;
             }
+            // TR: Index wird neu durchgezählt-
+            $list = array_values($list);
         }
-
         if ($nullpreisSearch != '')
         {
+            $k = 0;
             foreach ($list as $listEntry)
             {
                if ($listEntry['Nullpreis'] != $nullpreisSearch)
                {
                    unset($list[$k]);
                }
-
-
-
                $k++;
             }
+            // TR: Index wird neu durchgezählt-
+            $list = array_values($list);
+        }
+        if ($bestandSearch    != '')
+        {
+            $k = 0;
+            foreach ($list as $listEntry)
+            {
+                if ($listEntry['Bestand'] != $bestandSearch )
+                {
+                    unset($list[$k]);
+                }
+
+                $k++;
+            }
+            // TR: Index wird neu durchgezählt-
+            $list = array_values($list);
         }
 
-        // TR: Index wird neu durchgezählt-
-        $list = array_values($list);
-
-        createTable($list);
-             
 
 
-        
-        // TR: Suche Anzahl
-        if ($artikelnummerSearch != '') $sql .= " AND Artikelnummer LIKE '%" . $_GET["txt-artikelnummer"] . "%'";
-        if ($artikelnameSearch != '') $sql .= " AND Bezeichnung LIKE '%" . $_GET["txt-artikelname"] . "%'";
-        if ($herstellerSearch != '') $sql .= " AND Hersteller LIKE '%" . $_GET["txt-hersteller"] . "%'";  
-        if ($plattformIDSearch != '') $sql .= " AND ASIN LIKE '%" . $_GET["txt-plattformid"] . "%'";  
-        if ($eknettoSearch != '') $sql .= " AND GesamtEkNetto LIKE '" . str_replace(',', '.', $_GET["txt-eknetto"]) . "%'"; 
-        if ($mwstSearch != '') $sql .= " AND fSteuersatz LIKE '" . $_GET["txt-mwst"] . "%'";  
-        if ($versandklassenSearch != '') $sql .= " AND cName LIKE '%" . $_GET["txt-versandklasse"] . "%'";  
-        if ($gewichtSearch != '') $sql .= " AND Versandgewicht LIKE '" . str_replace(',', '.', $_GET["txt-gewicht"]) . "%'"; 
-        if ($vkpreisSearch != '') $sql .= " AND VerkaufspreisBrutto LIKE '" . str_replace(',', '.', $_GET["txt-vkpreis"]) . "%'"; 
-        if ($bestandSearch != '') $sql .= " AND BestandGesamt = '" . $_GET["txt-bestand"] . "'";
+        if ($sort != "")
+        {
+            $list = SortArray($list, $sort );
+        }
+
+         createTable($list);
 
         
 
@@ -273,25 +408,30 @@
         
         echo $pagLink . "</select><div id='counter'>" . count($list) . " Zeile(n)</div></div>";
         
-        function SortArray ($_list)
-        {            
-            usort($_list,"CompareDESC");
-            
+        function SortArray ($_list, $attribute)
+        {
+            if ($attribute == "th-marge-euro")
+            {
+                usort($_list,"CompareDESC");
+
+                return $_list;
+            }
+
             
         }
         
         function compareASC($value1, $value2) {
             
-            if ($value1["PlattformID"] < $value2["PlattformID"]) return -1;
-            else if ($value1["PlattformID"] > $value2["PlattformID"]) return 1;
+            if ($value1["MargeEuro"] < $value2["MargeEuro"]) return -1;
+            else if ($value1["MargeEuro"] > $value2["MargeEuro"]) return 1;
             else return 0;
         
         }
         
         function compareDESC($value1, $value2) {
             
-            if ($value1["PlattformID"] > $value2["PlattformID"]) return -1;
-            else if ($value1["PlattformID"] < $value2["PlattformID"]) return 1;
+            if ($value1["MargeEuro"] > $value2["MargeEuro"]) return -1;
+            else if ($value1["MargeEuro"] < $value2["MargeEuro"]) return 1;
             else return 0;
             
         }
