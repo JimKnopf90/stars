@@ -102,8 +102,9 @@
         $margeEuroSearch = isset($_GET['txt-margeeuro']) ? $_GET['txt-margeeuro'] : '';
         $margeProzentSearch = isset($_GET['txt-margeprozent']) ? $_GET['txt-margeprozent'] : '';
 
-        // TR: Wert für die Sortierung auslesen.
+        // TR: Werte für die Sortierung auslesen.
         $sort = isset($_GET['sort']) ? $_GET['sort'] : '';
+        $sortStatus = isset($_GET['sort']) ? $_GET['sortStatus'] : '';
 
         
         // TR: Table Start
@@ -377,10 +378,9 @@
         }
 
 
-
         if ($sort != "")
         {
-            $list = SortArray($list, $sort );
+            $list = SortArray($list, $sort, $sortStatus);
         }
 
          createTable($list);
@@ -408,12 +408,17 @@
         
         echo $pagLink . "</select><div id='counter'>" . count($list) . " Zeile(n)</div></div>";
         
-        function SortArray ($_list, $attribute)
+        function SortArray ($_list, $attribute, $sortStatus)
         {
-            if ($attribute == "th-marge-euro")
+            if ($attribute == "th-marge-euro" and $sortStatus == "DESC")
             {
                 usort($_list,"CompareDESC");
+                return $_list;
+            }
 
+            if ($attribute == "th-marge-euro" and $sortStatus == "ASC")
+            {
+                usort($_list,"compareASC");
                 return $_list;
             }
 
@@ -422,16 +427,16 @@
         
         function compareASC($value1, $value2) {
             
-            if ($value1["MargeEuro"] < $value2["MargeEuro"]) return -1;
-            else if ($value1["MargeEuro"] > $value2["MargeEuro"]) return 1;
+            if (intval($value1["MargeEuro"]) < intval($value2["MargeEuro"])) return -1;
+            else if (intval($value1["MargeEuro"]) > intval($value2["MargeEuro"])) return 1;
             else return 0;
         
         }
         
         function compareDESC($value1, $value2) {
             
-            if ($value1["MargeEuro"] > $value2["MargeEuro"]) return -1;
-            else if ($value1["MargeEuro"] < $value2["MargeEuro"]) return 1;
+            if (intval($value1["MargeEuro"]) > intval($value2["MargeEuro"])) return -1;
+            else if (intval($value1["MargeEuro"]) < intval($value2["MargeEuro"])) return 1;
             else return 0;
             
         }

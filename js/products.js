@@ -5,9 +5,9 @@ window.onload = function () {
     var table;
     var plattform;
     var artikelnummer;
-    var artikelname = document;
-    var hersteller = document;
-    var plattformid = document;
+    var artikelname;
+    var hersteller;
+    var plattformid;
     var eknetto;
     var mwst;
     var versandklasse;
@@ -28,7 +28,20 @@ window.onload = function () {
 
     item = document.getElementById('th-marge-euro');
 
-    item.addEventListener('dblclick', changeOrder);
+    item.onclick = function(){
+        if (item.timer){
+            clearTimeout(item.timer);
+            item.timer = null;
+            changeOrder(item, "DESC");
+        }
+        else{
+            item.timer = setTimeout(function(){
+                item.timer = null;
+                changeOrder(item, "ASC");
+            },300);
+        }
+    }
+
 
 	function openDialog(e) {
 		
@@ -48,7 +61,7 @@ window.onload = function () {
 		window.open("../sites/versandklassen-edit.php?idVersanklasse=" + idVersanklasse, "", "toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=800,height=500,left = 710,top = 140");
 	}
 	
-	function changeOrder(e) {
+	function changeOrder(e, orderStatus) {
 
         plattform = document.getElementById('txt-plattform').value;
         artikelnummer = document.getElementById('txt-artikelnummer').value;
@@ -65,6 +78,10 @@ window.onload = function () {
         margeprozent  = document.getElementById('txt-margeprozent').value;
         bestand  = document.getElementById('txt-bestand').value;
 
-        window.location.href = "../sites/products.php?txt-plattform=&txt-artikelnummer=" + artikelnummer + "&txt-artikelname=&txt-hersteller=&txt-plattformid=&txt-eknetto=&txt-mwst=&txt-versandklasse=&txt-gewicht=&txt-nullpreis=&txt-vkpreis=&txt-margeeuro=&txt-margeprozent=&txt-bestand=&sort=" + e.target.id;
+
+        window.location.href = "../sites/products.php?txt-plattform=&txt-artikelnummer=" + artikelnummer + "&txt-artikelname=&txt-hersteller=&txt-plattformid=&" +
+            "txt-eknetto=&txt-mwst=&txt-versandklasse=&txt-gewicht=&txt-nullpreis=&txt-vkpreis=&txt-margeeuro=&txt-margeprozent=&txt-bestand=&sort=" + e.id + "&sortStatus=" + orderStatus;
     }
+
+
 };
