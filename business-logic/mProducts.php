@@ -158,7 +158,7 @@
             $list[$y]['Gewicht'] = number_format(floatval($row["Versandgewicht"]),2, ",", ".");
             $list[$y]['Nullpreis'] = number_format((floatval($row["GesamtEkNetto"]) + $valueVersandkosten + $valueVerpackungskosten ) * 1.19 * 1.217, 2, ",", ".");
             $list[$y]['VKPreis'] = number_format(floatval($row["VerkaufspreisBrutto"]),2, ",", ".");
-            $list[$y]['MargeEuro'] = number_format($margeEuro, 2, ",", ".");          
+            $list[$y]['MargeEuro'] = number_format($margeEuro, 2, ",", ".");
             $list[$y]['MargeProzent'] = number_format($margeProzent, 2, ",", ".");
             $list[$y]['Bestand'] = floatval($row["BestandGesamt"]);
             $list[$y]['Ordner'] = "Faltkartons";           
@@ -412,33 +412,96 @@
         {
             if ($attribute == "th-marge-euro" and $sortStatus == "DESC")
             {
-                usort($_list,"CompareDESC");
+                usort($_list,"CompareMargeEuroDESC");
                 return $_list;
             }
 
             if ($attribute == "th-marge-euro" and $sortStatus == "ASC")
             {
-                usort($_list,"compareASC");
+                usort($_list,"compareMargeEuroASC");
+                return $_list;
+            }
+
+            if ($attribute == "th-vk-preis" and $sortStatus == "DESC")
+            {
+                usort($_list,"compareVKPreisDESC");
+                return $_list;
+            }
+
+            if ($attribute == "th-vk-preis" and $sortStatus == "ASC")
+            {
+                usort($_list,"compareVKPreisASC");
+                return $_list;
+            }
+
+            if ($attribute == "th-marge-prozent" and $sortStatus == "DESC")
+            {
+                usort($_list,"compareMargeProzentDESC");
+                return $_list;
+            }
+
+            if ($attribute == "th-marge-prozent" and $sortStatus == "ASC")
+            {
+                usort($_list,"compareMargeProzentASC");
                 return $_list;
             }
 
             
         }
         
-        function compareASC($value1, $value2) {
-            
-            if (intval($value1["MargeEuro"]) < intval($value2["MargeEuro"])) return -1;
-            else if (intval($value1["MargeEuro"]) > intval($value2["MargeEuro"])) return 1;
+        function compareMargeEuroASC($value1, $value2) {
+            $val1 = floatval(str_replace(',', '.', $value1["MargeEuro"]));
+            $val2 =floatval(str_replace(',', '.', $value2["MargeEuro"]));
+            if ($val1 < $val2) return -1;
+            else if ($val1 > $val2) return 1;
             else return 0;
-        
+
         }
-        
-        function compareDESC($value1, $value2) {
-            
-            if (intval($value1["MargeEuro"]) > intval($value2["MargeEuro"])) return -1;
-            else if (intval($value1["MargeEuro"]) < intval($value2["MargeEuro"])) return 1;
+
+        function compareMargeEuroDESC($value1, $value2) {
+            $val1 = floatval(str_replace(',', '.', $value1["MargeEuro"]));
+            $val2 =floatval(str_replace(',', '.', $value2["MargeEuro"]));
+            if ($val1 > $val2) return -1;
+            else if ($val1 < $val2) return 1;
             else return 0;
-            
+        }
+
+        function compareVKPreisASC($value1, $value2) {
+
+            $val1 = floatval(str_replace(',', '.', $value1["VKPreis"]));
+            $val2 =floatval(str_replace(',', '.', $value2["VKPreis"]));
+            if ($val1 < $val2) return -1;
+            else if ($val1 > $val2) return 1;
+            else return 0;
+
+        }
+
+        function compareVKPreisDESC($value1, $value2) {
+            $val1 = floatval(str_replace(',', '.', $value1["VKPreis"]));
+            $val2 =floatval(str_replace(',', '.', $value2["VKPreis"]));
+            if ($val1 > $val2) return -1;
+            else if ($val1 < $val2) return 1;
+            else return 0;
+
+        }
+
+        function compareMargeProzentASC($value1, $value2) {
+
+            $val1 = floatval(str_replace(',', '.', $value1["MargeProzent"]));
+            $val2 =floatval(str_replace(',', '.', $value2["MargeProzent"]));
+            if ($val1 < $val2) return -1;
+            else if ($val1 > $val2) return 1;
+            else return 0;
+
+        }
+
+        function compareMargeProzentDESC($value1, $value2) {
+            $val1 = floatval(str_replace(',', '.', $value1["MargeProzent"]));
+            $val2 =floatval(str_replace(',', '.', $value2["MargeProzent"]));
+            if ($val1 > $val2) return -1;
+            else if ($val1 < $val2) return 1;
+            else return 0;
+
         }
 
         /**

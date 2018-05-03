@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ada7897-5108-4b71-9617-d2ac557075bc" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business-logic/mLoadVersandklassEdit.php" afterPath="$PROJECT_DIR$/business-logic/mLoadVersandklassEdit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business-logic/mLoadVersandklasse.php" afterPath="$PROJECT_DIR$/business-logic/mLoadVersandklasse.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business-logic/mProducts.php" afterPath="$PROJECT_DIR$/business-logic/mProducts.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business-logic/mSaveVersandklassen.php" afterPath="$PROJECT_DIR$/business-logic/mSaveVersandklassen.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/products.js" afterPath="$PROJECT_DIR$/js/products.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,47 +39,41 @@
       <file leaf-file-name="mProducts.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/business-logic/mProducts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="429" column="76" lean-forward="false" selection-start-line="429" selection-start-column="76" selection-end-line="429" selection-end-column="76" />
+            <state relative-caret-position="292">
+              <caret line="489" column="72" lean-forward="false" selection-start-line="489" selection-start-column="72" selection-end-line="489" selection-end-column="72" />
               <folding>
-                <element signature="e#11847#12235#0#PHP" expanded="false" />
-                <element signature="e#12244#12660#0#PHP" expanded="false" />
-                <element signature="e#12669#13079#0#PHP" expanded="false" />
-                <element signature="e#13088#13495#0#PHP" expanded="false" />
-                <element signature="e#13504#13915#0#PHP" expanded="false" />
-                <element signature="e#13924#14308#0#PHP" expanded="false" />
-                <element signature="e#14317#14708#0#PHP" expanded="false" />
-                <element signature="e#14717#15141#0#PHP" expanded="false" />
-                <element signature="e#15150#15534#0#PHP" expanded="false" />
-                <element signature="e#15543#15927#0#PHP" expanded="false" />
-                <element signature="e#15936#16333#0#PHP" expanded="false" />
-                <element signature="e#16342#16730#0#PHP" expanded="false" />
-                <element signature="e#16739#17121#0#PHP" expanded="false" />
-                <element signature="e#17130#17516#0#PHP" expanded="false" />
-                <marker date="1525070529284" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
-                <marker date="1525070529284" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
-                <marker date="1525070529284" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
-                <marker date="1525070529284" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
-                <marker date="1525070529284" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
-                <marker date="1525070529284" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
-                <marker date="1525070529284" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
-                <marker date="1525070529284" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
-                <marker date="1525070529284" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
-                <marker date="1525070529284" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
-                <marker date="1525070529284" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
-                <marker date="1525070529284" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
-                <marker date="1525070529284" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+                <element signature="e#11837#12225#0#PHP" expanded="false" />
+                <element signature="e#12234#12650#0#PHP" expanded="false" />
+                <element signature="e#12659#13069#0#PHP" expanded="false" />
+                <element signature="e#13078#13485#0#PHP" expanded="false" />
+                <element signature="e#13494#13905#0#PHP" expanded="false" />
+                <element signature="e#13914#14298#0#PHP" expanded="false" />
+                <element signature="e#14307#14698#0#PHP" expanded="false" />
+                <element signature="e#14707#15131#0#PHP" expanded="false" />
+                <element signature="e#15140#15524#0#PHP" expanded="false" />
+                <element signature="e#15533#15917#0#PHP" expanded="false" />
+                <element signature="e#15926#16323#0#PHP" expanded="false" />
+                <element signature="e#16332#16720#0#PHP" expanded="false" />
+                <element signature="e#16729#17111#0#PHP" expanded="false" />
+                <element signature="e#17120#17506#0#PHP" expanded="false" />
+                <element signature="e#18494#18667#0#PHP" expanded="false" />
+                <element signature="e#18681#18852#0#PHP" expanded="false" />
+                <element signature="e#18866#19035#0#PHP" expanded="false" />
+                <element signature="e#19049#19216#0#PHP" expanded="false" />
+                <marker date="1525341677148" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
+                <marker date="1525341677148" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
+                <marker date="1525341677148" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
+                <marker date="1525341677148" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
+                <marker date="1525341677148" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
+                <marker date="1525341677148" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
+                <marker date="1525341677148" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
+                <marker date="1525341677148" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
+                <marker date="1525341677148" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
+                <marker date="1525341677148" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
+                <marker date="1525341677148" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
+                <marker date="1525341677148" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
+                <marker date="1525341677148" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="products.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/products.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -83,8 +81,8 @@
       <file leaf-file-name="products.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/products.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+            <state relative-caret-position="356">
+              <caret line="98" column="50" lean-forward="false" selection-start-line="98" selection-start-column="34" selection-end-line="98" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -107,8 +105,9 @@
       <list>
         <option value="$PROJECT_DIR$/business-logic/mCon.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ba391b4c-578a-4d6a-92d4-8b324087086b/console.sql" />
-        <option value="$PROJECT_DIR$/business-logic/mSaveVersandklassen.php" />
+        <option value="$PROJECT_DIR$/business-logic/mLoadVersandklasse.php" />
         <option value="$PROJECT_DIR$/business-logic/mLoadVersandklassEdit.php" />
+        <option value="$PROJECT_DIR$/business-logic/mSaveVersandklassen.php" />
         <option value="$PROJECT_DIR$/js/products.js" />
         <option value="$PROJECT_DIR$/business-logic/mProducts.php" />
       </list>
@@ -131,9 +130,9 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="y" value="7" />
+    <option name="width" value="1932" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -172,6 +171,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -228,8 +229,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -343,18 +342,18 @@
       <workItem from="1524628940021" duration="29000" />
       <workItem from="1524756795209" duration="5839000" />
       <workItem from="1524839691650" duration="13412000" />
-      <workItem from="1525066500266" duration="4152000" />
+      <workItem from="1525066500266" duration="4591000" />
+      <workItem from="1525327627559" duration="9243000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36444000" />
+    <option name="totallyTimeSpent" value="46126000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="7" width="1932" height="1055" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.109375" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.115344465" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294979" sideWeight="0.50208336" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -363,7 +362,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23535565" sideWeight="0.49791667" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.205291" sideWeight="0.49791667" order="0" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,9 +373,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="37" />
+      <option name="time" value="45" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="products.php">
+        <watch expression="floatval($value1[&quot;VKPreis&quot;])" language="PHP" />
+        <watch expression="floatval(str_replace(',', '.', $value1[&quot;VKPreis&quot;]))" language="PHP" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/business-logic/mProducts.php">
@@ -384,33 +388,93 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11847#12235#0#PHP" expanded="false" />
-            <element signature="e#12244#12660#0#PHP" expanded="false" />
-            <element signature="e#12669#13079#0#PHP" expanded="false" />
-            <element signature="e#13088#13495#0#PHP" expanded="false" />
-            <element signature="e#13504#13915#0#PHP" expanded="false" />
-            <element signature="e#13924#14308#0#PHP" expanded="false" />
-            <element signature="e#14317#14708#0#PHP" expanded="false" />
-            <element signature="e#14717#15141#0#PHP" expanded="false" />
-            <element signature="e#15150#15534#0#PHP" expanded="false" />
-            <element signature="e#15543#15927#0#PHP" expanded="false" />
-            <element signature="e#15936#16333#0#PHP" expanded="false" />
-            <element signature="e#16342#16730#0#PHP" expanded="false" />
-            <element signature="e#16739#17121#0#PHP" expanded="false" />
-            <element signature="e#17130#17516#0#PHP" expanded="false" />
-            <marker date="1525070529284" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
-            <marker date="1525070529284" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
-            <marker date="1525070529284" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525070529284" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525070529284" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <element signature="e#11837#12225#0#PHP" expanded="false" />
+            <element signature="e#12234#12650#0#PHP" expanded="false" />
+            <element signature="e#12659#13069#0#PHP" expanded="false" />
+            <element signature="e#13078#13485#0#PHP" expanded="false" />
+            <element signature="e#13494#13905#0#PHP" expanded="false" />
+            <element signature="e#13914#14298#0#PHP" expanded="false" />
+            <element signature="e#14307#14698#0#PHP" expanded="false" />
+            <element signature="e#14707#15131#0#PHP" expanded="false" />
+            <element signature="e#15140#15524#0#PHP" expanded="false" />
+            <element signature="e#15533#15917#0#PHP" expanded="false" />
+            <element signature="e#15926#16323#0#PHP" expanded="false" />
+            <element signature="e#16332#16720#0#PHP" expanded="false" />
+            <element signature="e#16729#17111#0#PHP" expanded="false" />
+            <element signature="e#17120#17506#0#PHP" expanded="false" />
+            <element signature="e#18494#18667#0#PHP" expanded="false" />
+            <element signature="e#18681#18852#0#PHP" expanded="false" />
+            <element signature="e#18866#19035#0#PHP" expanded="false" />
+            <element signature="e#19049#19216#0#PHP" expanded="false" />
+            <marker date="1525341677148" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
+            <marker date="1525341677148" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
+            <marker date="1525341677148" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1525341677148" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1525341677148" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/products.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/products.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business-logic/mProducts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#11837#12225#0#PHP" expanded="false" />
+            <element signature="e#12234#12650#0#PHP" expanded="false" />
+            <element signature="e#12659#13069#0#PHP" expanded="false" />
+            <element signature="e#13078#13485#0#PHP" expanded="false" />
+            <element signature="e#13494#13905#0#PHP" expanded="false" />
+            <element signature="e#13914#14298#0#PHP" expanded="false" />
+            <element signature="e#14307#14698#0#PHP" expanded="false" />
+            <element signature="e#14707#15131#0#PHP" expanded="false" />
+            <element signature="e#15140#15524#0#PHP" expanded="false" />
+            <element signature="e#15533#15917#0#PHP" expanded="false" />
+            <element signature="e#15926#16323#0#PHP" expanded="false" />
+            <element signature="e#16332#16720#0#PHP" expanded="false" />
+            <element signature="e#16729#17111#0#PHP" expanded="false" />
+            <element signature="e#17120#17506#0#PHP" expanded="false" />
+            <element signature="e#18494#18667#0#PHP" expanded="false" />
+            <element signature="e#18681#18852#0#PHP" expanded="false" />
+            <element signature="e#18866#19035#0#PHP" expanded="false" />
+            <element signature="e#19049#19216#0#PHP" expanded="false" />
+            <marker date="1525341677148" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
+            <marker date="1525341677148" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
+            <marker date="1525341677148" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1525341677148" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1525341677148" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
           </folding>
         </state>
       </provider>
@@ -420,33 +484,37 @@
         <state relative-caret-position="731">
           <caret line="43" column="32" lean-forward="false" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
           <folding>
-            <element signature="e#11847#12235#0#PHP" expanded="false" />
-            <element signature="e#12244#12660#0#PHP" expanded="false" />
-            <element signature="e#12669#13079#0#PHP" expanded="false" />
-            <element signature="e#13088#13495#0#PHP" expanded="false" />
-            <element signature="e#13504#13915#0#PHP" expanded="false" />
-            <element signature="e#13924#14308#0#PHP" expanded="false" />
-            <element signature="e#14317#14708#0#PHP" expanded="false" />
-            <element signature="e#14717#15141#0#PHP" expanded="false" />
-            <element signature="e#15150#15534#0#PHP" expanded="false" />
-            <element signature="e#15543#15927#0#PHP" expanded="false" />
-            <element signature="e#15936#16333#0#PHP" expanded="false" />
-            <element signature="e#16342#16730#0#PHP" expanded="false" />
-            <element signature="e#16739#17121#0#PHP" expanded="false" />
-            <element signature="e#17130#17516#0#PHP" expanded="false" />
-            <marker date="1525070529284" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
-            <marker date="1525070529284" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
-            <marker date="1525070529284" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525070529284" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525070529284" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <element signature="e#11837#12225#0#PHP" expanded="false" />
+            <element signature="e#12234#12650#0#PHP" expanded="false" />
+            <element signature="e#12659#13069#0#PHP" expanded="false" />
+            <element signature="e#13078#13485#0#PHP" expanded="false" />
+            <element signature="e#13494#13905#0#PHP" expanded="false" />
+            <element signature="e#13914#14298#0#PHP" expanded="false" />
+            <element signature="e#14307#14698#0#PHP" expanded="false" />
+            <element signature="e#14707#15131#0#PHP" expanded="false" />
+            <element signature="e#15140#15524#0#PHP" expanded="false" />
+            <element signature="e#15533#15917#0#PHP" expanded="false" />
+            <element signature="e#15926#16323#0#PHP" expanded="false" />
+            <element signature="e#16332#16720#0#PHP" expanded="false" />
+            <element signature="e#16729#17111#0#PHP" expanded="false" />
+            <element signature="e#17120#17506#0#PHP" expanded="false" />
+            <element signature="e#18494#18667#0#PHP" expanded="false" />
+            <element signature="e#18681#18852#0#PHP" expanded="false" />
+            <element signature="e#18866#19035#0#PHP" expanded="false" />
+            <element signature="e#19049#19216#0#PHP" expanded="false" />
+            <marker date="1525341677148" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
+            <marker date="1525341677148" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
+            <marker date="1525341677148" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1525341677148" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1525341677148" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
           </folding>
         </state>
       </provider>
@@ -490,11 +558,11 @@
         <state relative-caret-position="238">
           <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
           <folding>
-            <marker date="1524759993610" expanded="true" signature="120:212" ph="UPDATE tVers... " />
-            <marker date="1524759993610" expanded="true" signature="120:284" ph="UPDATE tVers... " />
-            <marker date="1524759993610" expanded="true" signature="120:362" ph="UPDATE tVers... " />
-            <marker date="1524759993610" expanded="true" signature="120:429" ph="UPDATE tVers... " />
-            <marker date="1524759993610" expanded="true" signature="120:507" ph="UPDATE tVers... " />
+            <marker date="1525328362872" expanded="true" signature="120:212" ph="UPDATE tVers... " />
+            <marker date="1525328362872" expanded="true" signature="120:284" ph="UPDATE tVers... " />
+            <marker date="1525328362872" expanded="true" signature="120:362" ph="UPDATE tVers... " />
+            <marker date="1525328362872" expanded="true" signature="120:429" ph="UPDATE tVers... " />
+            <marker date="1525328362872" expanded="true" signature="120:507" ph="UPDATE tVers... " />
           </folding>
         </state>
       </provider>
@@ -504,7 +572,7 @@
         <state relative-caret-position="238">
           <caret line="14" column="100" lean-forward="false" selection-start-line="14" selection-start-column="100" selection-end-line="14" selection-end-column="100" />
           <folding>
-            <marker date="1524761186620" expanded="true" signature="143:304" ph="SELECT Versa... tVersandklassen" />
+            <marker date="1525328316069" expanded="true" signature="143:304" ph="SELECT Versa... tVersandklassen" />
           </folding>
         </state>
       </provider>
@@ -524,33 +592,37 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11847#12235#0#PHP" expanded="false" />
-            <element signature="e#12244#12660#0#PHP" expanded="false" />
-            <element signature="e#12669#13079#0#PHP" expanded="false" />
-            <element signature="e#13088#13495#0#PHP" expanded="false" />
-            <element signature="e#13504#13915#0#PHP" expanded="false" />
-            <element signature="e#13924#14308#0#PHP" expanded="false" />
-            <element signature="e#14317#14708#0#PHP" expanded="false" />
-            <element signature="e#14717#15141#0#PHP" expanded="false" />
-            <element signature="e#15150#15534#0#PHP" expanded="false" />
-            <element signature="e#15543#15927#0#PHP" expanded="false" />
-            <element signature="e#15936#16333#0#PHP" expanded="false" />
-            <element signature="e#16342#16730#0#PHP" expanded="false" />
-            <element signature="e#16739#17121#0#PHP" expanded="false" />
-            <element signature="e#17130#17516#0#PHP" expanded="false" />
-            <marker date="1525070529284" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
-            <marker date="1525070529284" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
-            <marker date="1525070529284" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525070529284" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525070529284" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <element signature="e#11837#12225#0#PHP" expanded="false" />
+            <element signature="e#12234#12650#0#PHP" expanded="false" />
+            <element signature="e#12659#13069#0#PHP" expanded="false" />
+            <element signature="e#13078#13485#0#PHP" expanded="false" />
+            <element signature="e#13494#13905#0#PHP" expanded="false" />
+            <element signature="e#13914#14298#0#PHP" expanded="false" />
+            <element signature="e#14307#14698#0#PHP" expanded="false" />
+            <element signature="e#14707#15131#0#PHP" expanded="false" />
+            <element signature="e#15140#15524#0#PHP" expanded="false" />
+            <element signature="e#15533#15917#0#PHP" expanded="false" />
+            <element signature="e#15926#16323#0#PHP" expanded="false" />
+            <element signature="e#16332#16720#0#PHP" expanded="false" />
+            <element signature="e#16729#17111#0#PHP" expanded="false" />
+            <element signature="e#17120#17506#0#PHP" expanded="false" />
+            <element signature="e#18494#18667#0#PHP" expanded="false" />
+            <element signature="e#18681#18852#0#PHP" expanded="false" />
+            <element signature="e#18866#19035#0#PHP" expanded="false" />
+            <element signature="e#19049#19216#0#PHP" expanded="false" />
+            <marker date="1525341677148" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
+            <marker date="1525341677148" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
+            <marker date="1525341677148" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1525341677148" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1525341677148" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
           </folding>
         </state>
       </provider>
@@ -568,33 +640,37 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11847#12235#0#PHP" expanded="false" />
-            <element signature="e#12244#12660#0#PHP" expanded="false" />
-            <element signature="e#12669#13079#0#PHP" expanded="false" />
-            <element signature="e#13088#13495#0#PHP" expanded="false" />
-            <element signature="e#13504#13915#0#PHP" expanded="false" />
-            <element signature="e#13924#14308#0#PHP" expanded="false" />
-            <element signature="e#14317#14708#0#PHP" expanded="false" />
-            <element signature="e#14717#15141#0#PHP" expanded="false" />
-            <element signature="e#15150#15534#0#PHP" expanded="false" />
-            <element signature="e#15543#15927#0#PHP" expanded="false" />
-            <element signature="e#15936#16333#0#PHP" expanded="false" />
-            <element signature="e#16342#16730#0#PHP" expanded="false" />
-            <element signature="e#16739#17121#0#PHP" expanded="false" />
-            <element signature="e#17130#17516#0#PHP" expanded="false" />
-            <marker date="1525070529284" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
-            <marker date="1525070529284" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
-            <marker date="1525070529284" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525070529284" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525070529284" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <element signature="e#11837#12225#0#PHP" expanded="false" />
+            <element signature="e#12234#12650#0#PHP" expanded="false" />
+            <element signature="e#12659#13069#0#PHP" expanded="false" />
+            <element signature="e#13078#13485#0#PHP" expanded="false" />
+            <element signature="e#13494#13905#0#PHP" expanded="false" />
+            <element signature="e#13914#14298#0#PHP" expanded="false" />
+            <element signature="e#14307#14698#0#PHP" expanded="false" />
+            <element signature="e#14707#15131#0#PHP" expanded="false" />
+            <element signature="e#15140#15524#0#PHP" expanded="false" />
+            <element signature="e#15533#15917#0#PHP" expanded="false" />
+            <element signature="e#15926#16323#0#PHP" expanded="false" />
+            <element signature="e#16332#16720#0#PHP" expanded="false" />
+            <element signature="e#16729#17111#0#PHP" expanded="false" />
+            <element signature="e#17120#17506#0#PHP" expanded="false" />
+            <element signature="e#18494#18667#0#PHP" expanded="false" />
+            <element signature="e#18681#18852#0#PHP" expanded="false" />
+            <element signature="e#18866#19035#0#PHP" expanded="false" />
+            <element signature="e#19049#19216#0#PHP" expanded="false" />
+            <marker date="1525341677148" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
+            <marker date="1525341677148" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
+            <marker date="1525341677148" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1525341677148" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1525341677148" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
           </folding>
         </state>
       </provider>
@@ -612,33 +688,37 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11847#12235#0#PHP" expanded="false" />
-            <element signature="e#12244#12660#0#PHP" expanded="false" />
-            <element signature="e#12669#13079#0#PHP" expanded="false" />
-            <element signature="e#13088#13495#0#PHP" expanded="false" />
-            <element signature="e#13504#13915#0#PHP" expanded="false" />
-            <element signature="e#13924#14308#0#PHP" expanded="false" />
-            <element signature="e#14317#14708#0#PHP" expanded="false" />
-            <element signature="e#14717#15141#0#PHP" expanded="false" />
-            <element signature="e#15150#15534#0#PHP" expanded="false" />
-            <element signature="e#15543#15927#0#PHP" expanded="false" />
-            <element signature="e#15936#16333#0#PHP" expanded="false" />
-            <element signature="e#16342#16730#0#PHP" expanded="false" />
-            <element signature="e#16739#17121#0#PHP" expanded="false" />
-            <element signature="e#17130#17516#0#PHP" expanded="false" />
-            <marker date="1525070529284" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
-            <marker date="1525070529284" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
-            <marker date="1525070529284" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525070529284" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525070529284" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <element signature="e#11837#12225#0#PHP" expanded="false" />
+            <element signature="e#12234#12650#0#PHP" expanded="false" />
+            <element signature="e#12659#13069#0#PHP" expanded="false" />
+            <element signature="e#13078#13485#0#PHP" expanded="false" />
+            <element signature="e#13494#13905#0#PHP" expanded="false" />
+            <element signature="e#13914#14298#0#PHP" expanded="false" />
+            <element signature="e#14307#14698#0#PHP" expanded="false" />
+            <element signature="e#14707#15131#0#PHP" expanded="false" />
+            <element signature="e#15140#15524#0#PHP" expanded="false" />
+            <element signature="e#15533#15917#0#PHP" expanded="false" />
+            <element signature="e#15926#16323#0#PHP" expanded="false" />
+            <element signature="e#16332#16720#0#PHP" expanded="false" />
+            <element signature="e#16729#17111#0#PHP" expanded="false" />
+            <element signature="e#17120#17506#0#PHP" expanded="false" />
+            <element signature="e#18494#18667#0#PHP" expanded="false" />
+            <element signature="e#18681#18852#0#PHP" expanded="false" />
+            <element signature="e#18866#19035#0#PHP" expanded="false" />
+            <element signature="e#19049#19216#0#PHP" expanded="false" />
+            <marker date="1525341677148" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
+            <marker date="1525341677148" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
+            <marker date="1525341677148" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1525341677148" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1525341677148" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
           </folding>
         </state>
       </provider>
@@ -648,33 +728,37 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11847#12235#0#PHP" expanded="false" />
-            <element signature="e#12244#12660#0#PHP" expanded="false" />
-            <element signature="e#12669#13079#0#PHP" expanded="false" />
-            <element signature="e#13088#13495#0#PHP" expanded="false" />
-            <element signature="e#13504#13915#0#PHP" expanded="false" />
-            <element signature="e#13924#14308#0#PHP" expanded="false" />
-            <element signature="e#14317#14708#0#PHP" expanded="false" />
-            <element signature="e#14717#15141#0#PHP" expanded="false" />
-            <element signature="e#15150#15534#0#PHP" expanded="false" />
-            <element signature="e#15543#15927#0#PHP" expanded="false" />
-            <element signature="e#15936#16333#0#PHP" expanded="false" />
-            <element signature="e#16342#16730#0#PHP" expanded="false" />
-            <element signature="e#16739#17121#0#PHP" expanded="false" />
-            <element signature="e#17130#17516#0#PHP" expanded="false" />
-            <marker date="1525070529284" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
-            <marker date="1525070529284" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
-            <marker date="1525070529284" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525070529284" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525070529284" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <element signature="e#11837#12225#0#PHP" expanded="false" />
+            <element signature="e#12234#12650#0#PHP" expanded="false" />
+            <element signature="e#12659#13069#0#PHP" expanded="false" />
+            <element signature="e#13078#13485#0#PHP" expanded="false" />
+            <element signature="e#13494#13905#0#PHP" expanded="false" />
+            <element signature="e#13914#14298#0#PHP" expanded="false" />
+            <element signature="e#14307#14698#0#PHP" expanded="false" />
+            <element signature="e#14707#15131#0#PHP" expanded="false" />
+            <element signature="e#15140#15524#0#PHP" expanded="false" />
+            <element signature="e#15533#15917#0#PHP" expanded="false" />
+            <element signature="e#15926#16323#0#PHP" expanded="false" />
+            <element signature="e#16332#16720#0#PHP" expanded="false" />
+            <element signature="e#16729#17111#0#PHP" expanded="false" />
+            <element signature="e#17120#17506#0#PHP" expanded="false" />
+            <element signature="e#18494#18667#0#PHP" expanded="false" />
+            <element signature="e#18681#18852#0#PHP" expanded="false" />
+            <element signature="e#18866#19035#0#PHP" expanded="false" />
+            <element signature="e#19049#19216#0#PHP" expanded="false" />
+            <marker date="1525341677148" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
+            <marker date="1525341677148" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
+            <marker date="1525341677148" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1525341677148" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1525341677148" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
           </folding>
         </state>
       </provider>
@@ -684,33 +768,37 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11847#12235#0#PHP" expanded="false" />
-            <element signature="e#12244#12660#0#PHP" expanded="false" />
-            <element signature="e#12669#13079#0#PHP" expanded="false" />
-            <element signature="e#13088#13495#0#PHP" expanded="false" />
-            <element signature="e#13504#13915#0#PHP" expanded="false" />
-            <element signature="e#13924#14308#0#PHP" expanded="false" />
-            <element signature="e#14317#14708#0#PHP" expanded="false" />
-            <element signature="e#14717#15141#0#PHP" expanded="false" />
-            <element signature="e#15150#15534#0#PHP" expanded="false" />
-            <element signature="e#15543#15927#0#PHP" expanded="false" />
-            <element signature="e#15936#16333#0#PHP" expanded="false" />
-            <element signature="e#16342#16730#0#PHP" expanded="false" />
-            <element signature="e#16739#17121#0#PHP" expanded="false" />
-            <element signature="e#17130#17516#0#PHP" expanded="false" />
-            <marker date="1525070529284" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
-            <marker date="1525070529284" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
-            <marker date="1525070529284" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525070529284" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525070529284" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <element signature="e#11837#12225#0#PHP" expanded="false" />
+            <element signature="e#12234#12650#0#PHP" expanded="false" />
+            <element signature="e#12659#13069#0#PHP" expanded="false" />
+            <element signature="e#13078#13485#0#PHP" expanded="false" />
+            <element signature="e#13494#13905#0#PHP" expanded="false" />
+            <element signature="e#13914#14298#0#PHP" expanded="false" />
+            <element signature="e#14307#14698#0#PHP" expanded="false" />
+            <element signature="e#14707#15131#0#PHP" expanded="false" />
+            <element signature="e#15140#15524#0#PHP" expanded="false" />
+            <element signature="e#15533#15917#0#PHP" expanded="false" />
+            <element signature="e#15926#16323#0#PHP" expanded="false" />
+            <element signature="e#16332#16720#0#PHP" expanded="false" />
+            <element signature="e#16729#17111#0#PHP" expanded="false" />
+            <element signature="e#17120#17506#0#PHP" expanded="false" />
+            <element signature="e#18494#18667#0#PHP" expanded="false" />
+            <element signature="e#18681#18852#0#PHP" expanded="false" />
+            <element signature="e#18866#19035#0#PHP" expanded="false" />
+            <element signature="e#19049#19216#0#PHP" expanded="false" />
+            <marker date="1525341677148" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
+            <marker date="1525341677148" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
+            <marker date="1525341677148" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1525341677148" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1525341677148" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
           </folding>
         </state>
       </provider>
@@ -734,33 +822,37 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11847#12235#0#PHP" expanded="false" />
-            <element signature="e#12244#12660#0#PHP" expanded="false" />
-            <element signature="e#12669#13079#0#PHP" expanded="false" />
-            <element signature="e#13088#13495#0#PHP" expanded="false" />
-            <element signature="e#13504#13915#0#PHP" expanded="false" />
-            <element signature="e#13924#14308#0#PHP" expanded="false" />
-            <element signature="e#14317#14708#0#PHP" expanded="false" />
-            <element signature="e#14717#15141#0#PHP" expanded="false" />
-            <element signature="e#15150#15534#0#PHP" expanded="false" />
-            <element signature="e#15543#15927#0#PHP" expanded="false" />
-            <element signature="e#15936#16333#0#PHP" expanded="false" />
-            <element signature="e#16342#16730#0#PHP" expanded="false" />
-            <element signature="e#16739#17121#0#PHP" expanded="false" />
-            <element signature="e#17130#17516#0#PHP" expanded="false" />
-            <marker date="1525070529284" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
-            <marker date="1525070529284" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
-            <marker date="1525070529284" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525070529284" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525070529284" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <element signature="e#11837#12225#0#PHP" expanded="false" />
+            <element signature="e#12234#12650#0#PHP" expanded="false" />
+            <element signature="e#12659#13069#0#PHP" expanded="false" />
+            <element signature="e#13078#13485#0#PHP" expanded="false" />
+            <element signature="e#13494#13905#0#PHP" expanded="false" />
+            <element signature="e#13914#14298#0#PHP" expanded="false" />
+            <element signature="e#14307#14698#0#PHP" expanded="false" />
+            <element signature="e#14707#15131#0#PHP" expanded="false" />
+            <element signature="e#15140#15524#0#PHP" expanded="false" />
+            <element signature="e#15533#15917#0#PHP" expanded="false" />
+            <element signature="e#15926#16323#0#PHP" expanded="false" />
+            <element signature="e#16332#16720#0#PHP" expanded="false" />
+            <element signature="e#16729#17111#0#PHP" expanded="false" />
+            <element signature="e#17120#17506#0#PHP" expanded="false" />
+            <element signature="e#18494#18667#0#PHP" expanded="false" />
+            <element signature="e#18681#18852#0#PHP" expanded="false" />
+            <element signature="e#18866#19035#0#PHP" expanded="false" />
+            <element signature="e#19049#19216#0#PHP" expanded="false" />
+            <marker date="1525341677148" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
+            <marker date="1525341677148" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
+            <marker date="1525341677148" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1525341677148" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1525341677148" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
           </folding>
         </state>
       </provider>
@@ -863,35 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/business-logic/mLoadVersandklasse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-          <folding>
-            <marker date="1522855014899" expanded="true" signature="143:278" ph="SELECT Versa... tVersandklassen" />
-            <marker date="1522855014899" expanded="true" signature="521:528" ph="ß" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/versandklassen-edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business-logic/mLoadVersandklassEdit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="100" lean-forward="false" selection-start-line="14" selection-start-column="100" selection-end-line="14" selection-end-column="100" />
-          <folding>
-            <marker date="1524761186620" expanded="true" signature="143:304" ph="SELECT Versa... tVersandklassen" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/business-logic/mLoadUsers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -932,20 +995,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/business-logic/mSaveVersandklassen.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-          <folding>
-            <marker date="1524759993610" expanded="true" signature="120:212" ph="UPDATE tVers... " />
-            <marker date="1524759993610" expanded="true" signature="120:284" ph="UPDATE tVers... " />
-            <marker date="1524759993610" expanded="true" signature="120:362" ph="UPDATE tVers... " />
-            <marker date="1524759993610" expanded="true" signature="120:429" ph="UPDATE tVers... " />
-            <marker date="1524759993610" expanded="true" signature="120:507" ph="UPDATE tVers... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/admin-users-add-new.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2125">
@@ -964,54 +1013,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/products.js">
+    <entry file="file://$PROJECT_DIR$/business-logic/mLoadVersandklassEdit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+        <state relative-caret-position="459">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <marker date="1525328316069" expanded="true" signature="143:304" ph="SELECT Versa... tVersandklassen" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/versandklassen-edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business-logic/mLoadVersandklasse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="20" />
+          <folding>
+            <marker date="1525328316050" expanded="true" signature="143:278" ph="SELECT Versa... tVersandklassen" />
+            <marker date="1525328316050" expanded="true" signature="521:528" ph="ß" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business-logic/mSaveVersandklassen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="87" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="87" />
+          <folding>
+            <marker date="1525328362872" expanded="true" signature="120:212" ph="UPDATE tVers... " />
+            <marker date="1525328362872" expanded="true" signature="120:284" ph="UPDATE tVers... " />
+            <marker date="1525328362872" expanded="true" signature="120:362" ph="UPDATE tVers... " />
+            <marker date="1525328362872" expanded="true" signature="120:429" ph="UPDATE tVers... " />
+            <marker date="1525328362872" expanded="true" signature="120:507" ph="UPDATE tVers... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
+        <state relative-caret-position="395">
           <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/products.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="98" column="50" lean-forward="false" selection-start-line="98" selection-start-column="34" selection-end-line="98" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/business-logic/mProducts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="429" column="76" lean-forward="false" selection-start-line="429" selection-start-column="76" selection-end-line="429" selection-end-column="76" />
+        <state relative-caret-position="292">
+          <caret line="489" column="72" lean-forward="false" selection-start-line="489" selection-start-column="72" selection-end-line="489" selection-end-column="72" />
           <folding>
-            <element signature="e#11847#12235#0#PHP" expanded="false" />
-            <element signature="e#12244#12660#0#PHP" expanded="false" />
-            <element signature="e#12669#13079#0#PHP" expanded="false" />
-            <element signature="e#13088#13495#0#PHP" expanded="false" />
-            <element signature="e#13504#13915#0#PHP" expanded="false" />
-            <element signature="e#13924#14308#0#PHP" expanded="false" />
-            <element signature="e#14317#14708#0#PHP" expanded="false" />
-            <element signature="e#14717#15141#0#PHP" expanded="false" />
-            <element signature="e#15150#15534#0#PHP" expanded="false" />
-            <element signature="e#15543#15927#0#PHP" expanded="false" />
-            <element signature="e#15936#16333#0#PHP" expanded="false" />
-            <element signature="e#16342#16730#0#PHP" expanded="false" />
-            <element signature="e#16739#17121#0#PHP" expanded="false" />
-            <element signature="e#17130#17516#0#PHP" expanded="false" />
-            <marker date="1525070529284" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
-            <marker date="1525070529284" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
-            <marker date="1525070529284" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525070529284" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525070529284" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525070529284" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
-            <marker date="1525070529284" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <element signature="e#11837#12225#0#PHP" expanded="false" />
+            <element signature="e#12234#12650#0#PHP" expanded="false" />
+            <element signature="e#12659#13069#0#PHP" expanded="false" />
+            <element signature="e#13078#13485#0#PHP" expanded="false" />
+            <element signature="e#13494#13905#0#PHP" expanded="false" />
+            <element signature="e#13914#14298#0#PHP" expanded="false" />
+            <element signature="e#14307#14698#0#PHP" expanded="false" />
+            <element signature="e#14707#15131#0#PHP" expanded="false" />
+            <element signature="e#15140#15524#0#PHP" expanded="false" />
+            <element signature="e#15533#15917#0#PHP" expanded="false" />
+            <element signature="e#15926#16323#0#PHP" expanded="false" />
+            <element signature="e#16332#16720#0#PHP" expanded="false" />
+            <element signature="e#16729#17111#0#PHP" expanded="false" />
+            <element signature="e#17120#17506#0#PHP" expanded="false" />
+            <element signature="e#18494#18667#0#PHP" expanded="false" />
+            <element signature="e#18681#18852#0#PHP" expanded="false" />
+            <element signature="e#18866#19035#0#PHP" expanded="false" />
+            <element signature="e#19049#19216#0#PHP" expanded="false" />
+            <marker date="1525341677148" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
+            <marker date="1525341677148" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
+            <marker date="1525341677148" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1525341677148" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1525341677148" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1525341677148" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
+            <marker date="1525341677148" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
           </folding>
         </state>
       </provider>

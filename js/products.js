@@ -26,21 +26,23 @@ window.onload = function () {
 
     }
 
-    item = document.getElementById('th-marge-euro');
-
-    item.onclick = function(){
-        if (item.timer){
-            clearTimeout(item.timer);
-            item.timer = null;
-            changeOrder(item, "DESC");
-        }
-        else{
-            item.timer = setTimeout(function(){
-                item.timer = null;
-                changeOrder(item, "ASC");
-            },300);
-        }
-    }
+    plattform = document.getElementById('txt-plattform');
+    artikelnummer = document.getElementById('txt-artikelnummer');
+    artikelname = document.getElementById('txt-artikelname');
+    hersteller = document.getElementById('txt-hersteller');
+    plattformid = document.getElementById('txt-plattformid');
+    eknetto = document.getElementById('txt-eknetto');
+    mwst = document.getElementById('txt-mwst');
+    versandklasse = document.getElementById('txt-versandklasse');
+    gewicht  = document.getElementById('txt-gewicht');
+    nullpreis  = document.getElementById('txt-nullpreis');
+    vkpreis  = document.getElementById('th-vk-preis');
+    vkpreis.addEventListener('click', sort);
+    margeeuro  = document.getElementById('th-marge-euro');
+    margeeuro.addEventListener('click', sort);
+    margeprozent  = document.getElementById('th-marge-prozent');
+    margeprozent.addEventListener('click', sort);
+    bestand  = document.getElementById('txt-bestand');
 
 
 	function openDialog(e) {
@@ -60,6 +62,57 @@ window.onload = function () {
 		
 		window.open("../sites/versandklassen-edit.php?idVersanklasse=" + idVersanklasse, "", "toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=800,height=500,left = 710,top = 140");
 	}
+
+	function sort(e) {
+
+        if(e.currentTarget.id == 'th-vk-preis')
+        {
+            item = document.getElementById('th-vk-preis');
+            if (item.timer){
+                clearTimeout(item.timer);
+                item.timer = null;
+                changeOrder(item, "DESC");
+            }
+            else{
+                item.timer = setTimeout(function(){
+                    item.timer = null;
+                    changeOrder(item, "ASC");
+                },300);
+            }
+        }
+
+        if(e.currentTarget.id == 'th-marge-euro')
+        {
+            item = document.getElementById('th-marge-euro');
+            if (item.timer){
+                clearTimeout(item.timer);
+                item.timer = null;
+                changeOrder(item, "DESC");
+            }
+            else{
+                item.timer = setTimeout(function(){
+                    item.timer = null;
+                    changeOrder(item, "ASC");
+                },300);
+            }
+        }
+        if(e.currentTarget.id == 'th-marge-prozent')
+        {
+            item = document.getElementById('th-marge-prozent');
+            if (item.timer){
+                clearTimeout(item.timer);
+                item.timer = null;
+                changeOrder(item, "DESC");
+            }
+            else{
+                item.timer = setTimeout(function(){
+                    item.timer = null;
+                    changeOrder(item, "ASC");
+                },300);
+            }
+        }
+
+    }
 	
 	function changeOrder(e, orderStatus) {
 
