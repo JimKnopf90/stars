@@ -112,7 +112,7 @@
        
         // TR: Headline        
         echo "<tr><th id='th-edit'><a ><img class='icon-art-settings' src='../image/icon-art-setting.png'/></a></th>";
-        echo "<th id='th-plattform'>Plattform <br><form><input id='txt-plattform' name='txt-plattform' value='" . $plattformSearch . "'></form></th>";
+        echo "<th id='th-plattform'>Plattform <img src='../image/sort-down.png'> <br><form><input id='txt-plattform' name='txt-plattform' value='" . $plattformSearch . "'></form></th>";
         echo "<th id='th-artikelnummer'>Artikelnummer <br><span><input name='txt-artikelnummer' id='txt-artikelnummer' value='" . $artikelnummerSearch . "'></span></th>";
         echo "<th id='th-artikelname'>Artikelname <br><input id='txt-artikelname' name='txt-artikelname' value='" . $artikelnameSearch . "'></th>";
         echo "<th id='th-hersteller'>Hersteller <br><input id='txt-hersteller' name='txt-hersteller' value='" . $herstellerSearch . "'></th>";
@@ -446,6 +446,139 @@
                 return $_list;
             }
 
+            if ($attribute == "th-bestand" and $sortStatus == "DESC")
+            {
+                usort($_list,"compareBestandDESC");
+                return $_list;
+            }
+
+            if ($attribute == "th-bestand" and $sortStatus == "ASC")
+            {
+                usort($_list,"compareBestandASC");
+                return $_list;
+            }
+
+            if ($attribute == "th-nullpreis" and $sortStatus == "DESC")
+            {
+                usort($_list,"compareNullpreisDESC");
+                return $_list;
+            }
+
+            if ($attribute == "th-nullpreis" and $sortStatus == "ASC")
+            {
+                usort($_list,"compareNullpreisASC");
+                return $_list;
+            }
+
+            if ($attribute == "th-gewicht" and $sortStatus == "DESC")
+            {
+                usort($_list,"compareGewichtDESC");
+                return $_list;
+            }
+
+            if ($attribute == "th-gewicht" and $sortStatus == "ASC")
+            {
+                usort($_list,"compareGewichtASC");
+                return $_list;
+            }
+
+            if ($attribute == "th-versandklasse" and $sortStatus == "DESC")
+            {
+                usort($_list,"compareVersandklasseDESC");
+                return $_list;
+            }
+
+            if ($attribute == "th-versandklasse" and $sortStatus == "ASC")
+            {
+                usort($_list,"compareVersandklasseASC");
+                return $_list;
+            }
+
+            if ($attribute == "th-mehrwertsteuer" and $sortStatus == "DESC")
+            {
+                usort($_list,"compareMwstDESC");
+                return $_list;
+            }
+
+            if ($attribute == "th-mehrwertsteuer" and $sortStatus == "ASC")
+            {
+                usort($_list,"compareMwstASC");
+                return $_list;
+            }
+
+            if ($attribute == "th-ek-netto" and $sortStatus == "DESC")
+            {
+                usort($_list,"compareEKNettoDESC");
+                return $_list;
+            }
+
+            if ($attribute == "th-ek-netto" and $sortStatus == "ASC")
+            {
+                usort($_list,"compareEKNettoASC");
+                return $_list;
+            }
+
+            if ($attribute == "th-plattform-id" and $sortStatus == "DESC")
+            {
+                usort($_list,"comparePlattformIdDESC");
+                return $_list;
+            }
+
+            if ($attribute == "th-plattform-id" and $sortStatus == "ASC")
+            {
+                usort($_list,"comparePlattformIdASC");
+                return $_list;
+            }
+
+            if ($attribute == "th-hersteller" and $sortStatus == "DESC")
+            {
+                usort($_list,"compareHerstellerDESC");
+                return $_list;
+            }
+
+            if ($attribute == "th-hersteller" and $sortStatus == "ASC")
+            {
+                usort($_list,"compareHerstellerASC");
+                return $_list;
+            }
+
+            if ($attribute == "th-artikelname" and $sortStatus == "DESC")
+            {
+                usort($_list,"compareArtikelnameDESC");
+                return $_list;
+            }
+
+            if ($attribute == "th-artikelname" and $sortStatus == "ASC")
+            {
+                usort($_list,"compareArtikelnameASC");
+                return $_list;
+            }
+
+            if ($attribute == "th-artikelnummer" and $sortStatus == "DESC")
+            {
+                usort($_list,"compareArtikelnummerDESC");
+                return $_list;
+            }
+
+            if ($attribute == "th-artikelnummer" and $sortStatus == "ASC")
+            {
+                usort($_list,"compareArtikelnummerASC");
+                return $_list;
+            }
+
+            if ($attribute == "th-plattform" and $sortStatus == "DESC")
+            {
+                usort($_list,"comparePlattformDESC");
+                return $_list;
+            }
+
+            if ($attribute == "th-plattform" and $sortStatus == "ASC")
+            {
+                usort($_list,"comparePlattformASC");
+                return $_list;
+            }
+
+
             
         }
         
@@ -503,6 +636,195 @@
             else return 0;
 
         }
+
+        function compareBestandASC($value1, $value2) {
+
+            $val1 = floatval(str_replace(',', '.', $value1["Bestand"]));
+            $val2 =floatval(str_replace(',', '.', $value2["Bestand"]));
+            if ($val1 < $val2) return -1;
+            else if ($val1 > $val2) return 1;
+            else return 0;
+        }
+
+        function compareBestandDESC($value1, $value2) {
+            $val1 = floatval(str_replace(',', '.', $value1["Bestand"]));
+            $val2 =floatval(str_replace(',', '.', $value2["Bestand"]));
+            if ($val1 > $val2) return -1;
+            else if ($val1 < $val2) return 1;
+            else return 0;
+        }
+
+        function compareNullpreisASC($value1, $value2) {
+
+            $val1 = floatval(str_replace(',', '.', $value1["Nullpreis"]));
+            $val2 = floatval(str_replace(',', '.', $value2["Nullpreis"]));
+            if ($val1 < $val2) return -1;
+            else if ($val1 > $val2) return 1;
+            else return 0;
+        }
+
+        function compareNullpreisDESC($value1, $value2) {
+            $val1 = floatval(str_replace(',', '.', $value1["Nullpreis"]));
+            $val2 = floatval(str_replace(',', '.', $value2["Nullpreis"]));
+            if ($val1 > $val2) return -1;
+            else if ($val1 < $val2) return 1;
+            else return 0;
+        }
+
+        function compareGewichtASC($value1, $value2) {
+
+            $val1 = floatval(str_replace(',', '.', $value1["Gewicht"]));
+            $val2 = floatval(str_replace(',', '.', $value2["Gewicht"]));
+            if ($val1 < $val2) return -1;
+            else if ($val1 > $val2) return 1;
+            else return 0;
+        }
+
+        function compareGewichtDESC($value1, $value2) {
+            $val1 = floatval(str_replace(',', '.', $value1["Gewicht"]));
+            $val2 = floatval(str_replace(',', '.', $value2["Gewicht"]));
+            if ($val1 > $val2) return -1;
+            else if ($val1 < $val2) return 1;
+            else return 0;
+        }
+
+        function compareVersandklasseASC($value1, $value2) {
+
+            $val1 =  $value1["VersandklasseName"];
+            $val2 =  $value2["VersandklasseName"];
+            if ($val1 < $val2) return -1;
+            else if ($val1 > $val2) return 1;
+            else return 0;
+        }
+
+        function compareVersandklasseDESC($value1, $value2) {
+            $val1 = $value1["VersandklasseName"];
+            $val2 = $value2["VersandklasseName"];
+            if ($val1 > $val2) return -1;
+            else if ($val1 < $val2) return 1;
+            else return 0;
+        }
+
+        function compareMwstASC($value1, $value2) {
+
+            $val1 =  $value1["Mwst"];
+            $val2 =  $value2["Mwst"];
+            if ($val1 < $val2) return -1;
+            else if ($val1 > $val2) return 1;
+            else return 0;
+        }
+
+        function compareMwstDESC($value1, $value2) {
+            $val1 = $value1["Mwst"];
+            $val2 = $value2["Mwst"];
+            if ($val1 > $val2) return -1;
+            else if ($val1 < $val2) return 1;
+            else return 0;
+        }
+
+        function compareEKNettoASC($value1, $value2) {
+
+            $val1 = floatval(str_replace(',', '.', $value1["EkNetto"]));
+            $val2 = floatval(str_replace(',', '.', $value2["EkNetto"]));
+            if ($val1 < $val2) return -1;
+            else if ($val1 > $val2) return 1;
+            else return 0;
+        }
+
+        function compareEKNettoDESC($value1, $value2) {
+            $val1 = floatval(str_replace(',', '.', $value1["EkNetto"]));
+            $val2 = floatval(str_replace(',', '.', $value2["EkNetto"]));
+            if ($val1 > $val2) return -1;
+            else if ($val1 < $val2) return 1;
+            else return 0;
+        }
+
+        function comparePlattformIdASC($value1, $value2) {
+
+            $val1 =  $value1["PlattformID"];
+            $val2 =  $value2["PlattformID"];
+            if ($val1 < $val2) return -1;
+            else if ($val1 > $val2) return 1;
+            else return 0;
+        }
+
+        function comparePlattformIdDESC($value1, $value2) {
+            $val1 = $value1["PlattformID"];
+            $val2 = $value2["PlattformID"];
+            if ($val1 > $val2) return -1;
+            else if ($val1 < $val2) return 1;
+            else return 0;
+        }
+
+        function compareHerstellerASC($value1, $value2) {
+
+            $val1 =  $value1["Hersteller"];
+            $val2 =  $value2["Hersteller"];
+            if ($val1 < $val2) return -1;
+            else if ($val1 > $val2) return 1;
+            else return 0;
+        }
+
+        function compareHerstellerDESC($value1, $value2) {
+            $val1 = $value1["Hersteller"];
+            $val2 = $value2["Hersteller"];
+            if ($val1 > $val2) return -1;
+            else if ($val1 < $val2) return 1;
+            else return 0;
+        }
+
+        function compareArtikelnameASC($value1, $value2) {
+
+            $val1 =  $value1["Artikelname"];
+            $val2 =  $value2["Artikelname"];
+            if ($val1 < $val2) return -1;
+            else if ($val1 > $val2) return 1;
+            else return 0;
+        }
+
+        function compareArtikelnameDESC($value1, $value2) {
+            $val1 = $value1["Artikelname"];
+            $val2 = $value2["Artikelname"];
+            if ($val1 > $val2) return -1;
+            else if ($val1 < $val2) return 1;
+            else return 0;
+        }
+
+        function compareArtikelnummerASC($value1, $value2) {
+
+            $val1 =  $value1["Artikelnummer"];
+            $val2 =  $value2["Artikelnummer"];
+            if ($val1 < $val2) return -1;
+            else if ($val1 > $val2) return 1;
+            else return 0;
+        }
+
+        function compareArtikelnummerDESC($value1, $value2) {
+            $val1 = $value1["Artikelnummer"];
+            $val2 = $value2["Artikelnummer"];
+            if ($val1 > $val2) return -1;
+            else if ($val1 < $val2) return 1;
+            else return 0;
+        }
+
+        function comparePlattformASC($value1, $value2) {
+
+            $val1 =  $value1["Plattform"];
+            $val2 =  $value2["Plattform"];
+            if ($val1 < $val2) return -1;
+            else if ($val1 > $val2) return 1;
+            else return 0;
+        }
+
+        function comparePlattformDESC($value1, $value2) {
+            $val1 = $value1["Plattform"];
+            $val2 = $value2["Plattform"];
+            if ($val1 > $val2) return -1;
+            else if ($val1 < $val2) return 1;
+            else return 0;
+        }
+
+
 
         /**
          * @param $_list

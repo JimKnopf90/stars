@@ -26,23 +26,34 @@ window.onload = function () {
 
     }
 
-    plattform = document.getElementById('txt-plattform');
-    artikelnummer = document.getElementById('txt-artikelnummer');
-    artikelname = document.getElementById('txt-artikelname');
-    hersteller = document.getElementById('txt-hersteller');
-    plattformid = document.getElementById('txt-plattformid');
-    eknetto = document.getElementById('txt-eknetto');
-    mwst = document.getElementById('txt-mwst');
-    versandklasse = document.getElementById('txt-versandklasse');
-    gewicht  = document.getElementById('txt-gewicht');
-    nullpreis  = document.getElementById('txt-nullpreis');
+    plattform = document.getElementById('th-plattform');
+    plattform.addEventListener('click', sort);
+    artikelnummer = document.getElementById('th-artikelnummer');
+    artikelnummer.addEventListener('click', sort);
+    artikelname = document.getElementById('th-artikelname');
+    artikelname.addEventListener('click', sort);
+    hersteller = document.getElementById('th-hersteller');
+    hersteller.addEventListener('click', sort);
+    plattformid = document.getElementById('th-plattform-id');
+    plattformid.addEventListener('click', sort);
+    eknetto = document.getElementById('th-ek-netto');
+    eknetto.addEventListener('click', sort);
+    mwst = document.getElementById('th-mehrwertsteuer');
+    mwst.addEventListener('click', sort);
+    versandklasse = document.getElementById('th-versandklasse');
+    versandklasse.addEventListener('click', sort);
+    gewicht  = document.getElementById('th-gewicht');
+    gewicht.addEventListener('click', sort);
+    nullpreis  = document.getElementById('th-nullpreis');
+    nullpreis.addEventListener('click', sort);
     vkpreis  = document.getElementById('th-vk-preis');
     vkpreis.addEventListener('click', sort);
     margeeuro  = document.getElementById('th-marge-euro');
     margeeuro.addEventListener('click', sort);
     margeprozent  = document.getElementById('th-marge-prozent');
     margeprozent.addEventListener('click', sort);
-    bestand  = document.getElementById('txt-bestand');
+    bestand  = document.getElementById('th-bestand');
+    bestand.addEventListener('click', sort);
 
 
 	function openDialog(e) {
@@ -111,6 +122,160 @@ window.onload = function () {
                 },300);
             }
         }
+        if(e.currentTarget.id == 'th-bestand') {
+            item = document.getElementById('th-bestand');
+            if (item.timer) {
+                clearTimeout(item.timer);
+                item.timer = null;
+                changeOrder(item, "DESC");
+            }
+            else {
+                item.timer = setTimeout(function () {
+                    item.timer = null;
+                    changeOrder(item, "ASC");
+                }, 300);
+            }
+        }
+        if(e.currentTarget.id == 'th-nullpreis') {
+            item = document.getElementById('th-nullpreis');
+            if (item.timer) {
+                clearTimeout(item.timer);
+                item.timer = null;
+                changeOrder(item, "DESC");
+            }
+            else {
+                item.timer = setTimeout(function () {
+                    item.timer = null;
+                    changeOrder(item, "ASC");
+                }, 300);
+            }
+        }
+        if(e.currentTarget.id == 'th-gewicht') {
+            item = document.getElementById('th-gewicht');
+            if (item.timer) {
+                clearTimeout(item.timer);
+                item.timer = null;
+                changeOrder(item, "DESC");
+            }
+            else {
+                item.timer = setTimeout(function () {
+                    item.timer = null;
+                    changeOrder(item, "ASC");
+                }, 300);
+            }
+        }
+        if(e.currentTarget.id == 'th-versandklasse') {
+            item = document.getElementById('th-versandklasse');
+            if (item.timer) {
+                clearTimeout(item.timer);
+                item.timer = null;
+                changeOrder(item, "DESC");
+            }
+            else {
+                item.timer = setTimeout(function () {
+                    item.timer = null;
+                    changeOrder(item, "ASC");
+                }, 300);
+            }
+        }
+        if(e.currentTarget.id == 'th-mehrwertsteuer') {
+            item = document.getElementById('th-mehrwertsteuer');
+            if (item.timer) {
+                clearTimeout(item.timer);
+                item.timer = null;
+                changeOrder(item, "DESC");
+            }
+            else {
+                item.timer = setTimeout(function () {
+                    item.timer = null;
+                    changeOrder(item, "ASC");
+                }, 300);
+            }
+        }
+        if(e.currentTarget.id == 'th-ek-netto') {
+            item = document.getElementById('th-ek-netto');
+            if (item.timer) {
+                clearTimeout(item.timer);
+                item.timer = null;
+                changeOrder(item, "DESC");
+            }
+            else {
+                item.timer = setTimeout(function () {
+                    item.timer = null;
+                    changeOrder(item, "ASC");
+                }, 300);
+            }
+        }
+        if(e.currentTarget.id == 'th-plattform-id') {
+            item = document.getElementById('th-plattform-id');
+            if (item.timer) {
+                clearTimeout(item.timer);
+                item.timer = null;
+                changeOrder(item, "DESC");
+            }
+            else {
+                item.timer = setTimeout(function () {
+                    item.timer = null;
+                    changeOrder(item, "ASC");
+                }, 300);
+            }
+        }
+        if(e.currentTarget.id == 'th-hersteller') {
+            item = document.getElementById('th-hersteller');
+            if (item.timer) {
+                clearTimeout(item.timer);
+                item.timer = null;
+                changeOrder(item, "DESC");
+            }
+            else {
+                item.timer = setTimeout(function () {
+                    item.timer = null;
+                    changeOrder(item, "ASC");
+                }, 300);
+            }
+        }
+        if(e.currentTarget.id == 'th-artikelname') {
+            item = document.getElementById('th-artikelname');
+            if (item.timer) {
+                clearTimeout(item.timer);
+                item.timer = null;
+                changeOrder(item, "DESC");
+            }
+            else {
+                item.timer = setTimeout(function () {
+                    item.timer = null;
+                    changeOrder(item, "ASC");
+                }, 300);
+            }
+        }
+        if(e.currentTarget.id == 'th-artikelnummer') {
+            item = document.getElementById('th-artikelnummer');
+            if (item.timer) {
+                clearTimeout(item.timer);
+                item.timer = null;
+                changeOrder(item, "DESC");
+            }
+            else {
+                item.timer = setTimeout(function () {
+                    item.timer = null;
+                    changeOrder(item, "ASC");
+                }, 300);
+            }
+        }
+        if(e.currentTarget.id == 'th-plattform') {
+            item = document.getElementById('th-plattform');
+            if (item.timer) {
+                clearTimeout(item.timer);
+                item.timer = null;
+                changeOrder(item, "DESC");
+            }
+            else {
+                item.timer = setTimeout(function () {
+                    item.timer = null;
+                    changeOrder(item, "ASC");
+                }, 300);
+            }
+        }
 
     }
 	
@@ -132,8 +297,8 @@ window.onload = function () {
         bestand  = document.getElementById('txt-bestand').value;
 
 
-        window.location.href = "../sites/products.php?txt-plattform=&txt-artikelnummer=" + artikelnummer + "&txt-artikelname=&txt-hersteller=&txt-plattformid=&" +
-            "txt-eknetto=&txt-mwst=&txt-versandklasse=&txt-gewicht=&txt-nullpreis=&txt-vkpreis=&txt-margeeuro=&txt-margeprozent=&txt-bestand=&sort=" + e.id + "&sortStatus=" + orderStatus;
+        window.location.href = "../sites/products.php?txt-plattform=" + plattform + "&txt-artikelnummer=" + artikelnummer + "&txt-artikelname=" + artikelname + "&txt-hersteller=" + hersteller + "&txt-plattformid=" + plattformid + "&" +
+            "txt-eknetto=" + eknetto + "&txt-mwst=" + mwst + "&txt-versandklasse=" + versandklasse + "&txt-gewicht=" + gewicht + "&txt-nullpreis=" + nullpreis + "&txt-vkpreis=" + vkpreis + "&txt-margeeuro=" + margeeuro + "&txt-margeprozent=" + margeprozent + "&txt-bestand=" + bestand + "&sort=" + e.id + "&sortStatus=" + orderStatus;
     }
 
 
