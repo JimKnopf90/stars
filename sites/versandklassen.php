@@ -66,6 +66,14 @@
                 </li>
                 
                 <li>
+                    <a class="btnSidebar" href="admin-lagerbestand.php">
+                        <button id="versandklassen" type="button" class="inactive">
+                            Lagerbestand
+                        </button>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="btnSidebar" href="#">
                         <button type="button" class="inactive">
                             Export

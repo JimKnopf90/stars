@@ -77,6 +77,14 @@ if(isset($_SESSION["adminusername"])) {
                 </li>
                 
                 <li>
+                    <a class="btnSidebar" href="admin-lagerbestand.php">
+                        <button id="versandklassen" type="button" class="inactive">
+                            Lagerbestand
+                        </button>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="btnSidebar" href="#">
                         <button id="export" type="button" class="inactive">
                             Export

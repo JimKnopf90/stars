@@ -24,24 +24,20 @@ if(isset($_SESSION["adminusername"])) {
                     
                     
                     <li>
-                        <a href="admin-users.php">
-                            <button type="button" class="inactive">
-                                Benutzerübersicht
-                            </button>
-                        </a>
+                        <button type="button" class="active">
+                            Bestandsübersicht
+                        </button>
                     </li>
                     
                     <li>
-                        <a href="admin-users-add-new.php">
-                            <button type="button" class="inactive">
-                                Hinzufügen
-                            </button>
-                        </a>
-                    </li> 
+                        <button type="button" class="inactive">
+                            Bestandsstatistik
+                        </button>
+                    </li>
                     
                     <li>
-                        <button type="button" class="active">
-                            Rechte
+                        <button type="button" class="inactive">
+                            Bestandswert
                         </button>
                     </li>
                 </ul>    
@@ -60,7 +56,7 @@ if(isset($_SESSION["adminusername"])) {
                 
                 <li>
                     <a class="btnSidebar" href="admin-users.php">
-                        <button id="user" type="button" class="active">
+                        <button id="user" type="button" class="inactive">
                             Benutzer
                         </button>
                     </a>
@@ -76,7 +72,7 @@ if(isset($_SESSION["adminusername"])) {
                 
                 <li>
                     <a class="btnSidebar" href="admin-lagerbestand.php">
-                        <button id="versandklassen" type="button" class="inactive">
+                        <button id="versandklassen" type="button" class="active">
                             Lagerbestand
                         </button>
                     </a>
@@ -124,12 +120,47 @@ if(isset($_SESSION["adminusername"])) {
             </ul>
         </div>  
         <div class="content">
-            <form class="rights">
-                <input type="checkbox" value="read">
-                <label for="read">Lesen</label>
-            </form>
+            <table>
+                <tr>
+                <th>Kategorie</th>
+                <th>Artikelnummer</th>
+                <th>Artikelname</th>
+                <th>Lagerbestand</th>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="sel_kateg_lagerbestand">
+                            <option>Alle Artikel</option>
+                            <option>Faltkartons</option>
+                            <option>Maxibriefkartons</option>
+                            <option>Großbriefkartons</option>
+                            <option>Klebeband</option>
+                            <option>Büroartikel</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input id="lagerbestand_art_nr" type="text">
+                    </td>
+                    <td>
+                        <input id="lagerbestand_art_name" type="text">
+                    </td>
+                    <td>
+                        <select id="sel_kateg_lagerbestand">
+                            <option>-- Auswählen --</option>
+                            <option>Höchster zuerst</option>
+                            <option>Niedrigster zuerst</option>
+                            <option>Nur Rückstand</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="hover">
+                    <td>Faltkartons</td>
+                    <td>111</td>
+                    <td>1 Faltkarton KK-30</td>
+                    <td>12542</td>
+                </tr>
+            </table>
         </div>
-           
         <!-- <img class="btn" src="../admin-image/homebutton.png" /> -->
         
     </body>
