@@ -8,6 +8,7 @@ if(isset($_SESSION["adminusername"])) {
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="../css/admin-stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="../css/admin-lagerbestand-stylesheet.css">
 		<link rel="icon" href="../admin-image/stars-logo.png">
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jequery.min.js">
         </script>
@@ -121,43 +122,77 @@ if(isset($_SESSION["adminusername"])) {
         </div>  
         <div class="content">
             <table>
-                <tr>
-                <th>Kategorie</th>
-                <th>Artikelnummer</th>
-                <th>Artikelname</th>
-                <th>Lagerbestand</th>
+                <tr id="lb-table-header">
+                    <th>Kategorie</th>
+                    <th>Artikelnummer</th>
+                    <th>Artikelname</th>
+                    <th>ges. Lagerbestand</th>
+                    <th>in Aufträgen</th>
+                    <th>verf. Lagerbestand</th>
+                    <th>Bestandswert</th>
                 </tr>
                 <tr>
                     <td>
-                        <select id="sel_kateg_lagerbestand">
-                            <option>Alle Artikel</option>
+                        <select id="lb-table-filter-kategorie">
+                            <option></option>
                             <option>Faltkartons</option>
-                            <option>Maxibriefkartons</option>
                             <option>Großbriefkartons</option>
+                            <option>Maxibriefkartons</option>
                             <option>Klebeband</option>
-                            <option>Büroartikel</option>
                         </select>
                     </td>
                     <td>
-                        <input id="lagerbestand_art_nr" type="text">
+                        <input id="lb-table-filter-artikelnummer" type="text">
                     </td>
                     <td>
-                        <input id="lagerbestand_art_name" type="text">
+                        <input id="lb-table-filter-artikelname" type="text">
                     </td>
                     <td>
-                        <select id="sel_kateg_lagerbestand">
-                            <option>-- Auswählen --</option>
-                            <option>Höchster zuerst</option>
-                            <option>Niedrigster zuerst</option>
-                            <option>Nur Rückstand</option>
+                        <select id="lb-table-filter-gesamter-lagerbestand">
+                            <option></option>
+                            <option>niedrigster</option>
+                            <option>höchster</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="lb-table-filter-auftraege">
+                            <option></option>
+                            <option>niedrigster</option>
+                            <option>höchster</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="lb-table-filter-verf-lagerbestand">
+                            <option></option>
+                            <option>niedrigster</option>
+                            <option>höchster</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="lb-table-filter-bestandswert">
+                            <option></option>
+                            <option>niedrigster</option>
+                            <option>höchster</option>
                         </select>
                     </td>
                 </tr>
-                <tr class="hover">
+                <tr class="lb-table-hover">
                     <td>Faltkartons</td>
-                    <td>111</td>
-                    <td>1 Faltkarton KK-30</td>
-                    <td>12542</td>
+                    <td>1234</td>
+                    <td>1 Faltkarton KK-Unsichtbar</td>
+                    <td>4500    Stück</td>
+                    <td>200     Stück</td>
+                    <td>4300     Stück</td>
+                    <td>257,57€</td>
+                </tr>
+                <tr class="lb-table-hover">
+                    <td>Faltkartons</td>
+                    <td>1234</td>
+                    <td>1 Faltkarton KK-Unsichtbar</td>
+                    <td>4500    Stück</td>
+                    <td>200     Stück</td>
+                    <td>4300     Stück</td>
+                    <td>257,57€</td>
                 </tr>
             </table>
         </div>
