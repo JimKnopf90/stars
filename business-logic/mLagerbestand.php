@@ -1,11 +1,24 @@
 <?php
    
-include("mCon.php");
+include("mConErp.php");
         
 $dbh = new PDO ("sqlsrv:Server=$hostname;Database=$dbname","$dbusername","$pw");
         
-$sql = "SELECT BestandsID, Kategorie, Artikelnummer, Artikelname, gesamterLagerbestand, inAuftraegen, verfuegbarerLagerbestand, istBestandswert
-                FROM tLagerbestand";
+$sql = "SELECT        Tabelle.kKategorie, Tabelle.kOberKategorie, Tabelle.kArtikel, Tabelle.cArtNr, Tabelle.cName, Tabelle.fLagerbestand, Tabelle.fZulauf, Tabelle.fInAuftraegen, Tabelle.fVerfuegbar, dbo.tliefartikel.fEKNetto
+FROM            (SELECT        dbo.tkategorie.kKategorie, dbo.tkategorie.kOberKategorie, dbo.tkategorieartikel.kArtikel, dbo.tArtikel.cArtNr, dbo.tArtikelBeschreibung.cName, dbo.tlagerbestand.fLagerbestand, 
+                                                    dbo.tlagerbestand.fZulauf, dbo.tlagerbestand.fInAuftraegen, dbo.tlagerbestand.fVerfuegbar
+                          FROM            dbo.tkategorie INNER JOIN
+                                                    dbo.tkategorieartikel ON dbo.tkategorie.kKategorie = dbo.tkategorieartikel.kKategorie INNER JOIN
+                                                    dbo.tArtikel ON dbo.tkategorieartikel.kArtikel = dbo.tArtikel.kArtikel INNER JOIN
+                                                    dbo.tArtikelBeschreibung ON dbo.tkategorieartikel.kArtikel = dbo.tArtikelBeschreibung.kArtikel INNER JOIN
+                                                    dbo.tlagerbestand ON dbo.tkategorieartikel.kArtikel = dbo.tlagerbestand.kArtikel
+                          WHERE        (dbo.tkategorie.kOberKategorie IN
+                                                        (SELECT        kKategorie
+                                                          FROM            dbo.tkategorie AS tkategorie_1
+                                                          WHERE        (kOberKategorie = 39))) OR
+                                                    (dbo.tkategorie.kOberKategorie = 39)) AS Tabelle INNER JOIN
+                         dbo.tliefartikel ON Tabelle.kArtikel = dbo.tliefartikel.tArtikel_kArtikel
+WHERE        (dbo.tliefartikel.tLieferant_kLieferant = 34)";
 
     /** Überschriften **/
 echo '<table id="lb-table">';
@@ -80,16 +93,19 @@ echo '<table id="lb-table">';
 
 
     foreach ($dbh->query($sql) as $row) {
-        echo '<tr class=" user-table-hover">'; 
-            echo '<td>' .$row["Kategorie"] . '</td>';
-            echo '<td>' .$row["Artikelnummer"] . '</td>';
-            echo '<td>' .$row["Artikelname"] . '</td>';
-            echo '<td>' . number_format(floatval($row["gesamterLagerbestand"]),2, ",", ".") . '</td>';;
-            echo '<td>' . number_format(floatval($row["inAuftraegen"]),2, ",", ".") . '</td>';
-            echo '<td>' . number_format(floatval($row["verfuegbarerLagerbestand"]),2, ",", ".") . '</td>';
-            echo '<td>' . number_format(floatval($row["istBestandswert"]),2, ",", ".") . '</td>';
+        
+        $istBestandswert = (floatval($row["fEKNetto"])) * (floatval($row["fVerfuegbar"])); 
+        
+        echo '<tr class="user-table-hover">'; 
+            echo '<td>' .$row["kKategorie"] . '</td>';
+            echo '<td>' .$row["cArtNr"] . '</td>';
+            echo '<td>' .$row["cName"] . '</td>';
+            echo '<td>' . number_format(floatval($row["fLagerbestand"]),2, ",", ".") . '</td>';
+            echo '<td>' . number_format(floatval($row["fInAuftraegen"]),2, ",", ".") . '</td>';
+            echo '<td>' . number_format(floatval($row["fVerfuegbar"]),2, ",", ".") . '</td>';
+            echo '<td>' .  number_format($istBestandswert,2, ",", ".") . '€' . '</td>';
     }
-
+    
 echo '</table>';
         
 
