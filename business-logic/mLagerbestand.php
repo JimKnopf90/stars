@@ -96,6 +96,7 @@ echo '<table id="lb-table">';
         
         $istBestandswert = (floatval($row["fEKNetto"])) * (floatval($row["fVerfuegbar"])); 
         
+        
         echo '<tr class="user-table-hover">'; 
             echo '<td>' .$row["kKategorie"] . '</td>';
             echo '<td>' .$row["cArtNr"] . '</td>';
@@ -103,7 +104,8 @@ echo '<table id="lb-table">';
             echo '<td>' . number_format(floatval($row["fLagerbestand"]),2, ",", ".") . '</td>';
             echo '<td>' . number_format(floatval($row["fInAuftraegen"]),2, ",", ".") . '</td>';
             echo '<td>' . number_format(floatval($row["fVerfuegbar"]),2, ",", ".") . '</td>';
-            echo '<td>' .  number_format($istBestandswert,2, ",", ".") . '€' . '</td>';
+            echo '<td>' . number_format($istBestandswert,2, ",", ".") . '€' . '</td>';
+
     }
     
 echo '</table>';
