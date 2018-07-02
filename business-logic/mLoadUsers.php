@@ -19,7 +19,7 @@ echo "<th>Rolle</th></tr></thead>";
         
 foreach ($dbh->query($sql) as $row) {
     
-    echo "<tr>"; 
+    echo "<tr class='user-table-hover'>"; 
     echo "<td>" .$row["usernameid"] . "</td>";   
     echo "<td>" .$row["username"] . "</td>";
     echo "<td>" . $row["forename"] . "</td>";

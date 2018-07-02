@@ -55,6 +55,7 @@ input{
     border: solid 1px black;
     font-size: 18px;
     font-weight: bolder;
+    margin-bottom: 10px;
 }
 
 .btnLogin:hover{

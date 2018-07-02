@@ -17,13 +17,6 @@ table td{
     border-bottom: solid 1px lightgray;
 }
 
-table tr:hover{
-    background: #0a52ca;
-    color: white;
-    cursor: pointer;
-    font-size: 17px;
-}
-
 .versandklasse{
     width: 200px;
     height: 30px;

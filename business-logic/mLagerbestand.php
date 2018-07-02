@@ -4,13 +4,12 @@ include("mCon.php");
         
 $dbh = new PDO ("sqlsrv:Server=$hostname;Database=$dbname","$dbusername","$pw");
         
-$sql = "SELECT BestandsID, Kategorie, Artikelnummer, Artikelname
+$sql = "SELECT BestandsID, Kategorie, Artikelnummer, Artikelname, gesamterLagerbestand, inAuftraegen, verfuegbarerLagerbestand, istBestandswert
                 FROM tLagerbestand";
 
     /** Überschriften **/
 echo '<table id="lb-table">';
     echo '<tr id="lb-table-header">';
-        echo '<th>ID</th>';
         echo '<th>Kategorie</th>';
         echo '<th>Art.Nr.</th>';
         echo '<th>Art.Name</th>';
@@ -21,11 +20,7 @@ echo '<table id="lb-table">';
     echo '</tr>';
 
     /** Kategoriefilter **/
-    echo '<tr>';
-        echo '<td>';
-            echo '<input type="text">';
-        echo '</td>';
-        
+    echo '<tr>';        
         echo '<td>';
             echo '<select id="lb-table-filter-kategorie">';
                 echo '<option></option>';
@@ -83,13 +78,16 @@ echo '<table id="lb-table">';
         echo '</td>';
     echo '</tr>';
 
+
     foreach ($dbh->query($sql) as $row) {
-        echo '<tr>'; 
-            echo '<td>' .$row["BestandsID"] . '</td>';
+        echo '<tr class=" user-table-hover">'; 
             echo '<td>' .$row["Kategorie"] . '</td>';
             echo '<td>' .$row["Artikelnummer"] . '</td>';
             echo '<td>' .$row["Artikelname"] . '</td>';
-            
+            echo '<td>' . number_format(floatval($row["gesamterLagerbestand"]),2, ",", ".") . '</td>';;
+            echo '<td>' . number_format(floatval($row["inAuftraegen"]),2, ",", ".") . '</td>';
+            echo '<td>' . number_format(floatval($row["verfuegbarerLagerbestand"]),2, ",", ".") . '</td>';
+            echo '<td>' . number_format(floatval($row["istBestandswert"]),2, ",", ".") . '</td>';
     }
 
 echo '</table>';

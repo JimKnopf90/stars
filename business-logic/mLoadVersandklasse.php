@@ -18,7 +18,7 @@ echo "<th>max. Ma&szlig;e</th></tr></thead>";
         
 foreach ($dbh->query($sql) as $row) {
     
-    echo "<tr>"; 
+    echo "<tr class='user-table-hover'>"; 
     echo "<td id='versandklassenID'>" .$row["VersandklassenID"] . "</td>";
     echo "<td>" .$row["VersandklasseJTL"] . "</td>";
     echo "<td>" . number_format(floatval($row["Preis"]),2, ",", ".") . "</td>";
