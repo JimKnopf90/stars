@@ -121,89 +121,15 @@ if(isset($_SESSION["adminusername"])) {
             </ul>
         </div>  
         <div class="content">
-            <table id="lb-table">
-                <tr id="lb-table-header">
-                    <th>Kategorie</th>
-                    <th>Artikelnummer</th>
-                    <th>Artikelname</th>
-                    <th>ges. Lagerbestand</th>
-                    <th>in Aufträgen</th>
-                    <th>verf. Lagerbestand</th>
-                    <th>Bestandswert</th>
-                </tr>
-                <tr>
-                    <td>
-                        <select id="lb-table-filter-kategorie">
-                            <option></option>
-                            <option>Faltkartons</option>
-                            <option>Großbriefkartons</option>
-                            <option>Maxibriefkartons</option>
-                            <option>Klebeband</option>
-                        </select>
-                    </td>
-                    <td>
-                        <input id="lb-table-filter-artikelnummer" type="text">
-                    </td>
-                    <td>
-                        <input id="lb-table-filter-artikelname" type="text">
-                    </td>
-                    <td>
-                        <select id="lb-table-filter-gesamter-lagerbestand">
-                            <option></option>
-                            <option>niedrigster</option>
-                            <option>höchster</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select id="lb-table-filter-auftraege">
-                            <option></option>
-                            <option>niedrigster</option>
-                            <option>höchster</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select id="lb-table-filter-verf-lagerbestand">
-                            <option></option>
-                            <option>niedrigster</option>
-                            <option>höchster</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select id="lb-table-filter-bestandswert">
-                            <option></option>
-                            <option>niedrigster</option>
-                            <option>höchster</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr class="lb-table-hover">
-                    <td>Faltkartons</td>
-                    <td>1234</td>
-                    <td>1 Faltkarton KK-Unsichtbar</td>
-                    <td>4500    Stück</td>
-                    <td>200     Stück</td>
-                    <td>4300     Stück</td>
-                    <td>257,57€</td>
-                </tr>
-                <tr class="lb-table-hover">
-                    <td>Faltkartons</td>
-                    <td>1234</td>
-                    <td>1 Faltkarton KK-Unsichtbar</td>
-                    <td>4500    Stück</td>
-                    <td>200     Stück</td>
-                    <td>4300     Stück</td>
-                    <td>257,57€</td>
-                </tr>
-            </table>
+            <?php
+             include("../business-logic/test.php");
+
+            } else {
+                header("Location: ../sites/admin-login.php"); 
+            }
+            ?>
         </div>
         <!-- <img class="btn" src="../admin-image/homebutton.png" /> -->
         
     </body>
 </html>
-<?php
- include("../business-logic/test.php");
-
-} else {
-    header("Location: ../sites/admin-login.php"); 
-}
-?>

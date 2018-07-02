@@ -130,8 +130,9 @@
         echo "<th id='th-ordner'>Ordner <br><input id='txt-ordner'><input type='submit' id='btnSubmit'></th></tr></thead>";
 
 
-        foreach ($dbh->query($sql) as $row) {         
-            
+        foreach ($dbh->query($sql) as $row) {
+
+
             $valueVersandkosten = $versandklassen[$row["cName"]][$row["cName"]];
             $valueVerpackungskosten = $verpackungskosten[$row["cName"]][$row["cName"]];
             $mwst = $row["VerkaufspreisBrutto"] - ($row["VerkaufspreisBrutto"] * 100 / (floatval($row["fSteuersatz"]) + 100 )) ;

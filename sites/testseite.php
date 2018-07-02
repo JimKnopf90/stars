@@ -125,10 +125,12 @@
         </div>
         <!-- <img class="btn" src="../admin-image/homebutton.png" /> -->
         
+        <?php
+                    include("../business-logic/test.php");
+                ?>
+        
     </body>
 </html>
 
-<? php
-                    include("../business-logic/test.php");
-                ?>
+
 
