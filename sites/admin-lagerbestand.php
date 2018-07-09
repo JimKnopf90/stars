@@ -15,6 +15,10 @@ if(isset($_SESSION["adminusername"])) {
 		<title>StaRs | Adminbereich</title>
 	</head>
 	<body>
+
+
+        
+        
         <header>
             <a href="admin-mainpage.php">
                 <img id="stars-logo" src="../admin-image/stars-logo.png" />

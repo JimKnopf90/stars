@@ -120,10 +120,10 @@ if(isset($_SESSION["adminusername"])) {
         </div>  
         <div class="content">
             <?php
-             include("../business-logic/mLagerbestand.php");
+            
 
             } else {
-                header("Location: ../sites/admin-login.php"); 
+                
             }
             ?>
         </div>

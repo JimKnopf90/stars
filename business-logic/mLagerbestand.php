@@ -1,10 +1,26 @@
 <?php
    
 include("mConErp.php");
-        
+
+$gesamtWarenwert = 0;
+$y = 0;
+$list = [];
+$b = 0;
+ //Paging
+$limit = 10;
+
+ if (isset($_GET["page"])) { 
+        $page  = $_GET["page"];       
+    } else { 
+        $page=1;        
+    };   
+    
+
+$start_from = ($page-1) * $limit; 
+
 $dbh = new PDO ("sqlsrv:Server=$hostname;Database=$dbname","$dbusername","$pw");
         
-$sql = "SELECT        Tabelle.kKategorie, Tabelle.kOberKategorie, Tabelle.kArtikel, Tabelle.cArtNr, Tabelle.cName, Tabelle.fLagerbestand, Tabelle.fZulauf, Tabelle.fInAuftraegen, Tabelle.fVerfuegbar, dbo.tliefartikel.fEKNetto
+$sql = "SELECT        Tabelle.kKategorie, dbo.tKategorieSprache.cName AS 'Kategoriename', Tabelle.kOberKategorie, Tabelle.kArtikel, Tabelle.cArtNr, Tabelle.cName, Tabelle.fLagerbestand, Tabelle.fZulauf, Tabelle.fInAuftraegen, Tabelle.fVerfuegbar, dbo.tliefartikel.fEKNetto
 FROM            (SELECT        dbo.tkategorie.kKategorie, dbo.tkategorie.kOberKategorie, dbo.tkategorieartikel.kArtikel, dbo.tArtikel.cArtNr, dbo.tArtikelBeschreibung.cName, dbo.tlagerbestand.fLagerbestand, 
                                                     dbo.tlagerbestand.fZulauf, dbo.tlagerbestand.fInAuftraegen, dbo.tlagerbestand.fVerfuegbar
                           FROM            dbo.tkategorie INNER JOIN
@@ -17,7 +33,7 @@ FROM            (SELECT        dbo.tkategorie.kKategorie, dbo.tkategorie.kOberKa
                                                           FROM            dbo.tkategorie AS tkategorie_1
                                                           WHERE        (kOberKategorie = 39))) OR
                                                     (dbo.tkategorie.kOberKategorie = 39)) AS Tabelle INNER JOIN
-                         dbo.tliefartikel ON Tabelle.kArtikel = dbo.tliefartikel.tArtikel_kArtikel
+                         dbo.tliefartikel ON Tabelle.kArtikel = dbo.tliefartikel.tArtikel_kArtikel INNER JOIN dbo.tKategorieSprache ON dbo.tKategorieSprache.kKategorie = Tabelle.kKategorie
 WHERE        (dbo.tliefartikel.tLieferant_kLieferant = 34)";
 
     /** Überschriften **/
@@ -95,20 +111,78 @@ echo '<table id="lb-table">';
     foreach ($dbh->query($sql) as $row) {
         
         $istBestandswert = (floatval($row["fEKNetto"])) * (floatval($row["fVerfuegbar"])); 
-
-        echo '<tr class="user-table-hover">'; 
-            echo '<td>' .$row["kKategorie"] . '</td>';
-            echo '<td>' .$row["cArtNr"] . '</td>';
-            echo '<td>' .$row["cName"] . '</td>';
-            echo '<td>' . number_format(floatval($row["fLagerbestand"]),2, ",", ".") . '</td>';
-            echo '<td>' . number_format(floatval($row["fInAuftraegen"]),2, ",", ".") . '</td>';
-            echo '<td>' . number_format(floatval($row["fVerfuegbar"]),2, ",", ".") . '</td>';
-            echo '<td>' . number_format($istBestandswert,2, ",", ".") . '€' . '</td>';
-
+        
+        
+         $list[$y]['Kategoriename'] = $row['Kategoriename'];
+         $list[$y]['cArtNr'] = $row['cArtNr'];
+         $list[$y]['cName'] = $row['cName'];
+         $list[$y]['fLagerbestand'] = $row["fLagerbestand"];
+         $list[$y]['fInAuftraegen'] = $row["fInAuftraegen"];
+         $list[$y]['fVerfuegbar'] = $row["fVerfuegbar"];
+         $list[$y]['istBestandswert'] = $istBestandswert;
+            
+        $gesamtWarenwert = $gesamtWarenwert + $istBestandswert;
+        $y = $y + 1;
     }
+
+  for ($a = 0; $a < count($list) ; $a++) {               
+                
+                // TR: Tabellen Content
+                if($a>=0 && $a<=($limit -1) * $page )
+                {
+                    echo '<tr class="user-table-hover">'; 
+                    echo '<td>' .$list[$a]['Kategoriename'] . '</td>';
+                    echo '<td>' .$list[$a]['cArtNr'] . '</td>';
+                    echo '<td>' .$list[$a]['cName'] . '</td>';
+                    echo '<td>' .$list[$a]['fLagerbestand'] . '</td>';
+                    echo '<td>' .$list[$a]['fInAuftraegen'] . '</td>';
+                    echo '<td>' .$list[$a]['fVerfuegbar']. '</td>';
+                    echo '<td>' .$list[$a]['istBestandswert']. '</td>';   
+                    
+                } else 
+                {
+                 if($a>=20 && $a<=30)  
+                 {
+                    echo '<tr class="user-table-hover">'; 
+                    echo '<td>' .$list[$a]['Kategoriename'] . '</td>';
+                    echo '<td>' .$list[$a]['cArtNr'] . '</td>';
+                    echo '<td>' .$list[$a]['cName'] . '</td>';
+                    echo '<td>' .$list[$a]['fLagerbestand'] . '</td>';
+                    echo '<td>' .$list[$a]['fInAuftraegen'] . '</td>';
+                    echo '<td>' .$list[$a]['fVerfuegbar']. '</td>';
+                    echo '<td>' .$list[$a]['istBestandswert']. '</td>'; 
+                 }
+                  
+                }
+                
+                    
+
+                   
+               
+            }
     
 echo '</table>';
+echo '<span>Gesamtwarenwert: </span>' . number_format($gesamtWarenwert,2, ",", "." ) . " €" ;
+
+$total_pages = ceil(count($list) / $limit);
         
+        $pagLink = "<div id='paging' class='pagination'>";
+        
+        for ($i=1; $i<=$total_pages; $i++) {          
+            if ($i <= 10) {
+                $pagLink .= "<a class='pagingElement' href='admin-lagerbestand.php?page=".$i."'>".$i."</a>";
+            } else {
+                if ($i == 11) {
+                    $pagLink .= "<select><option class='pagingElement' value='admin-lagerbestand.php?page=".$i."'>".$i."</option>";
+                } else {
+                     $pagLink .= "<option>".$i."</option>";
+
+                }
+              
+            }
+            
+        };
+     echo $pagLink . "</select><div id='counter'>" . count($list) . " Zeile(n)</div></div>";   
 
 ?>
 
