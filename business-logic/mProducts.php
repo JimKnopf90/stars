@@ -112,21 +112,21 @@
        
         // TR: Headline        
         echo "<tr><th id='th-edit'><a ><img class='icon-art-settings' src='../image/icon-art-setting.png'/></a></th>";
-        echo "<th id='th-plattform'>Plattform <br><form><input id='txt-plattform' name='txt-plattform' value='" . $plattformSearch . "'></form></th>";
-        echo "<th id='th-artikelnummer'>Artikelnummer <br><span><input name='txt-artikelnummer' id='txt-artikelnummer' value='" . $artikelnummerSearch . "'></span></th>";
-        echo "<th id='th-artikelname'>Artikelname <br><input id='txt-artikelname' name='txt-artikelname' value='" . $artikelnameSearch . "'></th>";
-        echo "<th id='th-hersteller'>Hersteller <br><input id='txt-hersteller' name='txt-hersteller' value='" . $herstellerSearch . "'></th>";
-        echo "<th id='th-plattform-id'>Plattform-ID <br><input id='txt-plattformid' name='txt-plattformid' value='" . $plattformIDSearch . "'></th>";
-        echo "<th id='th-ek-netto'>EK-Netto <br><input id='txt-eknetto' name='txt-eknetto' value='" . $eknettoSearch . "'></th>";
-        echo "<th id='th-mehrwertsteuer'>MwSt. <br><input id='txt-mwst' name='txt-mwst' value='" . $mwstSearch . "'></th>";
+        echo "<th id='th-plattform'><span id='spnPlattform'>Plattform</span> <br><form><input id='txt-plattform' name='txt-plattform' value='" . $plattformSearch . "'></form></th>";
+        echo "<th id='th-artikelnummer'><span id='spnArtikelnummer'>Artikelnummer</span> <br><span><input name='txt-artikelnummer' id='txt-artikelnummer' value='" . $artikelnummerSearch . "'></span></th>";
+        echo "<th id='th-artikelname'><span id='spnArtikelname'>Artikelname</span> <br><input id='txt-artikelname' name='txt-artikelname' value='" . $artikelnameSearch . "'></th>";
+        echo "<th id='th-hersteller'><span id='spnHersteller'>Hersteller</span> <br><input id='txt-hersteller' name='txt-hersteller' value='" . $herstellerSearch . "'></th>";
+        echo "<th id='th-plattform-id'><span id='spnPlattform-id'>Plattform-ID</span> <br><input id='txt-plattformid' name='txt-plattformid' value='" . $plattformIDSearch . "'></th>";
+        echo "<th id='th-ek-netto'><span id='spn-ek-netto'>EK-Netto</span> <br><input id='txt-eknetto' name='txt-eknetto' value='" . $eknettoSearch . "'></th>";
+        echo "<th id='th-mehrwertsteuer'><span id='spnMehrwertsteuer'>MwSt.</span> <br><input id='txt-mwst' name='txt-mwst' value='" . $mwstSearch . "'></th>";
         echo "<th id='th-versandklassenid'>Versandklassen-ID </th>";
-        echo "<th id='th-versandklasse'>Versandklasse <br><input id='txt-versandklasse' name='txt-versandklasse' value='" . $versandklassenSearch . "'></th>";
-        echo "<th id='th-gewicht'>Gewicht <br><input id='txt-gewicht' name='txt-gewicht' value='" . $gewichtSearch . "'></th>";
-        echo "<th id='th-nullpreis'>Nullpreis <br><input id='txt-nullpreis' name='txt-nullpreis' value='" . $nullpreisSearch . "'></th>";
-        echo "<th id='th-vk-preis'>VK Preis <br><input id='txt-vkpreis' name='txt-vkpreis' value='" . $vkpreisSearch . "'></th>";
-        echo "<th id='th-marge-euro'>Marge € <br><input id='txt-margeeuro' name='txt-margeeuro' value='" . $margeEuroSearch. "'></th>";
-        echo "<th id='th-marge-prozent'>Marge % <br><input id='txt-margeprozent' name='txt-margeprozent' value='" . $margeProzentSearch. "'></th>";
-        echo "<th id='th-bestand'>Bestand <br><input id='txt-bestand' name='txt-bestand' value='" . $bestandSearch . "'></th>";
+        echo "<th id='th-versandklasse'><span id='spnVersandklasse'>Versandklasse</span> <br><input id='txt-versandklasse' name='txt-versandklasse' value='" . $versandklassenSearch . "'></th>";
+        echo "<th id='th-gewicht'><span id='spnGewicht'>Gewicht</span> <br><input id='txt-gewicht' name='txt-gewicht' value='" . $gewichtSearch . "'></th>";
+        echo "<th id='th-nullpreis'><span id='spnNullpreis'>Nullpreis</span> <br><input id='txt-nullpreis' name='txt-nullpreis' value='" . $nullpreisSearch . "'></th>";
+        echo "<th id='th-vk-preis'><span id='spn-vk-preis'>VK Preis<span> <br><input id='txt-vkpreis' name='txt-vkpreis' value='" . $vkpreisSearch . "'></th>";
+        echo "<th id='th-marge-euro'><span id='spn-marge-euro'>Marge €</span> <br><input id='txt-margeeuro' name='txt-margeeuro' value='" . $margeEuroSearch. "'></th>";
+        echo "<th id='th-marge-prozent'><span id='spn-marge-prozent'>Marge %</span> <br><input id='txt-margeprozent' name='txt-margeprozent' value='" . $margeProzentSearch. "'></th>";
+        echo "<th id='th-bestand'><span id='spnBestand'>Bestand</span> <br><input id='txt-bestand' name='txt-bestand' value='" . $bestandSearch . "'></th>";
         echo "<th id='th-ordner'>Ordner <br><input id='txt-ordner'><input type='submit' id='btnSubmit'></th></tr></thead>";
 
 
@@ -410,169 +410,169 @@
         
         function SortArray ($_list, $attribute, $sortStatus)
         {
-            if ($attribute == "th-marge-euro" and $sortStatus == "DESC")
+            if ($attribute == "spn-marge-euro" and $sortStatus == "DESC")
             {
                 usort($_list,"CompareMargeEuroDESC");
                 return $_list;
             }
 
-            if ($attribute == "th-marge-euro" and $sortStatus == "ASC")
+            if ($attribute == "spn-marge-euro" and $sortStatus == "ASC")
             {
                 usort($_list,"compareMargeEuroASC");
                 return $_list;
             }
 
-            if ($attribute == "th-vk-preis" and $sortStatus == "DESC")
+            if ($attribute == "spn-vk-preis" and $sortStatus == "DESC")
             {
                 usort($_list,"compareVKPreisDESC");
                 return $_list;
             }
 
-            if ($attribute == "th-vk-preis" and $sortStatus == "ASC")
+            if ($attribute == "spn-vk-preis" and $sortStatus == "ASC")
             {
                 usort($_list,"compareVKPreisASC");
                 return $_list;
             }
 
-            if ($attribute == "th-marge-prozent" and $sortStatus == "DESC")
+            if ($attribute == "spn-marge-prozent" and $sortStatus == "DESC")
             {
                 usort($_list,"compareMargeProzentDESC");
                 return $_list;
             }
 
-            if ($attribute == "th-marge-prozent" and $sortStatus == "ASC")
+            if ($attribute == "spn-marge-prozent" and $sortStatus == "ASC")
             {
                 usort($_list,"compareMargeProzentASC");
                 return $_list;
             }
 
-            if ($attribute == "th-bestand" and $sortStatus == "DESC")
+            if ($attribute == "spnBestand" and $sortStatus == "DESC")
             {
                 usort($_list,"compareBestandDESC");
                 return $_list;
             }
 
-            if ($attribute == "th-bestand" and $sortStatus == "ASC")
+            if ($attribute == "spnBestand" and $sortStatus == "ASC")
             {
                 usort($_list,"compareBestandASC");
                 return $_list;
             }
 
-            if ($attribute == "th-nullpreis" and $sortStatus == "DESC")
+            if ($attribute == "spnNullpreis" and $sortStatus == "DESC")
             {
                 usort($_list,"compareNullpreisDESC");
                 return $_list;
             }
 
-            if ($attribute == "th-nullpreis" and $sortStatus == "ASC")
+            if ($attribute == "spnNullpreis" and $sortStatus == "ASC")
             {
                 usort($_list,"compareNullpreisASC");
                 return $_list;
             }
 
-            if ($attribute == "th-gewicht" and $sortStatus == "DESC")
+            if ($attribute == "spnGewicht" and $sortStatus == "DESC")
             {
                 usort($_list,"compareGewichtDESC");
                 return $_list;
             }
 
-            if ($attribute == "th-gewicht" and $sortStatus == "ASC")
+            if ($attribute == "spnGewicht" and $sortStatus == "ASC")
             {
                 usort($_list,"compareGewichtASC");
                 return $_list;
             }
 
-            if ($attribute == "th-versandklasse" and $sortStatus == "DESC")
+            if ($attribute == "spnVersandklasse" and $sortStatus == "DESC")
             {
                 usort($_list,"compareVersandklasseDESC");
                 return $_list;
             }
 
-            if ($attribute == "th-versandklasse" and $sortStatus == "ASC")
+            if ($attribute == "spnVersandklasse" and $sortStatus == "ASC")
             {
                 usort($_list,"compareVersandklasseASC");
                 return $_list;
             }
 
-            if ($attribute == "th-mehrwertsteuer" and $sortStatus == "DESC")
+            if ($attribute == "spnMehrwertsteuer" and $sortStatus == "DESC")
             {
                 usort($_list,"compareMwstDESC");
                 return $_list;
             }
 
-            if ($attribute == "th-mehrwertsteuer" and $sortStatus == "ASC")
+            if ($attribute == "spnMehrwertsteuer" and $sortStatus == "ASC")
             {
                 usort($_list,"compareMwstASC");
                 return $_list;
             }
 
-            if ($attribute == "th-ek-netto" and $sortStatus == "DESC")
+            if ($attribute == "spn-ek-netto" and $sortStatus == "DESC")
             {
                 usort($_list,"compareEKNettoDESC");
                 return $_list;
             }
 
-            if ($attribute == "th-ek-netto" and $sortStatus == "ASC")
+            if ($attribute == "spn-ek-netto" and $sortStatus == "ASC")
             {
                 usort($_list,"compareEKNettoASC");
                 return $_list;
             }
 
-            if ($attribute == "th-plattform-id" and $sortStatus == "DESC")
+            if ($attribute == "spnPlattform-id" and $sortStatus == "DESC")
             {
                 usort($_list,"comparePlattformIdDESC");
                 return $_list;
             }
 
-            if ($attribute == "th-plattform-id" and $sortStatus == "ASC")
+            if ($attribute == "spnPlattform-id" and $sortStatus == "ASC")
             {
                 usort($_list,"comparePlattformIdASC");
                 return $_list;
             }
 
-            if ($attribute == "th-hersteller" and $sortStatus == "DESC")
+            if ($attribute == "spnHersteller" and $sortStatus == "DESC")
             {
                 usort($_list,"compareHerstellerDESC");
                 return $_list;
             }
 
-            if ($attribute == "th-hersteller" and $sortStatus == "ASC")
+            if ($attribute == "spnHersteller" and $sortStatus == "ASC")
             {
                 usort($_list,"compareHerstellerASC");
                 return $_list;
             }
 
-            if ($attribute == "th-artikelname" and $sortStatus == "DESC")
+            if ($attribute == "spnArtikelname" and $sortStatus == "DESC")
             {
                 usort($_list,"compareArtikelnameDESC");
                 return $_list;
             }
 
-            if ($attribute == "th-artikelname" and $sortStatus == "ASC")
+            if ($attribute == "spnArtikelname" and $sortStatus == "ASC")
             {
                 usort($_list,"compareArtikelnameASC");
                 return $_list;
             }
 
-            if ($attribute == "th-artikelnummer" and $sortStatus == "DESC")
+            if ($attribute == "spnArtikelnummer" and $sortStatus == "DESC")
             {
                 usort($_list,"compareArtikelnummerDESC");
                 return $_list;
             }
 
-            if ($attribute == "th-artikelnummer" and $sortStatus == "ASC")
+            if ($attribute == "spnArtikelnummer" and $sortStatus == "ASC")
             {
                 usort($_list,"compareArtikelnummerASC");
                 return $_list;
             }
 
-            if ($attribute == "th-plattform" and $sortStatus == "DESC")
+            if ($attribute == "spnPlattform" and $sortStatus == "DESC")
             {
                 usort($_list,"comparePlattformDESC");
                 return $_list;
             }
 
-            if ($attribute == "th-plattform" and $sortStatus == "ASC")
+            if ($attribute == "spnPlattform" and $sortStatus == "ASC")
             {
                 usort($_list,"comparePlattformASC");
                 return $_list;
