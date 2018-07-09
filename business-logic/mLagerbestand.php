@@ -95,8 +95,7 @@ echo '<table id="lb-table">';
     foreach ($dbh->query($sql) as $row) {
         
         $istBestandswert = (floatval($row["fEKNetto"])) * (floatval($row["fVerfuegbar"])); 
-        
-        
+
         echo '<tr class="user-table-hover">'; 
             echo '<td>' .$row["kKategorie"] . '</td>';
             echo '<td>' .$row["cArtNr"] . '</td>';

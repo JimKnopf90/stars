@@ -26,7 +26,7 @@ if(isset($_SESSION["adminusername"])) {
                     
                     <li>
                         <a href="admin-lagerbestand.php">
-                            <button type="button" class="active">
+                            <button type="button" class="inactive">
                                 Bestandsübersicht
                             </button>
                         </a>
@@ -34,7 +34,7 @@ if(isset($_SESSION["adminusername"])) {
                     
                     <li>
                         <a href="admin-bestandsstatistik.php">
-                            <button type="button" class="inactive">
+                            <button type="button" class="active">
                                 Bestandsstatistik
                             </button>
                         </a>
