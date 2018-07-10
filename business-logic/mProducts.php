@@ -112,7 +112,7 @@
        
         // TR: Headline        
         echo "<tr><th id='th-edit'><a ><img class='icon-art-settings' src='../image/icon-art-setting.png'/></a></th>";
-        echo "<th id='th-plattform'>Plattform <img src='../image/sort-down.png'> <br><form><input id='txt-plattform' name='txt-plattform' value='" . $plattformSearch . "'></form></th>";
+        echo "<th id='th-plattform'>Plattform <br><form><input id='txt-plattform' name='txt-plattform' value='" . $plattformSearch . "'></form></th>";
         echo "<th id='th-artikelnummer'>Artikelnummer <br><span><input name='txt-artikelnummer' id='txt-artikelnummer' value='" . $artikelnummerSearch . "'></span></th>";
         echo "<th id='th-artikelname'>Artikelname <br><input id='txt-artikelname' name='txt-artikelname' value='" . $artikelnameSearch . "'></th>";
         echo "<th id='th-hersteller'>Hersteller <br><input id='txt-hersteller' name='txt-hersteller' value='" . $herstellerSearch . "'></th>";
