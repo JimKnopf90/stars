@@ -1,9 +1,8 @@
 table{
-    border-spacing: 0;
-    margin: 0;
-    margin-left: 20%;
-    margin-top: 20px;
-    position: absolute;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 0px;
+    margin-top: 5px;
 }
 
 table th{
@@ -15,13 +14,6 @@ table td{
     text-align: center;
     font-size: 18px;
     border-bottom: solid 1px lightgray;
-}
-
-table tr:hover{
-    background: #0a52ca;
-    color: white;
-    cursor: pointer;
-    font-size: 17px;
 }
 
 .versandklasse{
@@ -51,3 +43,10 @@ table tr:hover{
     margin: 0;
     padding-right: 10px;
 }
+
+/** Tabellenlayout - Lagerbestand **/
+
+
+
+
+

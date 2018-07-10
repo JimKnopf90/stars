@@ -15,10 +15,6 @@ if(isset($_SESSION["adminusername"])) {
 		<title>StaRs | Adminbereich</title>
 	</head>
 	<body>
-
-
-        
-        
         <header>
             <a href="admin-mainpage.php">
                 <img id="stars-logo" src="../admin-image/stars-logo.png" />
@@ -30,7 +26,7 @@ if(isset($_SESSION["adminusername"])) {
                     
                     <li>
                         <a href="admin-lagerbestand.php">
-                            <button type="button" class="active">
+                            <button type="button" class="inactive">
                                 Bestandsübersicht
                             </button>
                         </a>
@@ -38,7 +34,7 @@ if(isset($_SESSION["adminusername"])) {
                     
                     <li>
                         <a href="admin-bestandsstatistik.php">
-                            <button type="button" class="inactive">
+                            <button type="button" class="active">
                                 Bestandsstatistik
                             </button>
                         </a>
@@ -124,10 +120,10 @@ if(isset($_SESSION["adminusername"])) {
         </div>  
         <div class="content">
             <?php
-             include("../business-logic/mLagerbestand.php");
+            
 
             } else {
-                header("Location: ../sites/admin-login.php"); 
+                
             }
             ?>
         </div>

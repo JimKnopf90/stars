@@ -26,33 +26,33 @@ window.onload = function () {
 
     }
 
-    plattform = document.getElementById('th-plattform');
+    plattform = document.getElementById('spnPlattform');
     plattform.addEventListener('click', sort);
-    artikelnummer = document.getElementById('th-artikelnummer');
+    artikelnummer = document.getElementById('spnArtikelnummer');
     artikelnummer.addEventListener('click', sort);
-    artikelname = document.getElementById('th-artikelname');
+    artikelname = document.getElementById('spnArtikelname');
     artikelname.addEventListener('click', sort);
-    hersteller = document.getElementById('th-hersteller');
+    hersteller = document.getElementById('spnHersteller');
     hersteller.addEventListener('click', sort);
-    plattformid = document.getElementById('th-plattform-id');
+    plattformid = document.getElementById('spnPlattform-id');
     plattformid.addEventListener('click', sort);
-    eknetto = document.getElementById('th-ek-netto');
+    eknetto = document.getElementById('spn-ek-netto');
     eknetto.addEventListener('click', sort);
-    mwst = document.getElementById('th-mehrwertsteuer');
+    mwst = document.getElementById('spnMehrwertsteuer');
     mwst.addEventListener('click', sort);
-    versandklasse = document.getElementById('th-versandklasse');
+    versandklasse = document.getElementById('spnVersandklasse');
     versandklasse.addEventListener('click', sort);
-    gewicht  = document.getElementById('th-gewicht');
+    gewicht  = document.getElementById('spnGewicht');
     gewicht.addEventListener('click', sort);
-    nullpreis  = document.getElementById('th-nullpreis');
+    nullpreis  = document.getElementById('spnNullpreis');
     nullpreis.addEventListener('click', sort);
-    vkpreis  = document.getElementById('th-vk-preis');
+    vkpreis  = document.getElementById('spn-vk-preis');
     vkpreis.addEventListener('click', sort);
-    margeeuro  = document.getElementById('th-marge-euro');
+    margeeuro  = document.getElementById('spn-marge-euro');
     margeeuro.addEventListener('click', sort);
-    margeprozent  = document.getElementById('th-marge-prozent');
+    margeprozent  = document.getElementById('spn-marge-prozent');
     margeprozent.addEventListener('click', sort);
-    bestand  = document.getElementById('th-bestand');
+    bestand  = document.getElementById('spnBestand');
     bestand.addEventListener('click', sort);
 
 
@@ -76,9 +76,9 @@ window.onload = function () {
 
 	function sort(e) {
 
-        if(e.currentTarget.id == 'th-vk-preis')
+        if(e.currentTarget.id == 'spn-vk-preis')
         {
-            item = document.getElementById('th-vk-preis');
+            item = document.getElementById('spn-vk-preis');
             if (item.timer){
                 clearTimeout(item.timer);
                 item.timer = null;
@@ -92,9 +92,9 @@ window.onload = function () {
             }
         }
 
-        if(e.currentTarget.id == 'th-marge-euro')
+        if(e.currentTarget.id == 'spn-marge-euro')
         {
-            item = document.getElementById('th-marge-euro');
+            item = document.getElementById('spn-marge-euro');
             if (item.timer){
                 clearTimeout(item.timer);
                 item.timer = null;
@@ -107,9 +107,9 @@ window.onload = function () {
                 },300);
             }
         }
-        if(e.currentTarget.id == 'th-marge-prozent')
+        if(e.currentTarget.id == 'spn-marge-prozent')
         {
-            item = document.getElementById('th-marge-prozent');
+            item = document.getElementById('spn-marge-prozent');
             if (item.timer){
                 clearTimeout(item.timer);
                 item.timer = null;
@@ -122,8 +122,8 @@ window.onload = function () {
                 },300);
             }
         }
-        if(e.currentTarget.id == 'th-bestand') {
-            item = document.getElementById('th-bestand');
+        if(e.currentTarget.id == 'spnBestand') {
+            item = document.getElementById('spnBestand');
             if (item.timer) {
                 clearTimeout(item.timer);
                 item.timer = null;
@@ -136,8 +136,8 @@ window.onload = function () {
                 }, 300);
             }
         }
-        if(e.currentTarget.id == 'th-nullpreis') {
-            item = document.getElementById('th-nullpreis');
+        if(e.currentTarget.id == 'spnNullpreis') {
+            item = document.getElementById('spnNullpreis');
             if (item.timer) {
                 clearTimeout(item.timer);
                 item.timer = null;
@@ -150,8 +150,8 @@ window.onload = function () {
                 }, 300);
             }
         }
-        if(e.currentTarget.id == 'th-gewicht') {
-            item = document.getElementById('th-gewicht');
+        if(e.currentTarget.id == 'spnGewicht') {
+            item = document.getElementById('spnGewicht');
             if (item.timer) {
                 clearTimeout(item.timer);
                 item.timer = null;
@@ -164,8 +164,8 @@ window.onload = function () {
                 }, 300);
             }
         }
-        if(e.currentTarget.id == 'th-versandklasse') {
-            item = document.getElementById('th-versandklasse');
+        if(e.currentTarget.id == 'spnVersandklasse') {
+            item = document.getElementById('spnVersandklasse');
             if (item.timer) {
                 clearTimeout(item.timer);
                 item.timer = null;
@@ -178,8 +178,8 @@ window.onload = function () {
                 }, 300);
             }
         }
-        if(e.currentTarget.id == 'th-mehrwertsteuer') {
-            item = document.getElementById('th-mehrwertsteuer');
+        if(e.currentTarget.id == 'spnMehrwertsteuer') {
+            item = document.getElementById('spnMehrwertsteuer');
             if (item.timer) {
                 clearTimeout(item.timer);
                 item.timer = null;
@@ -192,8 +192,8 @@ window.onload = function () {
                 }, 300);
             }
         }
-        if(e.currentTarget.id == 'th-ek-netto') {
-            item = document.getElementById('th-ek-netto');
+        if(e.currentTarget.id == 'spn-ek-netto') {
+            item = document.getElementById('spn-ek-netto');
             if (item.timer) {
                 clearTimeout(item.timer);
                 item.timer = null;
@@ -206,8 +206,8 @@ window.onload = function () {
                 }, 300);
             }
         }
-        if(e.currentTarget.id == 'th-plattform-id') {
-            item = document.getElementById('th-plattform-id');
+        if(e.currentTarget.id == 'spnPlattform-id') {
+            item = document.getElementById('spnPlattform-id');
             if (item.timer) {
                 clearTimeout(item.timer);
                 item.timer = null;
@@ -220,8 +220,8 @@ window.onload = function () {
                 }, 300);
             }
         }
-        if(e.currentTarget.id == 'th-hersteller') {
-            item = document.getElementById('th-hersteller');
+        if(e.currentTarget.id == 'spnHersteller') {
+            item = document.getElementById('spnHersteller');
             if (item.timer) {
                 clearTimeout(item.timer);
                 item.timer = null;
@@ -234,8 +234,8 @@ window.onload = function () {
                 }, 300);
             }
         }
-        if(e.currentTarget.id == 'th-artikelname') {
-            item = document.getElementById('th-artikelname');
+        if(e.currentTarget.id == 'spnArtikelname') {
+            item = document.getElementById('spnArtikelname');
             if (item.timer) {
                 clearTimeout(item.timer);
                 item.timer = null;
@@ -248,8 +248,8 @@ window.onload = function () {
                 }, 300);
             }
         }
-        if(e.currentTarget.id == 'th-artikelnummer') {
-            item = document.getElementById('th-artikelnummer');
+        if(e.currentTarget.id == 'spnArtikelnummer') {
+            item = document.getElementById('spnArtikelnummer');
             if (item.timer) {
                 clearTimeout(item.timer);
                 item.timer = null;
@@ -262,8 +262,8 @@ window.onload = function () {
                 }, 300);
             }
         }
-        if(e.currentTarget.id == 'th-plattform') {
-            item = document.getElementById('th-plattform');
+        if(e.currentTarget.id == 'spnPlattform') {
+            item = document.getElementById('spnPlattform');
             if (item.timer) {
                 clearTimeout(item.timer);
                 item.timer = null;

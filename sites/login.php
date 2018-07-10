@@ -30,6 +30,10 @@ $_SESSION = array();
                 <button type="submit" value="Einloggen" class="btnLogin">Einloggen</button>
                 
             </form>
+            
+            <form action="admin-login.php">
+            <button type="submit" value="Adminbereich" class="btnLogin">Adminbereich</button>
+            </form>
         </div>    
     </body>
 </html>
