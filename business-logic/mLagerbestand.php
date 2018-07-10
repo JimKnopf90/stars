@@ -7,7 +7,7 @@ $y = 0;
 $list = [];
 $b = 0;
  //Paging
-$limit = 10;
+$limit = 30;
 
  if (isset($_GET["page"])) { 
         $page  = $_GET["page"];       
@@ -128,7 +128,7 @@ echo '<table id="lb-table">';
   for ($a = 0; $a < count($list) ; $a++) {               
                 
                 // TR: Tabellen Content
-                if($a>=0 && $a<=($limit -1) * $page )
+                if($a>=($page -1) * $limit  && $a<($limit) * $page )
                 {
                     echo '<tr class="user-table-hover">'; 
                     echo '<td>' .$list[$a]['Kategoriename'] . '</td>';
@@ -137,27 +137,8 @@ echo '<table id="lb-table">';
                     echo '<td>' .$list[$a]['fLagerbestand'] . '</td>';
                     echo '<td>' .$list[$a]['fInAuftraegen'] . '</td>';
                     echo '<td>' .$list[$a]['fVerfuegbar']. '</td>';
-                    echo '<td>' .$list[$a]['istBestandswert']. '</td>';   
-                    
-                } else 
-                {
-                 if($a>=20 && $a<=30)  
-                 {
-                    echo '<tr class="user-table-hover">'; 
-                    echo '<td>' .$list[$a]['Kategoriename'] . '</td>';
-                    echo '<td>' .$list[$a]['cArtNr'] . '</td>';
-                    echo '<td>' .$list[$a]['cName'] . '</td>';
-                    echo '<td>' .$list[$a]['fLagerbestand'] . '</td>';
-                    echo '<td>' .$list[$a]['fInAuftraegen'] . '</td>';
-                    echo '<td>' .$list[$a]['fVerfuegbar']. '</td>';
-                    echo '<td>' .$list[$a]['istBestandswert']. '</td>'; 
-                 }
-                  
+                    echo '<td>' .$list[$a]['istBestandswert']. '</td>';
                 }
-                
-                    
-
-                   
                
             }
     
@@ -173,18 +154,19 @@ $total_pages = ceil(count($list) / $limit);
                 $pagLink .= "<a class='pagingElement' href='admin-lagerbestand.php?page=".$i."'>".$i."</a>";
             } else {
                 if ($i == 11) {
-                    $pagLink .= "<select><option class='pagingElement' value='admin-lagerbestand.php?page=".$i."'>".$i."</option>";
-                } else {
-                     $pagLink .= "<option>".$i."</option>";
-
+                    $pagLink .= "<select onchange=\"location = this.value;\"><option value='' selected disabled hidden>Seite wählen</option><option class='pagingElement' value='admin-lagerbestand.php?page=".$i."'>$i</option>";
                 }
+                else {
+                    $pagLink .= "<option class='pagingElement' value='admin-lagerbestand.php?page=".$i."'>$i</option>";
+                }
+
               
             }
             
         };
      echo $pagLink . "</select><div id='counter'>" . count($list) . " Zeile(n)</div></div>";   
 
-?>
+
 
 
 

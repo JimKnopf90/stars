@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ada7897-5108-4b71-9617-d2ac557075bc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business-logic/mProducts.php" afterPath="$PROJECT_DIR$/business-logic/mProducts.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business-logic/mLagerbestand.php" afterPath="$PROJECT_DIR$/business-logic/mLagerbestand.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,112 +28,16 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mProducts.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/business-logic/mProducts.php">
+      <file leaf-file-name="mLagerbestand.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/business-logic/mLagerbestand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="119" column="21" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="871" selection-end-column="0" />
+            <state relative-caret-position="629">
+              <caret line="156" column="131" lean-forward="false" selection-start-line="156" selection-start-column="131" selection-end-line="156" selection-end-column="131" />
               <folding>
-                <element signature="e#11837#12225#0#PHP" expanded="false" />
-                <element signature="e#12234#12650#0#PHP" expanded="false" />
-                <element signature="e#12659#13069#0#PHP" expanded="false" />
-                <element signature="e#13078#13485#0#PHP" expanded="false" />
-                <element signature="e#13494#13905#0#PHP" expanded="false" />
-                <element signature="e#13914#14298#0#PHP" expanded="false" />
-                <element signature="e#14307#14698#0#PHP" expanded="false" />
-                <element signature="e#14707#15131#0#PHP" expanded="false" />
-                <element signature="e#15140#15524#0#PHP" expanded="false" />
-                <element signature="e#15533#15917#0#PHP" expanded="false" />
-                <element signature="e#15926#16323#0#PHP" expanded="false" />
-                <element signature="e#16332#16720#0#PHP" expanded="false" />
-                <element signature="e#16729#17111#0#PHP" expanded="false" />
-                <element signature="e#17120#17506#0#PHP" expanded="false" />
-                <element signature="e#18494#18667#0#PHP" expanded="false" />
-                <element signature="e#18681#18852#0#PHP" expanded="false" />
-                <element signature="e#18866#19035#0#PHP" expanded="false" />
-                <element signature="e#19049#19216#0#PHP" expanded="false" />
-                <element signature="e#19230#19409#0#PHP" expanded="false" />
-                <element signature="e#19423#19600#0#PHP" expanded="false" />
-                <element signature="e#19614#19782#0#PHP" expanded="false" />
-                <element signature="e#19796#19962#0#PHP" expanded="false" />
-                <element signature="e#19976#20148#0#PHP" expanded="false" />
-                <element signature="e#20162#20332#0#PHP" expanded="false" />
-                <element signature="e#20346#20514#0#PHP" expanded="false" />
-                <element signature="e#20528#20694#0#PHP" expanded="false" />
-                <element signature="e#20708#20888#0#PHP" expanded="false" />
-                <element signature="e#20902#21080#0#PHP" expanded="false" />
-                <element signature="e#21094#21266#0#PHP" expanded="false" />
-                <element signature="e#21280#21450#0#PHP" expanded="false" />
-                <element signature="e#21464#21633#0#PHP" expanded="false" />
-                <element signature="e#21647#21814#0#PHP" expanded="false" />
-                <element signature="e#21828#22005#0#PHP" expanded="false" />
-                <element signature="e#22019#22194#0#PHP" expanded="false" />
-                <element signature="e#22208#22382#0#PHP" expanded="false" />
-                <element signature="e#22396#22568#0#PHP" expanded="false" />
-                <element signature="e#22582#22758#0#PHP" expanded="false" />
-                <element signature="e#22772#22946#0#PHP" expanded="false" />
-                <element signature="e#22960#23140#0#PHP" expanded="false" />
-                <element signature="e#23154#23332#0#PHP" expanded="false" />
-                <element signature="n#compareMargeEuroASC#0;n#!!top" expanded="false" />
-                <element signature="n#compareMargeEuroDESC#0;n#!!top" expanded="false" />
-                <element signature="n#compareVKPreisASC#0;n#!!top" expanded="false" />
-                <element signature="n#compareVKPreisDESC#0;n#!!top" expanded="false" />
-                <element signature="n#compareMargeProzentASC#0;n#!!top" expanded="false" />
-                <element signature="n#compareMargeProzentDESC#0;n#!!top" expanded="false" />
-                <element signature="n#compareBestandASC#0;n#!!top" expanded="false" />
-                <element signature="n#compareBestandDESC#0;n#!!top" expanded="false" />
-                <element signature="n#compareNullpreisASC#0;n#!!top" expanded="false" />
-                <element signature="n#compareNullpreisDESC#0;n#!!top" expanded="false" />
-                <element signature="n#compareGewichtASC#0;n#!!top" expanded="false" />
-                <element signature="n#compareGewichtDESC#0;n#!!top" expanded="false" />
-                <element signature="n#compareVersandklasseASC#0;n#!!top" expanded="false" />
-                <element signature="n#compareVersandklasseDESC#0;n#!!top" expanded="false" />
-                <element signature="n#compareMwstASC#0;n#!!top" expanded="false" />
-                <element signature="n#compareMwstDESC#0;n#!!top" expanded="false" />
-                <element signature="n#compareEKNettoASC#0;n#!!top" expanded="false" />
-                <element signature="n#compareEKNettoDESC#0;n#!!top" expanded="false" />
-                <element signature="n#comparePlattformIdASC#0;n#!!top" expanded="false" />
-                <element signature="n#comparePlattformIdDESC#0;n#!!top" expanded="false" />
-                <element signature="n#compareHerstellerASC#0;n#!!top" expanded="false" />
-                <element signature="n#compareHerstellerDESC#0;n#!!top" expanded="false" />
-                <element signature="n#compareArtikelnameASC#0;n#!!top" expanded="false" />
-                <element signature="n#compareArtikelnameDESC#0;n#!!top" expanded="false" />
-                <element signature="n#compareArtikelnummerASC#0;n#!!top" expanded="false" />
-                <element signature="n#compareArtikelnummerDESC#0;n#!!top" expanded="false" />
-                <marker date="1525446696463" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
-                <marker date="1525446696463" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
-                <marker date="1525446696463" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
-                <marker date="1525446696463" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
-                <marker date="1525446696463" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
-                <marker date="1525446696463" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
-                <marker date="1525446696463" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
-                <marker date="1525446696463" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
-                <marker date="1525446696463" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
-                <marker date="1525446696463" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
-                <marker date="1525446696463" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
-                <marker date="1525446696463" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
-                <marker date="1525446696463" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+                <marker date="1531215670816" expanded="true" signature="367:2341" ph="SELECT Tabel... kKategorie" />
+                <marker date="1531215670816" expanded="true" signature="649:2070" ph="SELECT dbo.t... tkategorie" />
+                <marker date="1531215670816" expanded="true" signature="1754:1976" ph="SELECT kKate... tkategorie" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="products.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/products.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="5" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="products.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/products.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4709">
-              <caret line="277" column="9" lean-forward="false" selection-start-line="277" selection-start-column="9" selection-end-line="277" selection-end-column="9" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -162,6 +65,7 @@
         <option value="$PROJECT_DIR$/business-logic/mSaveVersandklassen.php" />
         <option value="$PROJECT_DIR$/js/products.js" />
         <option value="$PROJECT_DIR$/business-logic/mProducts.php" />
+        <option value="$PROJECT_DIR$/business-logic/mLagerbestand.php" />
       </list>
     </option>
   </component>
@@ -420,16 +324,15 @@
       <workItem from="1525535697912" duration="996000" />
       <workItem from="1526904414061" duration="2011000" />
       <workItem from="1527272733453" duration="684000" />
-      <workItem from="1531144767789" duration="32000" />
+      <workItem from="1531144767789" duration="5249000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57339000" />
+    <option name="totallyTimeSpent" value="62556000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12083333" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -456,13 +359,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sites/products.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/products.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
@@ -476,85 +372,45 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11837#12225#0#PHP" expanded="false" />
-            <element signature="e#12234#12650#0#PHP" expanded="false" />
-            <element signature="e#12659#13069#0#PHP" expanded="false" />
-            <element signature="e#13078#13485#0#PHP" expanded="false" />
-            <element signature="e#13494#13905#0#PHP" expanded="false" />
-            <element signature="e#13914#14298#0#PHP" expanded="false" />
-            <element signature="e#14307#14698#0#PHP" expanded="false" />
-            <element signature="e#14707#15131#0#PHP" expanded="false" />
-            <element signature="e#15140#15524#0#PHP" expanded="false" />
-            <element signature="e#15533#15917#0#PHP" expanded="false" />
-            <element signature="e#15926#16323#0#PHP" expanded="false" />
-            <element signature="e#16332#16720#0#PHP" expanded="false" />
-            <element signature="e#16729#17111#0#PHP" expanded="false" />
-            <element signature="e#17120#17506#0#PHP" expanded="false" />
-            <element signature="e#18494#18667#0#PHP" expanded="false" />
-            <element signature="e#18681#18852#0#PHP" expanded="false" />
-            <element signature="e#18866#19035#0#PHP" expanded="false" />
-            <element signature="e#19049#19216#0#PHP" expanded="false" />
-            <element signature="e#19230#19409#0#PHP" expanded="false" />
-            <element signature="e#19423#19600#0#PHP" expanded="false" />
-            <element signature="e#19614#19782#0#PHP" expanded="false" />
-            <element signature="e#19796#19962#0#PHP" expanded="false" />
-            <element signature="e#19976#20148#0#PHP" expanded="false" />
-            <element signature="e#20162#20332#0#PHP" expanded="false" />
-            <element signature="e#20346#20514#0#PHP" expanded="false" />
-            <element signature="e#20528#20694#0#PHP" expanded="false" />
-            <element signature="e#20708#20888#0#PHP" expanded="false" />
-            <element signature="e#20902#21080#0#PHP" expanded="false" />
-            <element signature="e#21094#21266#0#PHP" expanded="false" />
-            <element signature="e#21280#21450#0#PHP" expanded="false" />
-            <element signature="e#21464#21633#0#PHP" expanded="false" />
-            <element signature="e#21647#21814#0#PHP" expanded="false" />
-            <element signature="e#21828#22005#0#PHP" expanded="false" />
-            <element signature="e#22019#22194#0#PHP" expanded="false" />
-            <element signature="e#22208#22382#0#PHP" expanded="false" />
-            <element signature="e#22396#22568#0#PHP" expanded="false" />
-            <element signature="e#22582#22758#0#PHP" expanded="false" />
-            <element signature="e#22772#22946#0#PHP" expanded="false" />
-            <element signature="e#22960#23140#0#PHP" expanded="false" />
-            <element signature="e#23154#23332#0#PHP" expanded="false" />
-            <element signature="n#compareMargeEuroASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeEuroDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVKPreisASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVKPreisDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeProzentASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeProzentDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareBestandASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareBestandDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareNullpreisASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareNullpreisDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareGewichtASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareGewichtDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVersandklasseASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVersandklasseDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMwstASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMwstDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareEKNettoASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareEKNettoDESC#0;n#!!top" expanded="false" />
-            <element signature="n#comparePlattformIdASC#0;n#!!top" expanded="false" />
-            <element signature="n#comparePlattformIdDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareHerstellerASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareHerstellerDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnameASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnameDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnummerASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnummerDESC#0;n#!!top" expanded="false" />
-            <marker date="1525446696463" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
-            <marker date="1525446696463" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
-            <marker date="1525446696463" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525446696463" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525446696463" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
+            <marker date="1531203881595" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
+            <marker date="1531203881595" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1531203881595" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1531203881595" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="false" signature="24256:24530" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="24590:24863" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="24920:25191" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25249:25519" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25581:25862" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25925:26205" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26262:26532" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26590:26859" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26918:27193" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27253:27527" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27584:27855" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27913:28183" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28246:28473" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28537:28761" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28815:29016" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29071:29269" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29326:29597" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29655:29925" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29986:30201" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30263:30475" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30535:30748" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30809:31019" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31080:31295" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31357:31569" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31632:31851" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31915:32131" ph="..." />
           </folding>
         </state>
       </provider>
@@ -564,85 +420,45 @@
         <state relative-caret-position="731">
           <caret line="43" column="32" lean-forward="false" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
           <folding>
-            <element signature="e#11837#12225#0#PHP" expanded="false" />
-            <element signature="e#12234#12650#0#PHP" expanded="false" />
-            <element signature="e#12659#13069#0#PHP" expanded="false" />
-            <element signature="e#13078#13485#0#PHP" expanded="false" />
-            <element signature="e#13494#13905#0#PHP" expanded="false" />
-            <element signature="e#13914#14298#0#PHP" expanded="false" />
-            <element signature="e#14307#14698#0#PHP" expanded="false" />
-            <element signature="e#14707#15131#0#PHP" expanded="false" />
-            <element signature="e#15140#15524#0#PHP" expanded="false" />
-            <element signature="e#15533#15917#0#PHP" expanded="false" />
-            <element signature="e#15926#16323#0#PHP" expanded="false" />
-            <element signature="e#16332#16720#0#PHP" expanded="false" />
-            <element signature="e#16729#17111#0#PHP" expanded="false" />
-            <element signature="e#17120#17506#0#PHP" expanded="false" />
-            <element signature="e#18494#18667#0#PHP" expanded="false" />
-            <element signature="e#18681#18852#0#PHP" expanded="false" />
-            <element signature="e#18866#19035#0#PHP" expanded="false" />
-            <element signature="e#19049#19216#0#PHP" expanded="false" />
-            <element signature="e#19230#19409#0#PHP" expanded="false" />
-            <element signature="e#19423#19600#0#PHP" expanded="false" />
-            <element signature="e#19614#19782#0#PHP" expanded="false" />
-            <element signature="e#19796#19962#0#PHP" expanded="false" />
-            <element signature="e#19976#20148#0#PHP" expanded="false" />
-            <element signature="e#20162#20332#0#PHP" expanded="false" />
-            <element signature="e#20346#20514#0#PHP" expanded="false" />
-            <element signature="e#20528#20694#0#PHP" expanded="false" />
-            <element signature="e#20708#20888#0#PHP" expanded="false" />
-            <element signature="e#20902#21080#0#PHP" expanded="false" />
-            <element signature="e#21094#21266#0#PHP" expanded="false" />
-            <element signature="e#21280#21450#0#PHP" expanded="false" />
-            <element signature="e#21464#21633#0#PHP" expanded="false" />
-            <element signature="e#21647#21814#0#PHP" expanded="false" />
-            <element signature="e#21828#22005#0#PHP" expanded="false" />
-            <element signature="e#22019#22194#0#PHP" expanded="false" />
-            <element signature="e#22208#22382#0#PHP" expanded="false" />
-            <element signature="e#22396#22568#0#PHP" expanded="false" />
-            <element signature="e#22582#22758#0#PHP" expanded="false" />
-            <element signature="e#22772#22946#0#PHP" expanded="false" />
-            <element signature="e#22960#23140#0#PHP" expanded="false" />
-            <element signature="e#23154#23332#0#PHP" expanded="false" />
-            <element signature="n#compareMargeEuroASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeEuroDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVKPreisASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVKPreisDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeProzentASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeProzentDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareBestandASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareBestandDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareNullpreisASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareNullpreisDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareGewichtASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareGewichtDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVersandklasseASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVersandklasseDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMwstASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMwstDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareEKNettoASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareEKNettoDESC#0;n#!!top" expanded="false" />
-            <element signature="n#comparePlattformIdASC#0;n#!!top" expanded="false" />
-            <element signature="n#comparePlattformIdDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareHerstellerASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareHerstellerDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnameASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnameDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnummerASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnummerDESC#0;n#!!top" expanded="false" />
-            <marker date="1525446696463" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
-            <marker date="1525446696463" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
-            <marker date="1525446696463" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525446696463" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525446696463" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
+            <marker date="1531203881595" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
+            <marker date="1531203881595" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1531203881595" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1531203881595" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="false" signature="24256:24530" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="24590:24863" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="24920:25191" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25249:25519" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25581:25862" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25925:26205" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26262:26532" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26590:26859" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26918:27193" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27253:27527" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27584:27855" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27913:28183" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28246:28473" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28537:28761" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28815:29016" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29071:29269" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29326:29597" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29655:29925" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29986:30201" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30263:30475" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30535:30748" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30809:31019" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31080:31295" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31357:31569" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31632:31851" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31915:32131" ph="..." />
           </folding>
         </state>
       </provider>
@@ -660,7 +476,7 @@
         <state relative-caret-position="34">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="13" />
           <folding>
-            <marker date="1524392409881" expanded="true" signature="143:232" ph="SELECT usern... tUser" />
+            <marker date="1531203530601" expanded="true" signature="143:232" ph="SELECT usern... tUser" />
           </folding>
         </state>
       </provider>
@@ -720,85 +536,45 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11837#12225#0#PHP" expanded="false" />
-            <element signature="e#12234#12650#0#PHP" expanded="false" />
-            <element signature="e#12659#13069#0#PHP" expanded="false" />
-            <element signature="e#13078#13485#0#PHP" expanded="false" />
-            <element signature="e#13494#13905#0#PHP" expanded="false" />
-            <element signature="e#13914#14298#0#PHP" expanded="false" />
-            <element signature="e#14307#14698#0#PHP" expanded="false" />
-            <element signature="e#14707#15131#0#PHP" expanded="false" />
-            <element signature="e#15140#15524#0#PHP" expanded="false" />
-            <element signature="e#15533#15917#0#PHP" expanded="false" />
-            <element signature="e#15926#16323#0#PHP" expanded="false" />
-            <element signature="e#16332#16720#0#PHP" expanded="false" />
-            <element signature="e#16729#17111#0#PHP" expanded="false" />
-            <element signature="e#17120#17506#0#PHP" expanded="false" />
-            <element signature="e#18494#18667#0#PHP" expanded="false" />
-            <element signature="e#18681#18852#0#PHP" expanded="false" />
-            <element signature="e#18866#19035#0#PHP" expanded="false" />
-            <element signature="e#19049#19216#0#PHP" expanded="false" />
-            <element signature="e#19230#19409#0#PHP" expanded="false" />
-            <element signature="e#19423#19600#0#PHP" expanded="false" />
-            <element signature="e#19614#19782#0#PHP" expanded="false" />
-            <element signature="e#19796#19962#0#PHP" expanded="false" />
-            <element signature="e#19976#20148#0#PHP" expanded="false" />
-            <element signature="e#20162#20332#0#PHP" expanded="false" />
-            <element signature="e#20346#20514#0#PHP" expanded="false" />
-            <element signature="e#20528#20694#0#PHP" expanded="false" />
-            <element signature="e#20708#20888#0#PHP" expanded="false" />
-            <element signature="e#20902#21080#0#PHP" expanded="false" />
-            <element signature="e#21094#21266#0#PHP" expanded="false" />
-            <element signature="e#21280#21450#0#PHP" expanded="false" />
-            <element signature="e#21464#21633#0#PHP" expanded="false" />
-            <element signature="e#21647#21814#0#PHP" expanded="false" />
-            <element signature="e#21828#22005#0#PHP" expanded="false" />
-            <element signature="e#22019#22194#0#PHP" expanded="false" />
-            <element signature="e#22208#22382#0#PHP" expanded="false" />
-            <element signature="e#22396#22568#0#PHP" expanded="false" />
-            <element signature="e#22582#22758#0#PHP" expanded="false" />
-            <element signature="e#22772#22946#0#PHP" expanded="false" />
-            <element signature="e#22960#23140#0#PHP" expanded="false" />
-            <element signature="e#23154#23332#0#PHP" expanded="false" />
-            <element signature="n#compareMargeEuroASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeEuroDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVKPreisASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVKPreisDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeProzentASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeProzentDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareBestandASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareBestandDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareNullpreisASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareNullpreisDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareGewichtASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareGewichtDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVersandklasseASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVersandklasseDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMwstASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMwstDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareEKNettoASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareEKNettoDESC#0;n#!!top" expanded="false" />
-            <element signature="n#comparePlattformIdASC#0;n#!!top" expanded="false" />
-            <element signature="n#comparePlattformIdDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareHerstellerASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareHerstellerDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnameASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnameDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnummerASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnummerDESC#0;n#!!top" expanded="false" />
-            <marker date="1525446696463" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
-            <marker date="1525446696463" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
-            <marker date="1525446696463" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525446696463" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525446696463" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
+            <marker date="1531203881595" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
+            <marker date="1531203881595" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1531203881595" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1531203881595" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="false" signature="24256:24530" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="24590:24863" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="24920:25191" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25249:25519" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25581:25862" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25925:26205" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26262:26532" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26590:26859" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26918:27193" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27253:27527" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27584:27855" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27913:28183" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28246:28473" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28537:28761" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28815:29016" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29071:29269" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29326:29597" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29655:29925" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29986:30201" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30263:30475" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30535:30748" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30809:31019" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31080:31295" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31357:31569" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31632:31851" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31915:32131" ph="..." />
           </folding>
         </state>
       </provider>
@@ -815,85 +591,45 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11837#12225#0#PHP" expanded="false" />
-            <element signature="e#12234#12650#0#PHP" expanded="false" />
-            <element signature="e#12659#13069#0#PHP" expanded="false" />
-            <element signature="e#13078#13485#0#PHP" expanded="false" />
-            <element signature="e#13494#13905#0#PHP" expanded="false" />
-            <element signature="e#13914#14298#0#PHP" expanded="false" />
-            <element signature="e#14307#14698#0#PHP" expanded="false" />
-            <element signature="e#14707#15131#0#PHP" expanded="false" />
-            <element signature="e#15140#15524#0#PHP" expanded="false" />
-            <element signature="e#15533#15917#0#PHP" expanded="false" />
-            <element signature="e#15926#16323#0#PHP" expanded="false" />
-            <element signature="e#16332#16720#0#PHP" expanded="false" />
-            <element signature="e#16729#17111#0#PHP" expanded="false" />
-            <element signature="e#17120#17506#0#PHP" expanded="false" />
-            <element signature="e#18494#18667#0#PHP" expanded="false" />
-            <element signature="e#18681#18852#0#PHP" expanded="false" />
-            <element signature="e#18866#19035#0#PHP" expanded="false" />
-            <element signature="e#19049#19216#0#PHP" expanded="false" />
-            <element signature="e#19230#19409#0#PHP" expanded="false" />
-            <element signature="e#19423#19600#0#PHP" expanded="false" />
-            <element signature="e#19614#19782#0#PHP" expanded="false" />
-            <element signature="e#19796#19962#0#PHP" expanded="false" />
-            <element signature="e#19976#20148#0#PHP" expanded="false" />
-            <element signature="e#20162#20332#0#PHP" expanded="false" />
-            <element signature="e#20346#20514#0#PHP" expanded="false" />
-            <element signature="e#20528#20694#0#PHP" expanded="false" />
-            <element signature="e#20708#20888#0#PHP" expanded="false" />
-            <element signature="e#20902#21080#0#PHP" expanded="false" />
-            <element signature="e#21094#21266#0#PHP" expanded="false" />
-            <element signature="e#21280#21450#0#PHP" expanded="false" />
-            <element signature="e#21464#21633#0#PHP" expanded="false" />
-            <element signature="e#21647#21814#0#PHP" expanded="false" />
-            <element signature="e#21828#22005#0#PHP" expanded="false" />
-            <element signature="e#22019#22194#0#PHP" expanded="false" />
-            <element signature="e#22208#22382#0#PHP" expanded="false" />
-            <element signature="e#22396#22568#0#PHP" expanded="false" />
-            <element signature="e#22582#22758#0#PHP" expanded="false" />
-            <element signature="e#22772#22946#0#PHP" expanded="false" />
-            <element signature="e#22960#23140#0#PHP" expanded="false" />
-            <element signature="e#23154#23332#0#PHP" expanded="false" />
-            <element signature="n#compareMargeEuroASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeEuroDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVKPreisASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVKPreisDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeProzentASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeProzentDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareBestandASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareBestandDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareNullpreisASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareNullpreisDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareGewichtASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareGewichtDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVersandklasseASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVersandklasseDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMwstASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMwstDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareEKNettoASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareEKNettoDESC#0;n#!!top" expanded="false" />
-            <element signature="n#comparePlattformIdASC#0;n#!!top" expanded="false" />
-            <element signature="n#comparePlattformIdDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareHerstellerASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareHerstellerDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnameASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnameDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnummerASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnummerDESC#0;n#!!top" expanded="false" />
-            <marker date="1525446696463" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
-            <marker date="1525446696463" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
-            <marker date="1525446696463" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525446696463" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525446696463" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
+            <marker date="1531203881595" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
+            <marker date="1531203881595" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1531203881595" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1531203881595" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="false" signature="24256:24530" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="24590:24863" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="24920:25191" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25249:25519" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25581:25862" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25925:26205" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26262:26532" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26590:26859" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26918:27193" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27253:27527" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27584:27855" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27913:28183" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28246:28473" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28537:28761" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28815:29016" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29071:29269" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29326:29597" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29655:29925" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29986:30201" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30263:30475" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30535:30748" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30809:31019" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31080:31295" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31357:31569" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31632:31851" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31915:32131" ph="..." />
           </folding>
         </state>
       </provider>
@@ -910,85 +646,45 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11837#12225#0#PHP" expanded="false" />
-            <element signature="e#12234#12650#0#PHP" expanded="false" />
-            <element signature="e#12659#13069#0#PHP" expanded="false" />
-            <element signature="e#13078#13485#0#PHP" expanded="false" />
-            <element signature="e#13494#13905#0#PHP" expanded="false" />
-            <element signature="e#13914#14298#0#PHP" expanded="false" />
-            <element signature="e#14307#14698#0#PHP" expanded="false" />
-            <element signature="e#14707#15131#0#PHP" expanded="false" />
-            <element signature="e#15140#15524#0#PHP" expanded="false" />
-            <element signature="e#15533#15917#0#PHP" expanded="false" />
-            <element signature="e#15926#16323#0#PHP" expanded="false" />
-            <element signature="e#16332#16720#0#PHP" expanded="false" />
-            <element signature="e#16729#17111#0#PHP" expanded="false" />
-            <element signature="e#17120#17506#0#PHP" expanded="false" />
-            <element signature="e#18494#18667#0#PHP" expanded="false" />
-            <element signature="e#18681#18852#0#PHP" expanded="false" />
-            <element signature="e#18866#19035#0#PHP" expanded="false" />
-            <element signature="e#19049#19216#0#PHP" expanded="false" />
-            <element signature="e#19230#19409#0#PHP" expanded="false" />
-            <element signature="e#19423#19600#0#PHP" expanded="false" />
-            <element signature="e#19614#19782#0#PHP" expanded="false" />
-            <element signature="e#19796#19962#0#PHP" expanded="false" />
-            <element signature="e#19976#20148#0#PHP" expanded="false" />
-            <element signature="e#20162#20332#0#PHP" expanded="false" />
-            <element signature="e#20346#20514#0#PHP" expanded="false" />
-            <element signature="e#20528#20694#0#PHP" expanded="false" />
-            <element signature="e#20708#20888#0#PHP" expanded="false" />
-            <element signature="e#20902#21080#0#PHP" expanded="false" />
-            <element signature="e#21094#21266#0#PHP" expanded="false" />
-            <element signature="e#21280#21450#0#PHP" expanded="false" />
-            <element signature="e#21464#21633#0#PHP" expanded="false" />
-            <element signature="e#21647#21814#0#PHP" expanded="false" />
-            <element signature="e#21828#22005#0#PHP" expanded="false" />
-            <element signature="e#22019#22194#0#PHP" expanded="false" />
-            <element signature="e#22208#22382#0#PHP" expanded="false" />
-            <element signature="e#22396#22568#0#PHP" expanded="false" />
-            <element signature="e#22582#22758#0#PHP" expanded="false" />
-            <element signature="e#22772#22946#0#PHP" expanded="false" />
-            <element signature="e#22960#23140#0#PHP" expanded="false" />
-            <element signature="e#23154#23332#0#PHP" expanded="false" />
-            <element signature="n#compareMargeEuroASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeEuroDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVKPreisASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVKPreisDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeProzentASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeProzentDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareBestandASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareBestandDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareNullpreisASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareNullpreisDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareGewichtASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareGewichtDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVersandklasseASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVersandklasseDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMwstASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMwstDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareEKNettoASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareEKNettoDESC#0;n#!!top" expanded="false" />
-            <element signature="n#comparePlattformIdASC#0;n#!!top" expanded="false" />
-            <element signature="n#comparePlattformIdDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareHerstellerASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareHerstellerDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnameASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnameDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnummerASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnummerDESC#0;n#!!top" expanded="false" />
-            <marker date="1525446696463" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
-            <marker date="1525446696463" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
-            <marker date="1525446696463" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525446696463" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525446696463" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
+            <marker date="1531203881595" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
+            <marker date="1531203881595" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1531203881595" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1531203881595" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="false" signature="24256:24530" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="24590:24863" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="24920:25191" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25249:25519" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25581:25862" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25925:26205" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26262:26532" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26590:26859" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26918:27193" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27253:27527" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27584:27855" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27913:28183" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28246:28473" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28537:28761" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28815:29016" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29071:29269" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29326:29597" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29655:29925" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29986:30201" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30263:30475" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30535:30748" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30809:31019" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31080:31295" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31357:31569" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31632:31851" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31915:32131" ph="..." />
           </folding>
         </state>
       </provider>
@@ -998,85 +694,45 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11837#12225#0#PHP" expanded="false" />
-            <element signature="e#12234#12650#0#PHP" expanded="false" />
-            <element signature="e#12659#13069#0#PHP" expanded="false" />
-            <element signature="e#13078#13485#0#PHP" expanded="false" />
-            <element signature="e#13494#13905#0#PHP" expanded="false" />
-            <element signature="e#13914#14298#0#PHP" expanded="false" />
-            <element signature="e#14307#14698#0#PHP" expanded="false" />
-            <element signature="e#14707#15131#0#PHP" expanded="false" />
-            <element signature="e#15140#15524#0#PHP" expanded="false" />
-            <element signature="e#15533#15917#0#PHP" expanded="false" />
-            <element signature="e#15926#16323#0#PHP" expanded="false" />
-            <element signature="e#16332#16720#0#PHP" expanded="false" />
-            <element signature="e#16729#17111#0#PHP" expanded="false" />
-            <element signature="e#17120#17506#0#PHP" expanded="false" />
-            <element signature="e#18494#18667#0#PHP" expanded="false" />
-            <element signature="e#18681#18852#0#PHP" expanded="false" />
-            <element signature="e#18866#19035#0#PHP" expanded="false" />
-            <element signature="e#19049#19216#0#PHP" expanded="false" />
-            <element signature="e#19230#19409#0#PHP" expanded="false" />
-            <element signature="e#19423#19600#0#PHP" expanded="false" />
-            <element signature="e#19614#19782#0#PHP" expanded="false" />
-            <element signature="e#19796#19962#0#PHP" expanded="false" />
-            <element signature="e#19976#20148#0#PHP" expanded="false" />
-            <element signature="e#20162#20332#0#PHP" expanded="false" />
-            <element signature="e#20346#20514#0#PHP" expanded="false" />
-            <element signature="e#20528#20694#0#PHP" expanded="false" />
-            <element signature="e#20708#20888#0#PHP" expanded="false" />
-            <element signature="e#20902#21080#0#PHP" expanded="false" />
-            <element signature="e#21094#21266#0#PHP" expanded="false" />
-            <element signature="e#21280#21450#0#PHP" expanded="false" />
-            <element signature="e#21464#21633#0#PHP" expanded="false" />
-            <element signature="e#21647#21814#0#PHP" expanded="false" />
-            <element signature="e#21828#22005#0#PHP" expanded="false" />
-            <element signature="e#22019#22194#0#PHP" expanded="false" />
-            <element signature="e#22208#22382#0#PHP" expanded="false" />
-            <element signature="e#22396#22568#0#PHP" expanded="false" />
-            <element signature="e#22582#22758#0#PHP" expanded="false" />
-            <element signature="e#22772#22946#0#PHP" expanded="false" />
-            <element signature="e#22960#23140#0#PHP" expanded="false" />
-            <element signature="e#23154#23332#0#PHP" expanded="false" />
-            <element signature="n#compareMargeEuroASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeEuroDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVKPreisASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVKPreisDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeProzentASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeProzentDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareBestandASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareBestandDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareNullpreisASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareNullpreisDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareGewichtASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareGewichtDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVersandklasseASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVersandklasseDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMwstASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMwstDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareEKNettoASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareEKNettoDESC#0;n#!!top" expanded="false" />
-            <element signature="n#comparePlattformIdASC#0;n#!!top" expanded="false" />
-            <element signature="n#comparePlattformIdDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareHerstellerASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareHerstellerDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnameASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnameDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnummerASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnummerDESC#0;n#!!top" expanded="false" />
-            <marker date="1525446696463" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
-            <marker date="1525446696463" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
-            <marker date="1525446696463" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525446696463" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525446696463" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
+            <marker date="1531203881595" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
+            <marker date="1531203881595" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1531203881595" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1531203881595" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="false" signature="24256:24530" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="24590:24863" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="24920:25191" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25249:25519" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25581:25862" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25925:26205" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26262:26532" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26590:26859" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26918:27193" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27253:27527" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27584:27855" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27913:28183" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28246:28473" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28537:28761" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28815:29016" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29071:29269" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29326:29597" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29655:29925" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29986:30201" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30263:30475" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30535:30748" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30809:31019" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31080:31295" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31357:31569" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31632:31851" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31915:32131" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1086,85 +742,45 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11837#12225#0#PHP" expanded="false" />
-            <element signature="e#12234#12650#0#PHP" expanded="false" />
-            <element signature="e#12659#13069#0#PHP" expanded="false" />
-            <element signature="e#13078#13485#0#PHP" expanded="false" />
-            <element signature="e#13494#13905#0#PHP" expanded="false" />
-            <element signature="e#13914#14298#0#PHP" expanded="false" />
-            <element signature="e#14307#14698#0#PHP" expanded="false" />
-            <element signature="e#14707#15131#0#PHP" expanded="false" />
-            <element signature="e#15140#15524#0#PHP" expanded="false" />
-            <element signature="e#15533#15917#0#PHP" expanded="false" />
-            <element signature="e#15926#16323#0#PHP" expanded="false" />
-            <element signature="e#16332#16720#0#PHP" expanded="false" />
-            <element signature="e#16729#17111#0#PHP" expanded="false" />
-            <element signature="e#17120#17506#0#PHP" expanded="false" />
-            <element signature="e#18494#18667#0#PHP" expanded="false" />
-            <element signature="e#18681#18852#0#PHP" expanded="false" />
-            <element signature="e#18866#19035#0#PHP" expanded="false" />
-            <element signature="e#19049#19216#0#PHP" expanded="false" />
-            <element signature="e#19230#19409#0#PHP" expanded="false" />
-            <element signature="e#19423#19600#0#PHP" expanded="false" />
-            <element signature="e#19614#19782#0#PHP" expanded="false" />
-            <element signature="e#19796#19962#0#PHP" expanded="false" />
-            <element signature="e#19976#20148#0#PHP" expanded="false" />
-            <element signature="e#20162#20332#0#PHP" expanded="false" />
-            <element signature="e#20346#20514#0#PHP" expanded="false" />
-            <element signature="e#20528#20694#0#PHP" expanded="false" />
-            <element signature="e#20708#20888#0#PHP" expanded="false" />
-            <element signature="e#20902#21080#0#PHP" expanded="false" />
-            <element signature="e#21094#21266#0#PHP" expanded="false" />
-            <element signature="e#21280#21450#0#PHP" expanded="false" />
-            <element signature="e#21464#21633#0#PHP" expanded="false" />
-            <element signature="e#21647#21814#0#PHP" expanded="false" />
-            <element signature="e#21828#22005#0#PHP" expanded="false" />
-            <element signature="e#22019#22194#0#PHP" expanded="false" />
-            <element signature="e#22208#22382#0#PHP" expanded="false" />
-            <element signature="e#22396#22568#0#PHP" expanded="false" />
-            <element signature="e#22582#22758#0#PHP" expanded="false" />
-            <element signature="e#22772#22946#0#PHP" expanded="false" />
-            <element signature="e#22960#23140#0#PHP" expanded="false" />
-            <element signature="e#23154#23332#0#PHP" expanded="false" />
-            <element signature="n#compareMargeEuroASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeEuroDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVKPreisASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVKPreisDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeProzentASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeProzentDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareBestandASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareBestandDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareNullpreisASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareNullpreisDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareGewichtASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareGewichtDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVersandklasseASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVersandklasseDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMwstASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMwstDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareEKNettoASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareEKNettoDESC#0;n#!!top" expanded="false" />
-            <element signature="n#comparePlattformIdASC#0;n#!!top" expanded="false" />
-            <element signature="n#comparePlattformIdDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareHerstellerASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareHerstellerDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnameASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnameDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnummerASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnummerDESC#0;n#!!top" expanded="false" />
-            <marker date="1525446696463" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
-            <marker date="1525446696463" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
-            <marker date="1525446696463" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525446696463" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525446696463" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
+            <marker date="1531203881595" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
+            <marker date="1531203881595" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1531203881595" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1531203881595" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="false" signature="24256:24530" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="24590:24863" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="24920:25191" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25249:25519" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25581:25862" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25925:26205" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26262:26532" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26590:26859" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26918:27193" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27253:27527" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27584:27855" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27913:28183" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28246:28473" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28537:28761" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28815:29016" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29071:29269" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29326:29597" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29655:29925" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29986:30201" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30263:30475" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30535:30748" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30809:31019" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31080:31295" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31357:31569" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31632:31851" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31915:32131" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1188,85 +804,45 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11837#12225#0#PHP" expanded="false" />
-            <element signature="e#12234#12650#0#PHP" expanded="false" />
-            <element signature="e#12659#13069#0#PHP" expanded="false" />
-            <element signature="e#13078#13485#0#PHP" expanded="false" />
-            <element signature="e#13494#13905#0#PHP" expanded="false" />
-            <element signature="e#13914#14298#0#PHP" expanded="false" />
-            <element signature="e#14307#14698#0#PHP" expanded="false" />
-            <element signature="e#14707#15131#0#PHP" expanded="false" />
-            <element signature="e#15140#15524#0#PHP" expanded="false" />
-            <element signature="e#15533#15917#0#PHP" expanded="false" />
-            <element signature="e#15926#16323#0#PHP" expanded="false" />
-            <element signature="e#16332#16720#0#PHP" expanded="false" />
-            <element signature="e#16729#17111#0#PHP" expanded="false" />
-            <element signature="e#17120#17506#0#PHP" expanded="false" />
-            <element signature="e#18494#18667#0#PHP" expanded="false" />
-            <element signature="e#18681#18852#0#PHP" expanded="false" />
-            <element signature="e#18866#19035#0#PHP" expanded="false" />
-            <element signature="e#19049#19216#0#PHP" expanded="false" />
-            <element signature="e#19230#19409#0#PHP" expanded="false" />
-            <element signature="e#19423#19600#0#PHP" expanded="false" />
-            <element signature="e#19614#19782#0#PHP" expanded="false" />
-            <element signature="e#19796#19962#0#PHP" expanded="false" />
-            <element signature="e#19976#20148#0#PHP" expanded="false" />
-            <element signature="e#20162#20332#0#PHP" expanded="false" />
-            <element signature="e#20346#20514#0#PHP" expanded="false" />
-            <element signature="e#20528#20694#0#PHP" expanded="false" />
-            <element signature="e#20708#20888#0#PHP" expanded="false" />
-            <element signature="e#20902#21080#0#PHP" expanded="false" />
-            <element signature="e#21094#21266#0#PHP" expanded="false" />
-            <element signature="e#21280#21450#0#PHP" expanded="false" />
-            <element signature="e#21464#21633#0#PHP" expanded="false" />
-            <element signature="e#21647#21814#0#PHP" expanded="false" />
-            <element signature="e#21828#22005#0#PHP" expanded="false" />
-            <element signature="e#22019#22194#0#PHP" expanded="false" />
-            <element signature="e#22208#22382#0#PHP" expanded="false" />
-            <element signature="e#22396#22568#0#PHP" expanded="false" />
-            <element signature="e#22582#22758#0#PHP" expanded="false" />
-            <element signature="e#22772#22946#0#PHP" expanded="false" />
-            <element signature="e#22960#23140#0#PHP" expanded="false" />
-            <element signature="e#23154#23332#0#PHP" expanded="false" />
-            <element signature="n#compareMargeEuroASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeEuroDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVKPreisASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVKPreisDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeProzentASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeProzentDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareBestandASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareBestandDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareNullpreisASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareNullpreisDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareGewichtASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareGewichtDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVersandklasseASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVersandklasseDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMwstASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMwstDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareEKNettoASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareEKNettoDESC#0;n#!!top" expanded="false" />
-            <element signature="n#comparePlattformIdASC#0;n#!!top" expanded="false" />
-            <element signature="n#comparePlattformIdDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareHerstellerASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareHerstellerDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnameASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnameDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnummerASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnummerDESC#0;n#!!top" expanded="false" />
-            <marker date="1525446696463" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
-            <marker date="1525446696463" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
-            <marker date="1525446696463" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525446696463" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525446696463" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
+            <marker date="1531203881595" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
+            <marker date="1531203881595" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1531203881595" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1531203881595" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="false" signature="24256:24530" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="24590:24863" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="24920:25191" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25249:25519" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25581:25862" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25925:26205" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26262:26532" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26590:26859" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26918:27193" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27253:27527" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27584:27855" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27913:28183" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28246:28473" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28537:28761" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28815:29016" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29071:29269" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29326:29597" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29655:29925" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29986:30201" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30263:30475" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30535:30748" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30809:31019" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31080:31295" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31357:31569" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31632:31851" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31915:32131" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1374,7 +950,7 @@
         <state relative-caret-position="34">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="13" />
           <folding>
-            <marker date="1524392409881" expanded="true" signature="143:232" ph="SELECT usern... tUser" />
+            <marker date="1531203530601" expanded="true" signature="143:232" ph="SELECT usern... tUser" />
           </folding>
         </state>
       </provider>
@@ -1449,8 +1025,8 @@
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="20" />
           <folding>
-            <marker date="1525328316050" expanded="true" signature="143:278" ph="SELECT Versa... tVersandklassen" />
-            <marker date="1525328316050" expanded="true" signature="521:528" ph="ß" />
+            <marker date="1531203530604" expanded="true" signature="143:278" ph="SELECT Versa... tVersandklassen" />
+            <marker date="1531203530604" expanded="true" signature="521:528" ph="ß" />
           </folding>
         </state>
       </provider>
@@ -1489,7 +1065,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
+        <state relative-caret-position="276">
           <caret line="46" column="5" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
           <folding />
         </state>
@@ -1497,88 +1073,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/business-logic/mProducts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="119" column="21" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="871" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="123" column="49" lean-forward="false" selection-start-line="123" selection-start-column="49" selection-end-line="123" selection-end-column="49" />
           <folding>
-            <element signature="e#11837#12225#0#PHP" expanded="false" />
-            <element signature="e#12234#12650#0#PHP" expanded="false" />
-            <element signature="e#12659#13069#0#PHP" expanded="false" />
-            <element signature="e#13078#13485#0#PHP" expanded="false" />
-            <element signature="e#13494#13905#0#PHP" expanded="false" />
-            <element signature="e#13914#14298#0#PHP" expanded="false" />
-            <element signature="e#14307#14698#0#PHP" expanded="false" />
-            <element signature="e#14707#15131#0#PHP" expanded="false" />
-            <element signature="e#15140#15524#0#PHP" expanded="false" />
-            <element signature="e#15533#15917#0#PHP" expanded="false" />
-            <element signature="e#15926#16323#0#PHP" expanded="false" />
-            <element signature="e#16332#16720#0#PHP" expanded="false" />
-            <element signature="e#16729#17111#0#PHP" expanded="false" />
-            <element signature="e#17120#17506#0#PHP" expanded="false" />
-            <element signature="e#18494#18667#0#PHP" expanded="false" />
-            <element signature="e#18681#18852#0#PHP" expanded="false" />
-            <element signature="e#18866#19035#0#PHP" expanded="false" />
-            <element signature="e#19049#19216#0#PHP" expanded="false" />
-            <element signature="e#19230#19409#0#PHP" expanded="false" />
-            <element signature="e#19423#19600#0#PHP" expanded="false" />
-            <element signature="e#19614#19782#0#PHP" expanded="false" />
-            <element signature="e#19796#19962#0#PHP" expanded="false" />
-            <element signature="e#19976#20148#0#PHP" expanded="false" />
-            <element signature="e#20162#20332#0#PHP" expanded="false" />
-            <element signature="e#20346#20514#0#PHP" expanded="false" />
-            <element signature="e#20528#20694#0#PHP" expanded="false" />
-            <element signature="e#20708#20888#0#PHP" expanded="false" />
-            <element signature="e#20902#21080#0#PHP" expanded="false" />
-            <element signature="e#21094#21266#0#PHP" expanded="false" />
-            <element signature="e#21280#21450#0#PHP" expanded="false" />
-            <element signature="e#21464#21633#0#PHP" expanded="false" />
-            <element signature="e#21647#21814#0#PHP" expanded="false" />
-            <element signature="e#21828#22005#0#PHP" expanded="false" />
-            <element signature="e#22019#22194#0#PHP" expanded="false" />
-            <element signature="e#22208#22382#0#PHP" expanded="false" />
-            <element signature="e#22396#22568#0#PHP" expanded="false" />
-            <element signature="e#22582#22758#0#PHP" expanded="false" />
-            <element signature="e#22772#22946#0#PHP" expanded="false" />
-            <element signature="e#22960#23140#0#PHP" expanded="false" />
-            <element signature="e#23154#23332#0#PHP" expanded="false" />
-            <element signature="n#compareMargeEuroASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeEuroDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVKPreisASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVKPreisDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeProzentASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMargeProzentDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareBestandASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareBestandDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareNullpreisASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareNullpreisDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareGewichtASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareGewichtDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVersandklasseASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareVersandklasseDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMwstASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareMwstDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareEKNettoASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareEKNettoDESC#0;n#!!top" expanded="false" />
-            <element signature="n#comparePlattformIdASC#0;n#!!top" expanded="false" />
-            <element signature="n#comparePlattformIdDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareHerstellerASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareHerstellerDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnameASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnameDESC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnummerASC#0;n#!!top" expanded="false" />
-            <element signature="n#compareArtikelnummerDESC#0;n#!!top" expanded="false" />
-            <marker date="1525446696463" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
-            <marker date="1525446696463" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
-            <marker date="1525446696463" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525446696463" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
-            <marker date="1525446696463" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
-            <marker date="1525446696463" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
-            <marker date="1525446696463" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="290:319" ph="SELECT * FRO... tVersandklassen" />
+            <marker date="1531203881595" expanded="true" signature="1420:2728" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="1420:3173" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="1420:5645" ph="SELECT DISTI... " />
+            <marker date="1531203881595" expanded="true" signature="2393:2728" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1531203881595" expanded="true" signature="2996:3148" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="3239:5645" ph="SELECT DISTI... vArtikelliste" />
+            <marker date="1531203881595" expanded="true" signature="4416:5039" ph="SELECT dbo.t... tStueckliste" />
+            <marker date="1531203881595" expanded="true" signature="5165:5620" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5227:5619" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5319:5618" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5411:5617" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="true" signature="5503:5616" ph="SELECT kKate... tkategorie" />
+            <marker date="1531203881595" expanded="false" signature="24256:24530" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="24590:24863" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="24920:25191" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25249:25519" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25581:25862" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="25925:26205" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26262:26532" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26590:26859" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="26918:27193" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27253:27527" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27584:27855" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="27913:28183" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28246:28473" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28537:28761" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="28815:29016" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29071:29269" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29326:29597" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29655:29925" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="29986:30201" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30263:30475" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30535:30748" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="30809:31019" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31080:31295" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31357:31569" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31632:31851" ph="..." />
+            <marker date="1531203881595" expanded="false" signature="31915:32131" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business-logic/mLagerbestand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="156" column="131" lean-forward="false" selection-start-line="156" selection-start-column="131" selection-end-line="156" selection-end-column="131" />
+          <folding>
+            <marker date="1531215670816" expanded="true" signature="367:2341" ph="SELECT Tabel... kKategorie" />
+            <marker date="1531215670816" expanded="true" signature="649:2070" ph="SELECT dbo.t... tkategorie" />
+            <marker date="1531215670816" expanded="true" signature="1754:1976" ph="SELECT kKate... tkategorie" />
           </folding>
         </state>
       </provider>
