@@ -146,8 +146,8 @@ echo '</table>';
 echo '<span>Gesamtwarenwert: </span>' . number_format($gesamtWarenwert,2, ",", "." ) . " €" ;
 
 $total_pages = ceil(count($list) / $limit);
-        
-        $pagLink = "<div id='paging' class='pagination'>";
+
+        $pagLink = "<div id='paging' class='pagination'><div id='pagenumber'> Seite: " . $page . "</div>";
         
         for ($i=1; $i<=$total_pages; $i++) {          
             if ($i <= 10) {

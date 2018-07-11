@@ -383,22 +383,22 @@
             $list = SortArray($list, $sort, $sortStatus);
         }
 
-         createTable($list);
+         createTable($list, $page, $limit);
 
         
 
         $total_pages = ceil(count($list) / $limit);
         
-        $pagLink = "<div id='paging' class='pagination'>";
+        $pagLink = "<div id='paging' class='pagination'><div id='pagenumber'> Seite: " . $page . "</div>";
         
         for ($i=1; $i<=$total_pages; $i++) {          
             if ($i <= 10) {
-                $pagLink .= "<a class='pagingElement' href='mProducts.php?page=".$i."'>".$i."</a>";
+                $pagLink .= "<a class='pagingElement' href='products.php?page=".$i."'>".$i."</a>";
             } else {
                 if ($i == 11) {
-                    $pagLink .= "<select><option class='pagingElement' value='products.php?page=".$i."'>".$i."</option>";
+                    $pagLink .= "<select onchange=\"location = this.value;\"><option value='' selected disabled hidden>Seite wählen</option><option class='pagingElement' value='products.php?page=".$i."'>$i</option>";
                 } else {
-                     $pagLink .= "<option>".$i."</option>";
+                    $pagLink .= "<option class='pagingElement' value='products.php?page=".$i."'>$i</option>";
 
                 }
               
@@ -829,7 +829,7 @@
         /**
          * @param $_list
          */
-        function createTable ($_list)
+        function createTable ($_list, $_page, $_limit)
         {
             // TR: Table Head
             echo "<tbody>";
@@ -837,7 +837,8 @@
             for ($a = 0; $a < count($_list) ; $a++) {               
                 
                 // TR: Tabellen Content
-                if ($a <= 30) {          
+                if($a>=($_page -1) * $_limit  && $a<($_limit) * $_page )
+                {
                     
                     echo "<tr class='hover' >";
                     echo "<td id='td-edit' class='btnEdit'><a><img class='icon-art-setting' src='../image/icon-art-setting.png' /></a></td>";
@@ -864,7 +865,7 @@
             
             //Table Conclusion
             echo "</tbody>";
-            echo "</table></form>"; 
+            echo "</table></form>";
         }
         
 
