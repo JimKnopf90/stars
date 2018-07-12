@@ -116,10 +116,10 @@ echo '<table id="lb-table">';
          $list[$y]['Kategoriename'] = $row['Kategoriename'];
          $list[$y]['cArtNr'] = $row['cArtNr'];
          $list[$y]['cName'] = $row['cName'];
-         $list[$y]['fLagerbestand'] = $row["fLagerbestand"];
-         $list[$y]['fInAuftraegen'] = $row["fInAuftraegen"];
-         $list[$y]['fVerfuegbar'] = $row["fVerfuegbar"];
-         $list[$y]['istBestandswert'] = $istBestandswert;
+         $list[$y]['fLagerbestand'] = number_format(floatval($row["fLagerbestand"]),2, ",", ".");
+         $list[$y]['fInAuftraegen'] = number_format(floatval($row["fInAuftraegen"]),2, ",", ".");
+         $list[$y]['fVerfuegbar'] = number_format(floatval($row["fVerfuegbar"]),2, ",", ".");
+         $list[$y]['istBestandswert'] = number_format($istBestandswert,2, ",", "." ) . " €";
             
         $gesamtWarenwert = $gesamtWarenwert + $istBestandswert;
         $y = $y + 1;
