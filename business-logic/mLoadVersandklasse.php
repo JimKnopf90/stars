@@ -25,7 +25,7 @@ foreach ($dbh->query($sql) as $row) {
     echo "<td>" . number_format(floatval($row["PreisVerpackungskosten"]),2, ",", ".") . "</td>";
     echo "<td>" . number_format(floatval($row["GewichtMax"]),2, ",", ".") . "</td>";
     echo "<td>" . number_format(floatval($row["MesswerteMax"]),2, ",", ".") . "</td>";  
-    echo "<td><form action='../sites/versandklassen-edit.php'><input type='button' value=". $row["VersandklassenID"] ." class='btnEdit'></form></td>";
+    echo "<td><form action='../sites/versandklassen-edit.php'><input type='button' value=". $row["VersandklassenID"] ." class='btnEdit'></input></form></td>";
     echo "</tr>";
             
     }

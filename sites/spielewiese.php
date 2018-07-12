@@ -13,6 +13,14 @@ if(isset($_SESSION["adminusername"])) {
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jequery.min.js">
         </script>
 		<title>StaRs | Adminbereich</title>
+        <script> 
+function show(id) { 
+    if(document.getElementById) { 
+        var mydiv = document.getElementById(id); 
+        mydiv.style.display = (mydiv.style.display=='block'?'none':'block'); 
+    } 
+} 
+</script>
         
 	</head>
 	<body>
@@ -23,11 +31,20 @@ if(isset($_SESSION["adminusername"])) {
         <header>
             <a href="admin-mainpage.php">
                 <img id="stars-logo" src="../admin-image/stars-logo.png" />
-            </a>        
+            </a>
+            
             <nav class="nav-bar">
                         
                 <ul>
                     
+                    <li>
+                        <a href="" onclick="javascript:show('button-sidebar'); return false">
+                            <button type="button" class="homebutton">
+                                <!-- img id="homebutton" src="../admin-image/homebutton.png" /> -->
+                                ____
+                            </button>
+                        </a>
+                    </li>
                     
                     <li>
                         <a href="admin-lagerbestand.php">
@@ -47,8 +64,8 @@ if(isset($_SESSION["adminusername"])) {
                 </ul>    
             </nav>
         </header>
-        
-        <div class="sidebar">
+         
+        <div style="display: none" id="button-sidebar" class="sidebar">
             <ul>                                
                 <li>
                     <a class="btnSidebar" href="admin-mainpage.php">
@@ -122,7 +139,8 @@ if(isset($_SESSION["adminusername"])) {
                     </a>
                 </li>
             </ul>
-        </div>  
+        </div>
+        
         <div class="content">
             <?php
              include("../business-logic/mLagerbestand.php");
