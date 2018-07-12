@@ -692,6 +692,11 @@ form ul li{
     padding-left: 20px;
 }
 
+.btnEdit{
+    background: url(../image/btn_edit.png)
+    border-style: none;
+}
+
 
 
 
